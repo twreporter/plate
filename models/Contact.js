@@ -7,11 +7,11 @@ var Contact = new keystone.List('Contact');
 Contact.add({
 	name: { type: Types.Name, required: true, index: true },
 	email: { type: Types.Email, initial: true, index: true, unique: true },
-	favouriteFlavour: { type: Types.Select, options: 'chocolate, vanilla, strawberry', index: true },
-	birthday: { type: Types.Date, index: true },
-	homepage: { type: Types.Url, index: true },
-	favouriteWords: { type: Types.TextArray, index: true },
-	favouriteNumbers: { type: Types.TextArray, index: true },
+	image: { type: Types.CloudinaryImage },
+	homepage: { type: Types.Url, index: false },
+	facebook: { type: Types.Url, index: false },
+	twitter: { type: Types.Url, index: false },
+	instantgram: { type: Types.Url, index: true },
 	address: { type: Types.Location, collapse: true },
 	bio: { type: Types.Markdown, collapse: true },
 });

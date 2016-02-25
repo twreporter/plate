@@ -9,7 +9,7 @@ var Post = new keystone.List('Post', {
 Post.add({
 	name: { type: String, required: true },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
-	authors: { type: Types.Relationship, ref: 'User', many: true },
+	authors: { type: Types.Relationship, ref: 'Contact', many: true },
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
 	image: { type: Types.CloudinaryImage },
 	content: {
