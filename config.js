@@ -26,5 +26,4 @@ exports.locals = {
 exports.nav = {
 	'people': ['users', 'companies', 'contacts'],
 	'content': ['posts', 'post-categories', 'events', 'jobs', 'galleries'],
-	'test-schemas': ['autocreates', 'field-tests'],
 };
