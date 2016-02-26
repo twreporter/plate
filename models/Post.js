@@ -7,8 +7,8 @@ var Post = new keystone.List('Post', {
 });
 
 Post.add({
-    title: { type: String, require: true },
 	name: { type: String, required: true },
+    title: { type: String, require: true },
     subtitle: { type: String, require: true },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	authors: { type: Types.Relationship, ref: 'Contact', many: true },
@@ -19,6 +19,7 @@ Post.add({
 		extended: { type: Types.Html, wysiwyg: true, height: 400 }
 	},
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
+	tags: { type: Types.Relationship, ref: 'Tag', many: true },
 });
 
 Post.schema.virtual('content.full').get(() => {
