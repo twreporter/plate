@@ -5,7 +5,7 @@ A KeystoneJS Project with various configurations for development and testing pur
 **Note: This project requires Node.js v4.x**
 
 
-# How to run TWReporter's fork of KeystoneJS CMS
+# How to run Plate (TWReporter's fork of KeystoneJS CMS)
 
 ```
 git clone https://github.com/twreporter/keystone.git
