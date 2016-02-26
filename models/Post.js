@@ -20,7 +20,13 @@ Post.add({
 	},
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
 	tags: { type: Types.Relationship, ref: 'Tag', many: true },
+	style: { type: Types.Select, options: 'article, index, review', default: 'article', index: true },
+    relateds: {type: Types.Relationship, ref: 'Post', many: true },
+    og_title: { type: String, require: false},
+    og_description: { type: String, require: false},
 });
+
+Post.relationship({ ref: 'Post', refPath: 'relateds' });
 
 Post.schema.virtual('content.full').get(() => {
 	return this.content.extended || this.content.brief;
