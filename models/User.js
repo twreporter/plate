@@ -40,5 +40,5 @@ User.schema.path('password').set(value => {
 });
 
 transform.toJSON(User);
-User.defaultColumns = 'name, email, company, isAdmin';
+User.defaultColumns = 'name, email, role, isAdmin';
 User.register();
