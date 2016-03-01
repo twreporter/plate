@@ -5,7 +5,7 @@ var Types = keystone.Field.Types;
 var User = new keystone.List('User');
 
 User.add({
-	name: { type: Types.Name, required: true, index: true },
+	name: { type: String, required: true, index: true },
 	email: { type: Types.Email, initial: true, required: true, index: true, unique: true },
 	password: { type: Types.Password, initial: true, required: true },
     role: { type: Types.Select, options: 'contributor, author, editor, moderator, admin', default: 'contributor', required: true },
@@ -32,7 +32,7 @@ var protect = function(path) {
 		return (this.isProtected) ? this.get(path) : value;
 	});
 };
-var protectedPaths = ['name.first', 'name.last', 'email', 'isAdmin'];
+var protectedPaths = ['name', 'email', 'isAdmin'];
 protectedPaths.forEach(protect);
 
 User.schema.path('password').set(value => {

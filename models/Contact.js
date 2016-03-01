@@ -5,7 +5,7 @@ var Types = keystone.Field.Types;
 var Contact = new keystone.List('Contact');
 
 Contact.add({
-	name: { type: Types.Name, required: true, index: true },
+	name: { type: String, required: true, index: true },
 	email: { type: Types.Email, initial: true, index: true, unique: true },
 	image: { type: Types.CloudinaryImage },
 	homepage: { type: Types.Url, index: false },
