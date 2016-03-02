@@ -16,5 +16,6 @@ git clone https://github.com/twreporter/plate.git
 cd plate
 npm install
 npm link keystone
+cp config.sample.js config.js // remember to modify the config
 KEYSTONE_DEV=true npm start
 ```

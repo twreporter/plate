@@ -17,8 +17,8 @@ exports.options = {
 	'user model': 'User',
     'cookie secret': '&#34;fF-ELbvoJ|P6:$&lt;;3c-Cen8OJJy[W1&amp;i@O.M)-%&lt;&gt;QTiTvC93&lt;n;R@!vD@A6N=7',
     'gcs config': {
-        projectId: 'coastal-run-106202',
-        keyFilename: __dirname + '/gcskeyfile.json'
+        projectId: '', // Your projectId
+        keyFilename: '', // Your keyFilename path
     }
 };
 
