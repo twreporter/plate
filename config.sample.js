@@ -15,8 +15,11 @@ exports.options = {
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-	'cookie secret': '&#34;fF-ELbvoJ|P6:$&lt;;3c-Cen8OJJy[W1&amp;i@O.M)-%&lt;&gt;QTiTvC93&lt;n;R@!vD@A6N=7',
-
+    'cookie secret': '&#34;fF-ELbvoJ|P6:$&lt;;3c-Cen8OJJy[W1&amp;i@O.M)-%&lt;&gt;QTiTvC93&lt;n;R@!vD@A6N=7',
+    'gcs config': {
+        projectId: '', // Your projectId
+        keyFilename: '', // Your keyFilename path
+    }
 };
 
 exports.locals = {
@@ -25,5 +28,5 @@ exports.locals = {
 
 exports.nav = {
 	'people': ['users', 'companies', 'contacts'],
-	'content': ['posts', 'post-categories', 'events', 'jobs', 'galleries', 'tags'],
+	'content': ['posts', 'post-categories', 'events', 'jobs', 'images', 'tags']
 };

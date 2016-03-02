@@ -8,6 +8,6 @@ keystone.set('routes', require('./routes'));
 keystone.set('nav', config.nav);
 
 keystone.start({
-	onMount () { console.log('Application Mounted'); },
-	onStart () { console.log('Application Started'); },
+  onMount () { console.log('Application Mounted'); },
+  onStart () { console.log('Application Started'); },
 });
