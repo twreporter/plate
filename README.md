@@ -1,4 +1,4 @@
-# keystone-test-project
+# Plate - for Keystone CMS
 
 A KeystoneJS Project with various configurations for development and testing purposes
 
@@ -12,8 +12,8 @@ git clone https://github.com/twreporter/keystone.git
 cd keystone
 npm link
 cd ..
-git clone https://github.com/twreporter/keystone-test-project
-cd keystone-test-project
+git clone https://github.com/twreporter/plate.git
+cd plate
 npm install
 npm link keystone
 KEYSTONE_DEV=true npm start
