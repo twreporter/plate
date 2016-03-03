@@ -15,9 +15,11 @@ Image.add({
         destination: 'galleries/',
         publicRead: true
     },
-	tags: { type: Types.Relationship, ref: 'Tag', many: true },
+    artist: { type: Types.Relationship, ref: 'Contact' },
+    description: { type: String },
+    tags: { type: Types.Relationship, ref: 'Tag', many: true },
 });
 
 transform.toJSON(Image);
-Image.defaultColumns = 'image, tags';
+Image.defaultColumns = 'image, artist, tags';
 Image.register();
