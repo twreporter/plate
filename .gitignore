@@ -1,3 +1,6 @@
+# Ignore config for keystone
+config.js
+
 # Logs
 logs
 *.log
@@ -37,3 +40,4 @@ node_modules
 updates/0.0.0-*.js
 
 public/js/packages.js
+
