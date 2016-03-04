@@ -1,3 +1,4 @@
+var gm = require('gm');
 var keystone = require('keystone');
 var transform = require('model-transform');
 var Types = keystone.Field.Types;
@@ -13,11 +14,41 @@ Image.add({
         datePrefix: 'YYYYMMDDHHmmss',
         bucket: 'twreporter-article.twreporter.org',
         destination: 'galleries/',
-        publicRead: true
+        publicRead: true,
+        resize: function(image, width, height, options) {
+            return gm(image).resize(width, height, '>').stream();
+        },
+        resizeOpts: [{
+            target: 'desktop',
+            width: 2000,
+            height: null,
+            options: {}
+        }, {
+            target: 'tablet',
+            width: 1200,
+            height: null,
+            options: {}
+        }, {
+            target: 'mobile',
+            width: 800,
+            height: null,
+            options: {}
+        }]
     },
-	tags: { type: Types.Relationship, ref: 'Tag', many: true },
+    photographer: {
+        type: Types.Relationship,
+        ref: 'Contact'
+    },
+    description: {
+        type: String
+    },
+    tags: {
+        type: Types.Relationship,
+        ref: 'Tag',
+        many: true
+    },
 });
 
 transform.toJSON(Image);
-Image.defaultColumns = 'image, tags';
+Image.defaultColumns = 'image, photographer, tags';
 Image.register();
