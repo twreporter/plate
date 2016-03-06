@@ -6,7 +6,7 @@ A KeystoneJS Project with various configurations for development and testing pur
 
 # Before running Plate
 
-Install [gm](git@github.com:aheckmann/gm.git) first.
+Install [gm](https://github.com/aheckmann/gm.git) first.
 We will need that to resize images.
 
 # How to run Plate (TWReporter's fork of KeystoneJS CMS)
