@@ -14,7 +14,7 @@ Post.add({
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	authors: { type: Types.Relationship, ref: 'Contact', many: true },
 	publishedDate: { type: Date, index: true, dependsOn: { state: 'published' }, default: Date.now },
-	heroImage: { type: Types.Relationship, ref: 'Image' },
+	heroImage: { type: Types.ImageRelationship, ref: 'Image' },
 	content: {
 		brief: { type: Types.Html, wysiwyg: true, height: 150 },
 		extended: { type: Types.Html, wysiwyg: true, height: 400 }
