@@ -13,7 +13,7 @@ Post.add({
     byline: { type: String, require: true },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	authors: { type: Types.Relationship, ref: 'Contact', many: true },
-	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
+	publishedDate: { type: Date, index: true, dependsOn: { state: 'published' }, default: Date.now },
 	heroImage: { type: Types.Relationship, ref: 'Image' },
 	content: {
 		brief: { type: Types.Html, wysiwyg: true, height: 150 },
@@ -26,6 +26,7 @@ Post.add({
     og_title: { type: String, require: false},
     og_description: { type: String, require: false},
 	isFeatured: { type: Boolean, index: true },
+    createTime: { type: Date, default: Date.now },
 });
 
 Post.relationship({ ref: 'Post', refPath: 'relateds' });
