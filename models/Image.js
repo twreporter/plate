@@ -12,6 +12,7 @@ Image.add({
         index: true,
         autoCleanup: true,
         datePrefix: 'YYYYMMDDHHmmss',
+        // TODO move these settings to config
         bucket: 'twreporter-article.twreporter.org',
         destination: 'galleries/',
         publicRead: true,
@@ -49,7 +50,13 @@ Image.add({
     },
 });
 
-Image.relationship({ ref: 'Post', refPath: 'heroImage' });
+Image.relationship({
+    ref: 'Post',
+    refPath: 'heroImage'
+}, {
+    ref: 'Audio',
+    refPath: 'heroImage'
+});
 
 transform.toJSON(Image);
 Image.defaultColumns = 'image, photographer, tags';
