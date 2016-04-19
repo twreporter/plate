@@ -11,6 +11,7 @@ Audio.add({
         index: true,
         autoCleanup: true,
         datePrefix: 'YYYYMMDDHHmmss',
+        // TODO move these settings to config
         bucket: 'twreporter-article.twreporter.org',
         destination: 'galleries/',
         publicRead: true,
