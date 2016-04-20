@@ -18,7 +18,7 @@
     "express": "^4.13.4",
     "gm": "^1.21.1",
     "jade": "^1.11.0",
-    "keystone": "https://github.com/keystonejs/keystone.git",
+    "twreporter-keystone": "^0.4.0-alpha",
     "lorem-ipsum": "^1.0.3",
     "model-transform": "^2.0.0",
     "morgan": "^1.6.1",

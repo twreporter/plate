@@ -1,5 +1,5 @@
 var gm = require('gm');
-var keystone = require('keystone');
+var keystone = require('twreporter-keystone');
 var transform = require('model-transform');
 var Types = keystone.Field.Types;
 

@@ -1,4 +1,4 @@
-var keystone = require('keystone');
+var keystone = require('twreporter-keystone');
 var config = require('./config');
 
 keystone.init(config.options);
