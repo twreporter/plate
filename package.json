@@ -18,7 +18,7 @@
     "express": "^4.13.4",
     "gm": "^1.21.1",
     "jade": "^1.11.0",
-    "twreporter-keystone": "^0.4.0-alpha",
+    "twreporter-keystone": "^0.4.0-beta",
     "lorem-ipsum": "^1.0.3",
     "model-transform": "^2.0.0",
     "morgan": "^1.6.1",
