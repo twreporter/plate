@@ -1,4 +1,4 @@
-var keystone = require('keystone');
+var keystone = require('twreporter-keystone');
 var transform = require('model-transform');
 
 var Tag = new keystone.List('Tag', {

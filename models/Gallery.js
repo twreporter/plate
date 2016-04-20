@@ -1,4 +1,4 @@
-var keystone = require('keystone');
+var keystone = require('twreporter-keystone');
 var Types = keystone.Field.Types;
 
 var Gallery = new keystone.List('Gallery', {

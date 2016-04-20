@@ -6,7 +6,7 @@
 var bodyParser = require('body-parser');
 var compression = require('compression');
 var express = require('express');
-var keystone = require('keystone');
+var keystone = require('twreporter-keystone');
 var morgan = require('morgan');
 var multer = require('multer');
 
