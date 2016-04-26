@@ -36,5 +36,5 @@ Post.schema.virtual('content.full').get(() => {
 });
 
 transform.toJSON(Post);
-Post.defaultColumns = 'name, state|20%, author|20%, categories|20%, publishedDate|20%';
+Post.defaultColumns = 'title, name, state|20%, author|20%, categories|20%, publishedDate|20%';
 Post.register();
