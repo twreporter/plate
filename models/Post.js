@@ -12,8 +12,8 @@ Post.add({
     subtitle: { type: String, require: true },
     byline: { type: String, require: true },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
-	authors: { type: Types.Relationship, ref: 'Contact', many: true },
 	publishedDate: { type: Date, index: true, dependsOn: { state: 'published' }, default: Date.now },
+	authors: { type: Types.Relationship, ref: 'Contact', many: true },
 	heroImage: { type: Types.ImageRelationship, ref: 'Image' },
 	content: {
 		brief: { type: Types.Html, wysiwyg: true, height: 150 },
