@@ -13,6 +13,7 @@ Member.add({
 	city: { type: String, required: false },
 	address: { type: Types.Location, collapse: true },
     zip: { type: Types.Number },
+    eletter: { type: Boolean, label: 'Subscribe e-letter', index: true },
     gender: { type: Types.Select, options: 'male, female, mid', default: 'mid', required: false },
 });
 
