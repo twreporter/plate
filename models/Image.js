@@ -43,10 +43,19 @@ Image.add({
     description: {
         type: String
     },
+    copyright: { 
+        type: Types.Select, 
+        options: 'Creative-Commons, Copyrighted', 
+        default: 'Copyrighted', index: true 
+    },
     tags: {
         type: Types.Relationship,
         ref: 'Tag',
         many: true
+    },
+    sale: {
+        type: Boolean,
+        index: true
     },
 });
 
