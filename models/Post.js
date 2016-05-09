@@ -28,7 +28,7 @@ Post.add({
     relateds: {type: Types.Relationship, ref: 'Post', many: true },
     og_title: { type: String, require: false},
     og_description: { type: String, require: false},
-    og_image: { type: String, require: false},
+	og_image: { type: Types.ImageRelationship, ref: 'Image' },
 	isFeatured: { type: Boolean, index: true },
     createTime: { type: Date, default: Date.now },
 });
