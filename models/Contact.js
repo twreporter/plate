@@ -7,7 +7,7 @@ var Contact = new keystone.List('Contact');
 Contact.add({
 	name: { type: String, required: true, index: true },
 	email: { type: Types.Email, initial: true, index: true },
-	image: { type: Types.CloudinaryImage },
+	image: { type: Types.ImageRelationship, ref: 'Image' },
 	homepage: { type: Types.Url, index: false },
 	facebook: { type: Types.Url, index: false },
 	twitter: { type: Types.Url, index: false },
