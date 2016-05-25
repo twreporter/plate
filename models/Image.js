@@ -34,6 +34,11 @@ Image.add({
             width: 800,
             height: null,
             options: {}
+        }, {
+            target: 'tiny',
+            width: 60,
+            height: null,
+            options: {}
         }]
     },
     photographer: {
@@ -43,10 +48,10 @@ Image.add({
     description: {
         type: String
     },
-    copyright: { 
-        type: Types.Select, 
-        options: 'Creative-Commons, Copyrighted', 
-        default: 'Copyrighted', index: true 
+    copyright: {
+        type: Types.Select,
+        options: 'Creative-Commons, Copyrighted',
+        default: 'Copyrighted', index: true
     },
     tags: {
         type: Types.Relationship,
