@@ -4,12 +4,14 @@ var transform = require('model-transform');
 var extractIPTC = require('../lib/extractIPTC');
 var Types = keystone.Field.Types;
 
-var Image = new keystone.List('Image');
+var ImageCollection = new keystone.List('ImageCollection');
 
-Image.add({
-    image: {
-        type: Types.GcsImage,
-        initial: true,
+ImageCollection.add({
+    collectionName: {
+      type: String, required: true, initial: true
+    },
+    images: {
+        type: Types.GcsImages,
         autoCleanup: true,
         datePrefix: 'YYYYMMDDHHmmss',
         // TODO move these settings to config
@@ -39,31 +41,9 @@ Image.add({
             options: {}
         }],
         extractIPTC: extractIPTC
-    },
-    copyright: {
-        type: Types.Select,
-        options: 'Creative-Commons, Copyrighted',
-        default: 'Copyrighted', index: true
-    },
-    tags: {
-        type: Types.Relationship,
-        ref: 'Tag',
-        many: true
-    },
-    sale: {
-        type: Boolean,
-        index: true
-    },
+    }
 });
 
-Image.relationship({
-    ref: 'Post',
-    refPath: 'heroImage'
-}, {
-    ref: 'Audio',
-    refPath: 'heroImage'
-});
-
-transform.toJSON(Image);
-Image.defaultColumns = 'images, tags';
-Image.register();
+transform.toJSON(ImageCollection);
+ImageCollection.defaultColumns = 'collectionName, images';
+ImageCollection.register();
