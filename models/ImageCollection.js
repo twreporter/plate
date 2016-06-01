@@ -1,7 +1,7 @@
+var extractIPTC = require('../lib/extractIPTC');
 var keystone = require('twreporter-keystone');
 var resizeImage = require('../lib/resizeImage');
 var transform = require('model-transform');
-var extractIPTC = require('../lib/extractIPTC');
 var Types = keystone.Field.Types;
 
 var ImageCollection = new keystone.List('ImageCollection');
