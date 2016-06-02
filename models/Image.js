@@ -51,10 +51,9 @@ Image.add({
         options: 'Creative-Commons, Copyrighted',
         default: 'Copyrighted', index: true
     },
-    tags: {
-        type: Types.Relationship,
-        ref: 'Tag',
-        many: true
+    keywords: {
+        type: String,
+        index: true
     },
     sale: {
         type: Boolean,

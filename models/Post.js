@@ -25,7 +25,7 @@ Post.add({
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
     copyright: { type: Types.Select, options: 'Creative-Commons, Copyrighted', default: 'Copyrighted', index: true },
 	tags: { type: Types.Relationship, ref: 'Tag', many: true },
-	style: { type: Types.Select, options: 'article, index, review', default: 'article', index: true },
+	style: { type: Types.Select, options: 'article, topic, review', default: 'article', index: true },
     relateds: {type: Types.Relationship, ref: 'Post', many: true },
     og_title: { type: String, require: false},
     og_description: { type: String, require: false},
