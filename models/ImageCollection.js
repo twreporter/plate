@@ -4,7 +4,9 @@ var resizeImage = require('../lib/resizeImage');
 var transform = require('model-transform');
 var Types = keystone.Field.Types;
 
-var ImageCollection = new keystone.List('ImageCollection');
+var ImageCollection = new keystone.List('ImageCollection', {
+    map: { name: 'collectionName' }
+});
 
 ImageCollection.add({
     collectionName: {
@@ -15,8 +17,8 @@ ImageCollection.add({
         autoCleanup: true,
         datePrefix: 'YYYYMMDDHHmmss',
         // TODO move these settings to config
-        bucket: 'twreporter-article.twreporter.org',
-        destination: 'galleries/',
+        bucket: 'twreporter-multimedia',
+        destination: 'images/',
         publicRead: true,
         resize: resizeImage,
         resizeOpts: [{
