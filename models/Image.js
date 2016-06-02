@@ -64,11 +64,8 @@ Image.add({
 Image.relationship({
     ref: 'Post',
     refPath: 'heroImage'
-}, {
-    ref: 'Audio',
-    refPath: 'heroImage'
 });
 
 transform.toJSON(Image);
-Image.defaultColumns = 'images, tags';
+Image.defaultColumns = 'image, description';
 Image.register();

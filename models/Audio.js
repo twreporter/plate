@@ -19,11 +19,6 @@ Audio.add({
     destination: 'audios/',
     publicRead: true,
   },
-  heroImage: { type: Types.ImageRelationship, ref: 'Image' },
-  author: {
-    type: Types.Relationship,
-    ref: 'Contact'
-  },
   tags: {
     type: Types.Relationship,
     ref: 'Tag',
@@ -33,5 +28,5 @@ Audio.add({
 
 
 transform.toJSON(Audio);
-Audio.defaultColumns = 'description, audio, author, tags';
+Audio.defaultColumns = 'description, audio, tags';
 Audio.register();
