@@ -8,7 +8,7 @@ var Post = new keystone.List('Post', {
 
 Post.add({
 	name: { type: String, required: true },
-    title: { type: String, require: true },
+    title: { type: String, require: true, default: 'untitled' },
     subtitle: { type: String, require: false },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	publishedDate: { type: Date, index: true, dependsOn: { state: 'published' }, default: Date.now },
