@@ -8,7 +8,7 @@ var Audio = new keystone.List('Audio', {
 
 Audio.add({
     title: { type: String, required: true, initial: true },
-    description: { type: String, required: true, initial: true },
+    description: { type: Types.Html, wysiwyg: true, height: 150 },
     audio: {
         type: Types.GcsFile,
         initial: true,
@@ -30,5 +30,5 @@ Audio.add({
 
 
 transform.toJSON(Audio);
-Audio.defaultColumns = 'description, audio, tags';
+Audio.defaultColumns = 'title, audio, tags';
 Audio.register();
