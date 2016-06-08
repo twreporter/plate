@@ -12,7 +12,6 @@ Audio.add({
     audio: {
         type: Types.GcsFile,
         initial: true,
-        index: true,
         autoCleanup: true,
         datePrefix: 'YYYYMMDDHHmmss',
         // TODO move these settings to config
