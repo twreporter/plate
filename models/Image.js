@@ -67,5 +67,5 @@ Image.relationship({
 });
 
 transform.toJSON(Image);
-Image.defaultColumns = 'image, description';
+Image.defaultColumns = 'description, image';
 Image.register();
