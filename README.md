@@ -12,14 +12,15 @@ We will need that to resize images.
 # How to run Plate (TWReporter's fork of KeystoneJS CMS)
 
 ```
-git clone https://github.com/twreporter/keystone.git
-cd keystone
-npm link
-cd ..
 git clone https://github.com/twreporter/plate.git
 cd plate
 npm install
-npm link keystone
 cp config.sample.js config.js // remember to modify the config
-KEYSTONE_DEV=true npm start
+
+// dev
+npm run dev
+
+// prod
+npm start
+
 ```
