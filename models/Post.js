@@ -16,6 +16,7 @@ Post.add({
 	photographers: { type: Types.Relationship, ref: 'Contact', many: true },
 	designers: { type: Types.Relationship, ref: 'Contact', many: true },
 	engineers: { type: Types.Relationship, ref: 'Contact', many: true },
+    extend_byline: { type: String, require: false },
 	heroImage: { type: Types.ImageRelationship, ref: 'Image' },
     heroImageSize: { type: Types.Select, options: 'extend, normal, small', default: 'normal', dependsOn: { heroImage: {'$regex': '.+/i'}}},
 	content: {
