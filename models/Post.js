@@ -8,7 +8,7 @@ var Post = new keystone.List('Post', {
 
 Post.add({
 	name: { type: String, required: true },
-    title: { type: String, require: true },
+    title: { type: String, require: true, default: 'untitled' },
     subtitle: { type: String, require: false },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	publishedDate: { type: Date, index: true, dependsOn: { state: 'published' }, default: Date.now },
@@ -16,6 +16,7 @@ Post.add({
 	photographers: { type: Types.Relationship, ref: 'Contact', many: true },
 	designers: { type: Types.Relationship, ref: 'Contact', many: true },
 	engineers: { type: Types.Relationship, ref: 'Contact', many: true },
+    extend_byline: { type: String, require: false },
 	heroImage: { type: Types.ImageRelationship, ref: 'Image' },
     heroImageSize: { type: Types.Select, options: 'extend, normal, small', default: 'normal', dependsOn: { heroImage: {'$regex': '.+/i'}}},
 	content: {
@@ -26,6 +27,7 @@ Post.add({
     copyright: { type: Types.Select, options: 'Creative-Commons, Copyrighted', default: 'Copyrighted', index: true },
 	tags: { type: Types.Relationship, ref: 'Tag', many: true },
 	style: { type: Types.Select, options: 'article, topic, review', default: 'article', index: true },
+    topic: { type: Types.Relationship, ref: 'Post', many: false, filters: { style: 'topic' }, dependsOn: { style: 'article' } },
     relateds: {type: Types.Relationship, ref: 'Post', many: true },
     og_title: { type: String, require: false},
     og_description: { type: String, require: false},
