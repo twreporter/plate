@@ -36,7 +36,7 @@ Image.add({
             options: {}
         }, {
             target: 'tiny',
-            width: 60,
+            width: 150,
             height: null,
             options: {}
         }],
