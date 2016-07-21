@@ -4,6 +4,7 @@ var Types = keystone.Field.Types;
 
 var Post = new keystone.List('Post', {
 	autokey: { path: 'slug', from: 'name', unique: true },
+    defaultSort: '-createdAt',
 });
 
 Post.add({
@@ -24,10 +25,11 @@ Post.add({
 		extended: { type: Types.Html, wysiwyg: true, height: 400 }
 	},
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
+	style: { type: Types.Select, options: 'article, review', default: 'article', index: true },
+    topics: { type: Types.Relationship, ref: 'Topic' },
+    topics_ref: { type: Types.Relationship, ref: 'Topic', hidden: true },
     copyright: { type: Types.Select, options: 'Creative-Commons, Copyrighted', default: 'Copyrighted', index: true },
 	tags: { type: Types.Relationship, ref: 'Tag', many: true },
-	style: { type: Types.Select, options: 'article, topic, review', default: 'article', index: true },
-    topic: { type: Types.Relationship, ref: 'Post', many: false, filters: { style: 'topic' }, dependsOn: { style: 'article' } },
     relateds: {type: Types.Relationship, ref: 'Post', many: true },
     og_title: { type: String, require: false},
     og_description: { type: String, require: false},
@@ -44,4 +46,10 @@ Post.schema.virtual('content.full').get(() => {
 
 transform.toJSON(Post);
 Post.defaultColumns = 'title, name, state|20%, author|20%, categories|20%, publishedDate|20%';
+Post.schema.pre('save', function(next) {
+    if (this.topics) {
+        this.topics_ref = this.topics
+    }
+    next();
+});
 Post.register();
