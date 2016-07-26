@@ -25,7 +25,7 @@ Post.add({
 		extended: { type: Types.Html, wysiwyg: true, height: 400 }
 	},
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
-	style: { type: Types.Select, options: 'article, review', default: 'article', index: true },
+	style: { type: Types.Select, options: 'article, review, photography', default: 'article', index: true },
     topics: { type: Types.Relationship, ref: 'Topic' },
     topics_ref: { type: Types.Relationship, ref: 'Topic', hidden: true },
     copyright: { type: Types.Select, options: 'Creative-Commons, Copyrighted', default: 'Copyrighted', index: true },
