@@ -20,10 +20,8 @@ Post.add({
     extend_byline: { type: String, require: false },
 	heroImage: { type: Types.ImageRelationship, ref: 'Image' },
     heroImageSize: { type: Types.Select, options: 'extend, normal, small', default: 'normal', dependsOn: { heroImage: {'$regex': '.+/i'}}},
-	content: {
-		brief: { type: Types.Html, wysiwyg: true, height: 150 },
-		extended: { type: Types.Html, wysiwyg: true, height: 400 }
-	},
+	brief: { type: Types.Html, wysiwyg: true, height: 150 },
+	content: { type: Types.Html, wysiwyg: true, height: 400 },
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
 	style: { type: Types.Select, options: 'article, review, photography', default: 'article', index: true },
     topics: { type: Types.Relationship, ref: 'Topic' },
