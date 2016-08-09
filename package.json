@@ -24,13 +24,19 @@
     "morgan": "^1.6.1",
     "multer": "^0.1.8",
     "randomkey": "^1.0.0",
-    "react": "^0.14.7",
-    "react-addons-css-transition-group": "^0.14.7",
-    "react-dom": "^0.14.7",
+    "react": "^15.2.0",
+    "react-addons-css-transition-group": "^15.2.0",
+    "react-dom": "^15.2.0",
     "react-domify": "^0.2.4",
     "store-prototype": "^1.1.1",
-    "twreporter-keystone": "^0.4.1",
+    "twreporter-keystone": "^0.5.0",
     "xhr": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "eslint": "^2.11.1",
+    "eslint-config-keystone": "^2.2.0",
+    "eslint-plugin-react": "^5.1.1"
   },
   "engines": {
     "node": ">=0.12.7",
@@ -38,8 +44,10 @@
   },
   "scripts": {
     "start": "node keystone.js",
-    "dev": "KEYSTONE_DEV=true node keystone.js",
-    "dev_windows": "set KEYSTONE_DEV=true&&node keystone.js"
+    "dev": "KEYSTONE_DEV=true PORT=3000 node keystone.js",
+    "dev_windows": "set KEYSTONE_DEV=true&&node keystone.js",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
   },
   "main": "keystone.js"
 }
