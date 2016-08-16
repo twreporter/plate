@@ -24,7 +24,6 @@
     "model-transform": "^2.0.0",
     "morgan": "^1.6.1",
     "multer": "^0.1.8",
-    "node-icu-charset-detector": "^0.2.0",
     "pm2": "^1.1.3",
     "randomkey": "^1.0.0",
     "react": "^15.2.0",
