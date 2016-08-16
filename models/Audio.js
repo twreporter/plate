@@ -1,3 +1,4 @@
+var config = require('../config');
 var keystone = require('twreporter-keystone');
 var transform = require('model-transform');
 var Types = keystone.Field.Types;
@@ -5,6 +6,7 @@ var Types = keystone.Field.Types;
 var Audio = new keystone.List('Audio', {
     map: { name: 'title' }
 });
+var bucket = config['options']['gcs config']['bucket']
 
 Audio.add({
     title: { type: String, required: true, initial: true },
@@ -14,8 +16,7 @@ Audio.add({
         initial: true,
         autoCleanup: true,
         datePrefix: 'YYYYMMDDHHmmss',
-        // TODO move these settings to config
-        bucket: 'twreporter-multimedia',
+        bucket: bucket,
         destination: 'audios/',
         publicRead: true,
     },

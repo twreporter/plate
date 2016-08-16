@@ -1,3 +1,4 @@
+var config = require('../config');
 var extractIPTC = require('../lib/extractIPTC');
 var keystone = require('twreporter-keystone');
 var resizeImage = require('../lib/resizeImage');
@@ -7,6 +8,7 @@ var Types = keystone.Field.Types;
 var Image = new keystone.List('Image', {
     map: { name: 'description' }
 });
+var bucket = config['options']['gcs config']['bucket']
 
 Image.add({
     image: {
@@ -15,7 +17,7 @@ Image.add({
         autoCleanup: true,
         datePrefix: 'YYYYMMDDHHmmss',
         // TODO move these settings to config
-        bucket: 'twreporter-multimedia',
+        bucket: bucket,
         destination: 'images/',
         publicRead: true,
         resize: resizeImage,
