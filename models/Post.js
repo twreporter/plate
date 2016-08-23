@@ -4,7 +4,7 @@ var Types = keystone.Field.Types;
 
 var Post = new keystone.List('Post', {
 	autokey: { path: 'slug', from: 'name', unique: true },
-    defaultSort: '-createdAt',
+    defaultSort: '-publishedDate',
 });
 
 Post.add({
