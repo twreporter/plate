@@ -16,6 +16,8 @@ Contact.add({
 	bio: { type: Types.Markdown, collapse: true },
 });
 
+Contact.relationship({ ref: 'Post', refPath: 'writters' });
+
 transform.toJSON(Contact);
 Contact.defaultColumns = 'name, email, favouriteFlavour, birthday, homepage';
 Contact.register();
