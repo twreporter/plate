@@ -6,7 +6,7 @@ var Tag = new keystone.List('Tag', {
 });
 
 Tag.add({
-	name: { type: String, required: true },
+	name: { label: '標籤名稱', type: String, required: true },
 });
 
 Tag.relationship({ ref: 'Post', refPath: 'tags' });

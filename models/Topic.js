@@ -6,7 +6,7 @@ var Topic = new keystone.List('Topic', {
 });
 
 Topic.add({
-	name: { type: String, required: true },
+	name: { label: '專題名稱', type: String, required: true },
 });
 
 Topic.relationship({ ref: 'Post', refPath: 'topics' });
