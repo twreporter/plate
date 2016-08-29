@@ -23,7 +23,7 @@ Post.add({
   brief: { label: '前言', type: Types.Html, wysiwyg: true, height: 150 },
   content: { label: '內文', type: Types.Html, wysiwyg: true, height: 400 },
   categories: { label: '分類', type: Types.Relationship, ref: 'PostCategory', many: true },
-  style: { label: '文章樣式', type: Types.Select, options: 'article, review, photography', default: 'article', index: true },
+  style: { label: '文章樣式', type: Types.Select, options: 'article, review, photography, interactive', default: 'article', index: true },
   topics: { label: '專題', type: Types.Relationship, ref: 'Topic' },
   topics_ref: { type: Types.Relationship, ref: 'Topic', hidden: true },
   copyright: { label: '版權使用', type: Types.Select, options: 'Creative-Commons, Copyrighted', default: 'Copyrighted', index: true },
