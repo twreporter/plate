@@ -10,7 +10,6 @@ var bucket = config['options']['gcs config']['bucket']
 
 Video.add({
     title: { type: String, required: true, initial: true },
-    description: { type: Types.Html, wysiwyg: true, height: 150 },
     video: {
         type: Types.GcsFile,
         initial: true,
