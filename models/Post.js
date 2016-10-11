@@ -4,7 +4,7 @@ var Types = keystone.Field.Types;
 
 var Post = new keystone.List('Post', {
 	autokey: { path: 'slug', from: 'name', unique: true },
-    defaultSort: '-publishedDate',
+	defaultSort: '-publishedDate',
 });
 
 Post.add({
@@ -38,6 +38,7 @@ Post.add({
   og_image: { label: '分享縮圖', type: Types.ImageRelationship, ref: 'Image' },
   isFeatured: { label: '置頂', type: Boolean, index: true },
   createTime: { type: Types.Datetime, default: Date.now, utc: true },
+  preview: { type: Types.Preview },
 });
 
 Post.relationship({ ref: 'Post', refPath: 'relateds' });
@@ -47,7 +48,7 @@ Post.schema.virtual('content.full').get(() => {
 });
 
 transform.toJSON(Post);
-Post.defaultColumns = 'title, name, state|20%, author|20%, categories|20%, publishedDate|20%';
+Post.defaultColumns = 'title, name, state|20%, author|20%, categories|20%, publishedDate|20%, preview|20%';
 Post.schema.pre('save', function(next) {
     if (this.topics) {
         this.topics_ref = this.topics
