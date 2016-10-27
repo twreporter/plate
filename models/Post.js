@@ -4,6 +4,7 @@ var Types = keystone.Field.Types;
 
 var Post = new keystone.List('Post', {
 	autokey: { path: 'slug', from: 'name', unique: true },
+	track: true,
 	defaultSort: '-publishedDate',
 });
 
@@ -37,7 +38,6 @@ Post.add({
   og_description: { label: '分享說明', type: String, require: false},
   og_image: { label: '分享縮圖', type: Types.ImageRelationship, ref: 'Image' },
   isFeatured: { label: '置頂', type: Boolean, index: true },
-  createTime: { type: Types.Datetime, default: Date.now, utc: true },
   preview: { type: Types.Preview },
 });
 
