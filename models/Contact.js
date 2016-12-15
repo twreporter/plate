@@ -2,7 +2,9 @@ var keystone = require('twreporter-keystone');
 var transform = require('model-transform');
 var Types = keystone.Field.Types;
 
-var Contact = new keystone.List('Contact');
+var Contact = new keystone.List('Contact', {
+  track: true,
+});
 
 Contact.add({
 	name: { label: '作者姓名', type: String, required: true, index: true },
