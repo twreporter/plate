@@ -1,39 +1,80 @@
-# Plate - for Keystone CMS
+# Plate - CMS of 報導者 The Reporter
 
-A KeystoneJS Project with various configurations for development and testing purposes
+This repo is used as the CMS of [報導者 The Reporter](https://www.twreporter.org).
 
-**Note: This project requires Node.js v4.x**
+`Plate` uses [twreporter-keystone](https://github.com/twreporter/keystone) which is based on [keystone](https://github.com/twreporter/keystone).
 
-# Before running Plate
+
+# How to Use Plate ?
+## Prerequisite
+Node version: **node@4.x.x**
 
 Install [gm](https://github.com/aheckmann/gm.git) first.
 We will need that to resize images.
 
-# How to run Plate (TWReporter's fork of KeystoneJS CMS)
+## Clone the repo
 ```
+cd $WORKSPACE/
 git clone https://github.com/twreporter/plate.git
-cd plate
-npm install
-cp config.sample.js config.js // remember to modify the config
+```
 
-// dev
+## Install the dependencies
+```
+cd $WORKSPACE/plate
+npm install
+```
+
+## Create the config.js
+```
+cd $WORKSPACE/plate
+// if you are not sure what kind of config you should use,
+// you can use the example one, and make changes.
+cp config.sample.js config.js 
+```
+
+## Start up the CMS 
+```
+// dev environment
 npm run dev
 
-// prod
+// prod environment
 npm start
 ```
 
-# How to run Plate with Keystone
+# How to Use Plate with Dev Keystone Library?
+If you want to develop `twreporter-keystone`(or your own keystone project) and `plate` at the same time,
+you can follow the commands below to set up your development environment.
+
+## Create npm link of keystone
 ```
-git clone https://github.com/twreporter/keystone.git		
-cd keystone		
-npm link		
-cd ..
+cd $WORKSPACE/ 
+git clone https://github.com/twreporter/keystone.git
+cd $WORKSPACE/keystone	
+npm install
+npm run build
+npm link
+```
+
+## Link keystone to plate
+```
+cd $WORKSPACE/
 git clone https://github.com/twreporter/plate.git
 cd plate
 npm install
 npm link twreporter-keystone
-cp config.sample.js config.js // remember to modify the config
+```
+
+## Create the config.js
+```
+cd $WORKSPACE/plate/
+
+// if you are not sure what kind of config you should use,
+// you can use the example one, and make changes.
+cp config.sample.js config.js 
+```
+## Start up the CMS
+```
+cd $WORKSPACE/plate/
 
 // dev
 npm run dev
