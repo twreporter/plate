@@ -31,7 +31,7 @@
     "react-dom": "^15.2.0",
     "react-domify": "^0.2.4",
     "store-prototype": "^1.1.1",
-    "twreporter-keystone": "0.5.27",
+    "twreporter-keystone": "^0.5.30",
     "xhr": "^2.2.0"
   },
   "devDependencies": {
