@@ -29,10 +29,10 @@ npm install
 cd $WORKSPACE/plate
 // if you are not sure what kind of config you should use,
 // you can use the example one, and make changes.
-cp config.sample.js config.js 
+cp config.sample.js config.js
 ```
 
-## Start up the CMS 
+## Start up the CMS
 ```
 // dev environment
 npm run dev
@@ -47,9 +47,9 @@ you can follow the commands below to set up your development environment.
 
 ## Create npm link of keystone
 ```
-cd $WORKSPACE/ 
+cd $WORKSPACE/
 git clone https://github.com/twreporter/keystone.git
-cd $WORKSPACE/keystone	
+cd $WORKSPACE/keystone
 npm install
 npm run build
 npm link
@@ -70,11 +70,12 @@ cd $WORKSPACE/plate/
 
 // if you are not sure what kind of config you should use,
 // you can use the example one, and make changes.
-cp config.sample.js config.js 
+cp config.sample.js config.js
 ```
 ## Start up the CMS
 ```
 cd $WORKSPACE/plate/
+
 
 // dev
 npm run dev
