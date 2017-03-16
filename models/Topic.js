@@ -20,7 +20,7 @@ Topic.add({
   description: { label: '簡介', type: Types.Html },
   team_description: { label: '製作人員名單', type: Types.Html },
   relateds: { label: '相關文章', type: Types.Relationship, ref: 'Post', many: true },
-  relateds_format: { label: '相關文章版型', type: Types.ArticlesFormat, options: 'in-row, in-column', default:'in-row' },
+  relateds_format: { label: '相關文章版型', type: Types.RelatedsFormat, options: 'in-row, in-column', default:'in-row' },
   relateds_background: { label: '文章區背景色', type: Types.Color },
   leading_image: { label: '首圖', type: Types.ImageRelationship, ref: 'Image' },
   leading_image_portrait: { label: '首圖（Portrait）', type: Types.ImageRelationship, ref: 'Image'},
