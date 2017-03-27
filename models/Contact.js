@@ -8,6 +8,7 @@ var Contact = new keystone.List('Contact', {
 
 Contact.add({
 	name: { label: '作者姓名', type: String, required: true, index: true },
+	job_title: { label: '職稱', type: String },
 	email: { type: Types.Email, initial: true, index: true },
 	image: { label: '照片', type: Types.ImageRelationship, ref: 'Image' },
 	homepage: { label: '個人首頁', type: Types.Url, index: false },
