@@ -19,7 +19,10 @@ Contact.add({
 	bio: { label: '簡介', type: Types.Markdown, collapse: true },
 });
 
-Contact.relationship({ ref: 'Post', refPath: 'writters' });
+Contact.relationship({ path: 'posts', ref: 'Post', refPath: 'writters' });
+Contact.relationship({ path: 'photographs', ref: 'Post', refPath: 'photographers'})
+Contact.relationship({ path: 'designs', ref: 'Post', refPath: 'designers'})
+Contact.relationship({ path: 'engineers', ref: 'Post', refPath: 'engineers'})
 
 transform.toJSON(Contact);
 Contact.defaultColumns = 'name, email, favouriteFlavour, birthday, homepage';
