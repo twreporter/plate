@@ -6463,9 +6463,9 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
 
-twreporter-keystone@0.5.33:
-  version "0.5.33"
-  resolved "https://registry.yarnpkg.com/twreporter-keystone/-/twreporter-keystone-0.5.33.tgz#1ae05c3808d0651527b079146d5a96d5a52cdd44"
+twreporter-keystone@0.5.34:
+  version "0.5.34"
+  resolved "https://registry.yarnpkg.com/twreporter-keystone/-/twreporter-keystone-0.5.34.tgz#42a865b629e7ad1d848ea1f195464058130977de"
   dependencies:
     async "1.5.2"
     asyncdi "1.1.0"
