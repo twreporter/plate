@@ -1,3 +1,6 @@
+### 1.1.3
+- Upgrade twreporter-keystone to 0.5.35 
+
 ### 1.1.2
 - Upgrade twreporter-keystone to 0.5.34 
 
