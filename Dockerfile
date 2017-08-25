@@ -9,6 +9,7 @@ WORKDIR $REACT_SOURCE
 RUN set -x \
     && apt-get update \
     && apt-get install -y git \
+    && apt-get install -y vim \
     && apt-get install -y build-essential \
     && apt-get install -y apt-transport-https \
     && rm -rf /var/lib/apt/lists/*
