@@ -26,8 +26,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: yarn build
-
       - run:
           name: Save pkg version to a file
           command: node ./.circleci/scripts/read-changelog.js > .pkg-version
