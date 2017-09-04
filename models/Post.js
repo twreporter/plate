@@ -23,6 +23,7 @@ Post.add({
   heroImage: { label: '首圖', type: Types.ImageRelationship, ref: 'Image' },
   heroImageSize: { label: '首圖尺寸', type: Types.Select, options: 'extend, normal, small', default: 'normal', dependsOn: { heroImage: {'$regex': '.+/i'}}},
   leading_image_portrait: { label: '首圖（Portrait）', type: Types.ImageRelationship, ref: 'Image'},
+  leading_image_description: { label: '首圖圖說', type: String, require: false },
   brief: { label: '前言', type: Types.Html, wysiwyg: true, height: 150 },
   content: { label: '內文', type: Types.Html, wysiwyg: true, height: 400 },
   categories: { label: '分類', type: Types.Relationship, ref: 'PostCategory', many: true },
