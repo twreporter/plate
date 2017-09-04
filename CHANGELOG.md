@@ -1,3 +1,6 @@
+### 1.1.5
+- Update Dockerfile. Install more dependencies like imagemagick and graphicsmagick
+
 ### 1.1.4
 - Update models/Post.js. Add leading_image_description field
 
