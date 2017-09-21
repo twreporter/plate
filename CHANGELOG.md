@@ -1,3 +1,6 @@
+### 1.1.6
+- Resize gif image correctly 
+
 ### 1.1.5
 - Update Dockerfile. Install more dependencies like imagemagick and graphicsmagick
 
