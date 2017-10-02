@@ -28,9 +28,7 @@ Post.add({
   content: { label: '內文', type: Types.Html, wysiwyg: true, height: 400 },
   categories: { label: '分類', type: Types.Relationship, ref: 'PostCategory', many: true },
   style: { label: '文章樣式', type: Types.Select, options: 'article, review, photography, interactive, longform', default: 'article', index: true },
-  bookmark: { label: '頁籤名稱', type: String, require: true, default: 'untitled', dependsOn: { '$or': { style: ['longform', 'interactive'] } } },
-  bookmark_order: { label: '頁籤順序', type: Number, require: true, default: 1, dependsOn: { '$or': { style: ['longform', 'interactive'] } } },
-  related_bookmarks: { label: '相關頁籤', type: Types.Relationship, ref: 'Post', many: true, dependsOn: { '$or': { style: ['longform', 'interactive'] } } },
+  theme: { label: '文章主題樣式', type: Types.Relationship, ref: 'Theme' },
   topics: { label: '專題', type: Types.Relationship, ref: 'Topic' },
   topics_ref: { type: Types.Relationship, ref: 'Topic', hidden: true },
   copyright: { label: '版權使用', type: Types.Select, options: 'Creative-Commons, Copyrighted', default: 'Copyrighted', index: true },
@@ -39,6 +37,7 @@ Post.add({
   og_title: { label: '分享標題', type: String, require: false},
   og_description: { label: '分享說明', type: String, require: false},
   og_image: { label: '分享縮圖', type: Types.ImageRelationship, ref: 'Image' },
+  is_external: { label: '另開新頁', type: Boolean, index: true },
   isFeatured: { label: '置頂', type: Boolean, index: true },
   preview: { type: Types.Preview },
 });
