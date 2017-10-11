@@ -1,6 +1,6 @@
 var config = require('../config');
 var extractIPTC = require('../lib/extractIPTC');
-var keystone = require('twreporter-keystone');
+var keystone = require('@twreporter/keystone');
 var resizeImage = require('../lib/resizeImage');
 var transform = require('model-transform');
 var Types = keystone.Field.Types;

@@ -1,3 +1,6 @@
+### 1.2.0
+- Add Theme model and it will belong to Post model
+
 ### 1.1.6
 - Resize gif image correctly 
 
