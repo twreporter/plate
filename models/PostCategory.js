@@ -1,4 +1,4 @@
-var keystone = require('twreporter-keystone');
+var keystone = require('@twreporter/keystone');
 var transform = require('model-transform');
 
 var PostCategory = new keystone.List('PostCategory', {
