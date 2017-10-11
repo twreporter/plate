@@ -1,6 +1,6 @@
 var babelify = require('babelify');
 var browserify = require('browserify-middleware');
-var keystone = require('twreporter-keystone');
+var keystone = require('@twreporter/keystone');
 
 var importRoutes = keystone.importer(__dirname);
 
