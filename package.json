@@ -3,6 +3,7 @@
   "version": "1.1.6",
   "private": true,
   "dependencies": {
+    "@twreporter/keystone": "^0.6.0",
     "babel-core": "^6.4.5",
     "babel-plugin-transform-object-assign": "^6.3.13",
     "babel-plugin-transform-object-rest-spread": "^6.3.13",
@@ -31,7 +32,6 @@
     "react-dom": "^15.2.0",
     "react-domify": "^0.2.4",
     "store-prototype": "^1.1.1",
-    "twreporter-keystone": "0.5.36",
     "xhr": "^2.2.0"
   },
   "devDependencies": {
