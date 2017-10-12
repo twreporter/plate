@@ -2,7 +2,7 @@ FROM node:4.2-slim
 
 RUN groupadd user && useradd --create-home --home-dir /home/user -g user user
 
-ENV REACT_SOURCE /usr/src/react
+ENV REACT_SOURCE /usr/src/react/
 ENV TZ=Asia/Taipei
 WORKDIR $REACT_SOURCE
 
@@ -32,8 +32,10 @@ RUN pm2 set pm2-logrotate:retain 7
 RUN pm2 set pm2-logrotate:compress true
 RUN pm2 set pm2-logrotate:rotateInterval '0 3 * * *'
 
-# Add built source files
-ADD . $REACT_SOURCE
+# Copy source files
+COPY . $REACT_SOURCE
+RUN cd $REACT_SOURCE
+RUN npm install 
 
 # Set time zone
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
