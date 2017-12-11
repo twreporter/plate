@@ -61,7 +61,7 @@ cd $WORKSPACE/
 git clone https://github.com/twreporter/plate.git
 cd plate
 npm install
-npm link twreporter-keystone
+npm link @twreporter/keystone
 ```
 
 ## Create the config.js
