@@ -2,6 +2,7 @@
 - Update package name in README.md
 - Remove unexist default columns
 - Add `secretEnabled` and `secretKey` to `User` model
+- Upgrade @twreporter/keystone to 0.6.2
 
 ### 1.2.0
 - Add Theme model and it will belong to Post model
