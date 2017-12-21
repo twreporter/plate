@@ -1,3 +1,6 @@
+### 1.2.1
+- Upgrade @twreporter/keystone to 0.6.2
+
 ### 1.2.0
 - Add Theme model and it will belong to Post model
 
