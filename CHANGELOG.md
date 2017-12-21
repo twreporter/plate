@@ -1,4 +1,7 @@
 ### 1.2.1
+- Update package name in README.md
+- Remove unexist default columns
+- Add `secretEnabled` and `secretKey` to `User` model
 - Upgrade @twreporter/keystone to 0.6.2
 
 ### 1.2.0

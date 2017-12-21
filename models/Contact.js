@@ -25,5 +25,5 @@ Contact.relationship({ path: 'designs', ref: 'Post', refPath: 'designers'})
 Contact.relationship({ path: 'engineers', ref: 'Post', refPath: 'engineers'})
 
 transform.toJSON(Contact);
-Contact.defaultColumns = 'name, email, favouriteFlavour, birthday, homepage';
+Contact.defaultColumns = 'name, email';
 Contact.register();
