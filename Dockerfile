@@ -1,4 +1,4 @@
-FROM node:4.2-slim
+FROM node:4.4-slim
 
 RUN groupadd user && useradd --create-home --home-dir /home/user -g user user
 
@@ -27,10 +27,10 @@ RUN buildDeps=' \
 
 # Install PM2
 RUN npm install -g pm2
-# RUN pm2 install pm2-logrotate
-# RUN pm2 set pm2-logrotate:retain 7
-# RUN pm2 set pm2-logrotate:compress true
-# RUN pm2 set pm2-logrotate:rotateInterval '0 3 * * *'
+RUN pm2 install pm2-logrotate
+RUN pm2 set pm2-logrotate:retain 7
+RUN pm2 set pm2-logrotate:compress true
+RUN pm2 set pm2-logrotate:rotateInterval '0 3 * * *'
 
 # Copy source files
 COPY . $REACT_SOURCE
