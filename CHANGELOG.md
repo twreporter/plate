@@ -1,3 +1,6 @@
+### 1.2.2
+- Upgrade @twreporter/keystone to 0.6.3 
+
 ### 1.2.1
 - Update package name in README.md
 - Remove unexist default columns
