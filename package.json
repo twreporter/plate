@@ -1,9 +1,9 @@
 {
   "name": "keystone-plate",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "private": true,
   "dependencies": {
-    "@twreporter/keystone": "^0.6.2",
+    "@twreporter/keystone": "^0.6.3",
     "babel-core": "^6.4.5",
     "babel-plugin-transform-object-assign": "^6.3.13",
     "babel-plugin-transform-object-rest-spread": "^6.3.13",
