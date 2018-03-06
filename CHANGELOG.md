@@ -1,3 +1,6 @@
+### 1.2.3
+- Resize image in 400px width
+
 ### 1.2.2
 - Upgrade @twreporter/keystone to 0.6.3 
 
