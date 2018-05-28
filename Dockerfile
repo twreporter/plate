@@ -27,7 +27,7 @@ RUN buildDeps=' \
 
 # Install PM2
 RUN npm install -g pm2
-RUN pm2 install pm2-logrotate
+RUN pm2 install pm2-logrotate@2.2.0
 RUN pm2 set pm2-logrotate:retain 7
 RUN pm2 set pm2-logrotate:compress true
 RUN pm2 set pm2-logrotate:rotateInterval '0 3 * * *'
