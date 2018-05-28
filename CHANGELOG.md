@@ -1,3 +1,10 @@
+### 1.2.4 
+- Downgrade pm2-logrotate to 2.2.0 since Node version(4.x) is not supporting pm2-logrotate@2.4.0 
+- Upgrade @twreporter/keystone to 0.6.4
+
+### 1.2.3
+- Resize image in 400px width
+
 ### 1.2.2
 - Upgrade @twreporter/keystone to 0.6.3 
 
