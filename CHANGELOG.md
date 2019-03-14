@@ -1,3 +1,6 @@
+### 1.2.6
+- Relpace `theme` by certain article style. Add `article:fullscreen:normal` and `article:fullscreen:dark` styles
+
 ### 1.2.5
 - Update @twreporter/keystone@^0.6.3 to @0.7.0
 
