@@ -1,3 +1,9 @@
+### 1.2.6
+- Relpace `theme` by certain article style. Add `article:fullscreen:normal` and `article:fullscreen:dark` styles
+
+### 1.2.5
+- Update @twreporter/keystone@^0.6.3 to @0.7.0
+
 ### 1.2.4 
 - Downgrade pm2-logrotate to 2.2.0 since Node version(4.x) is not supporting pm2-logrotate@2.4.0 
 - Upgrade @twreporter/keystone to 0.6.4
