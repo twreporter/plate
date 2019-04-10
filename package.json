@@ -1,6 +1,6 @@
 {
   "name": "keystone-plate",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "private": true,
   "dependencies": {
     "@twreporter/keystone": "0.7.0",

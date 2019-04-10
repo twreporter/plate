@@ -1,3 +1,6 @@
+### 1.2.7
+- Add four new article style, including `article:v2:default`, `article:v2:green`, `article:v2:yellow` and `article:v2:pink`.
+
 ### 1.2.6
 - Relpace `theme` by certain article style. Add `article:fullscreen:normal` and `article:fullscreen:dark` styles
 
