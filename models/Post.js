@@ -15,8 +15,6 @@ var articleStyles = [
   'interactive',
   'article:v2:default',
   'article:v2:pink',
-  'article:v2:green',
-  'article:v2:yellow',
   'article:fullscreen:normal',
   'article:fullscreen:dark',
   'longform',
