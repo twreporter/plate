@@ -1,3 +1,6 @@
+### 1.2.8
+- Remove `article:v2:green` and `article:v2:yellow` article styles
+
 ### 1.2.7
 - Add four new article style, including `article:v2:default`, `article:v2:green`, `article:v2:yellow` and `article:v2:pink`.
 
