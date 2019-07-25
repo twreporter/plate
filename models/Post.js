@@ -8,16 +8,20 @@ var Post = new keystone.List('Post', {
 	defaultSort: '-publishedDate',
 });
 
+var heroImageSizes = [
+  'extend',
+  'normal',
+  'fullscreen',
+  'small',
+]
+
 var articleStyles = [
-  'article',
-  'review',
-  'photography',
-  'interactive',
   'article:v2:default',
   'article:v2:pink',
-  'article:fullscreen:normal',
-  'article:fullscreen:dark',
+  'article:v2:photo',
   'longform',
+  'review',
+  'interactive',
 ]
 
 Post.add({
@@ -33,7 +37,7 @@ Post.add({
   extend_byline: { label: '作者（其他）', type: String, require: false },
   leading_video: { label: '置頂影片', type: Types.Relationship, ref: 'Video'},
   heroImage: { label: '首圖', type: Types.ImageRelationship, ref: 'Image' },
-  heroImageSize: { label: '首圖尺寸', type: Types.Select, options: 'extend, normal, small', default: 'normal', dependsOn: { heroImage: {'$regex': '.+/i'}}},
+  heroImageSize: { label: '首圖尺寸', type: Types.Select, options: heroImageSizes.join(','), default: 'normal', dependsOn: { heroImage: {'$regex': '.+/i'}}},
   leading_image_portrait: { label: '首圖（Portrait）', type: Types.ImageRelationship, ref: 'Image'},
   leading_image_description: { label: '首圖圖說', type: String, require: false },
   brief: { label: '前言', type: Types.Html, wysiwyg: true, height: 150 },
