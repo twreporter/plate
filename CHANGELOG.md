@@ -1,3 +1,10 @@
+### 1.2.9
+#### models/Post.js
+- heroImageSize: add `fullscreen` option
+- style: 
+  - remove `article`, `photography`, `article:fullscreen:dark` and `article:fullscreen:normal`
+  - add `article:v2:photo`
+
 ### 1.2.8
 - Remove `article:v2:green` and `article:v2:yellow` article styles
 
