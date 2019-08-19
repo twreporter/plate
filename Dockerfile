@@ -19,7 +19,7 @@ RUN pm2 set pm2-logrotate:rotateInterval '0 3 * * *'
 
 # Copy source files
 COPY . .
-RUN yarn install --proudction --ignore-engines --frozen-lockfile
+RUN yarn install --ignore-engines --frozen-lockfile
 
 # Set time zone
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
