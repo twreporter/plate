@@ -1,3 +1,28 @@
+# Released
+## 2.0.0(Current), 2019-10-23
+### Notable Changes
+- major updates:
+  - nodejs version: ^4.4.0 -> ^10.0.0 
+  - package dep manager: npm -> yarn
+- build: 
+  - refine Dockerfile
+  - integration with CircleCI
+- dev:
+  - create config.js on demand
+- code refactor:
+  - import used lodash functions without importing all
+
+### Commits
+- [[a47bc44](https://github.com/twreporter/plate/commit/a47bc440329125205e0082e70f7b67af1757c2e0)] - integration with CircleCI
+- [[ab7ec4f](https://github.com/twreporter/plate/commit/ab7ec4f8a4924f98fe0d98cdb264da8acf812ae4)] - update package.json#engines. restrict node engine >=10.0.0(nickhsine)
+- [[682a531](https://github.com/twreporter/plate/commit/682a5318f4f75c0b6ed380887096726b143e74b2)] - enhance developing process(nickhsine)
+- [[449d976](https://github.com/twreporter/plate/commit/449d976e5a5816b204c158ab808f058875cc253e)] - upgrade @twreporter/keystone to 0.7.1(nickhsine)
+- [[b27a131](https://github.com/twreporter/plate/commit/b27a1312d1a360483175e858575a7ecb270e2c92)] - fix typo in lib/extractIPTC.js
+- [[7ebf6c6](https://github.com/twreporter/plate/commit/7ebf6c623b272b75aa0791e883dbfb96a8a2a50d)] - add dep babel-preset-stage-0(nickhsine)
+- [[c76ba09](https://github.com/twreporter/plate/commit/c76ba09e116c6f4904186aaa6b9f7ad34e3a3194)] - add yarn.lock(nickhsine)
+- [[491b950](https://github.com/twreporter/plate/commit/491b95081dc6319e1019ede91add25209aa61c0a)] - update @twreporter/keystone in package.json#dependencies(nickhsine)
+- [[f62075b](https://github.com/twreporter/plate/commit/f62075b99bcfd69020c8761a49c015adec9ca35a)] - update lib/extractIPTC.js: only import lodash/get(nickhsine)
+
 ### 1.2.9
 #### models/Post.js
 - heroImageSize: add `fullscreen` option
