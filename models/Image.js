@@ -37,6 +37,11 @@ Image.add({
             height: null,
             options: {}
         }, {
+            target: 'w400',
+            width: 400,
+            height: null,
+            options: {}
+        }, {
             target: 'tiny',
             width: 150,
             height: null,
