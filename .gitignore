@@ -1,6 +1,9 @@
 # Ignore config for keystone
 config.js
 
+# google cloud platform service account
+gcskeyfile.json
+
 # Logs
 logs
 *.log

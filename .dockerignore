@@ -1,0 +1,15 @@
+# Directories
+.git
+
+# Files
+*.md
+*.txt
+*.png
+Makefile
+makefile
+package.json
+yarn.lock
+LICENSE
+Dockerfile
+build-config.js
+Procfile

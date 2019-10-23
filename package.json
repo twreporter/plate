@@ -3,7 +3,7 @@
   "version": "1.2.7",
   "private": true,
   "dependencies": {
-    "@twreporter/keystone": "0.7.1-beta.5",
+    "@twreporter/keystone": "0.7.1",
     "babel-core": "^6.4.5",
     "babel-plugin-transform-object-assign": "^6.3.13",
     "babel-plugin-transform-object-rest-spread": "^6.3.13",
@@ -11,7 +11,6 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.24.1",
     "babelify": "^7.2.0",
-    "better-npm-run": "0.0.10",
     "blacklist": "^1.1.2",
     "body-parser": "^1.14.2",
     "browserify-middleware": "^7.0.0",
@@ -41,32 +40,13 @@
     "eslint-plugin-react": "^5.1.1"
   },
   "engines": {
-    "node": ">=0.12.7",
-    "npm": ">=2.14.2"
+    "node": ">=10.*"
   },
   "scripts": {
-    "start": "better-npm-run start-prod",
-    "dev": "better-npm-run start-dev",
-    "dev_windows": "set KEYSTONE_DEV=true&&node keystone.js",
+    "start": "make start",
+    "dev": "make dev",
     "lint": "eslint .",
-    "lint-fix": "eslint . --fix",
-    "validate": "npm ls"
-  },
-  "betterScripts": {
-    "start-prod": {
-      "command": "pm2 start keystone.js --name keystone",
-      "env": {
-        "PORT": 3000
-      }
-    },
-    "start-dev": {
-      "command": "node keystone.js",
-      "env": {
-        "NODE_ENV": "development",
-        "KEYSTONE_DEV": true,
-        "PORT": 3002
-      }
-    }
+    "lint-fix": "eslint . --fix"
   },
   "main": "keystone.js"
 }
