@@ -9,17 +9,54 @@ var Post = new keystone.List('Post', {
 });
 
 var heroImageSizes = [
-  'extend',
-  'normal',
-  'fullscreen',
-  'small',
+  {
+    label: '大',
+    value: 'extend',
+  }, {
+    label: '中',
+    value: 'normal',
+  }, {
+    label: '全螢幕',
+    value: 'fullscreen',
+  }, {
+    label: '小',
+    value: 'small',
+  },
 ]
 
-var articleStyles = [
-  'article:v2:default',
-  'article:v2:pink',
-  'article:v2:photo',
-  'interactive',
+var articleStyles = [{
+  label: '預設版型',
+  value: 'article:v2:default',
+}, {
+  label: '粉紅版型',
+  value: 'article:v2:pink',
+}, {
+  label: '影像版型',
+  value:'article:v2:photo',
+}, {
+  label: '多媒體',
+  value: 'interactive',
+}, {
+  label: 'Longform',
+  value: 'longform',
+  disabled: true,
+}, {
+  label: 'Review',
+  value: 'review',
+  disabled: true,
+}, {
+  label: 'Article',
+  value: 'article',
+  disabled: true,
+}, {
+  label: 'Article Full Screen Dark',
+  value: 'article:fullscreen:dark',
+  disabled: true,
+}, {
+  label: 'Article Full Screen Normal',
+  value: 'article:fullscreen:normal',
+  disabled: true,
+}
 ]
 
 Post.add({
@@ -35,13 +72,13 @@ Post.add({
   extend_byline: { label: '作者（其他）', type: String, require: false },
   leading_video: { label: '置頂影片', type: Types.Relationship, ref: 'Video'},
   heroImage: { label: '首圖', type: Types.ImageRelationship, ref: 'Image' },
-  heroImageSize: { label: '首圖尺寸', type: Types.Select, options: heroImageSizes.join(','), default: 'normal', dependsOn: { heroImage: {'$regex': '.+/i'}}},
+  heroImageSize: { label: '首圖尺寸', type: Types.Select, options: heroImageSizes, default: 'normal', dependsOn: { heroImage: {'$regex': '.+/i'}}},
   leading_image_portrait: { label: '首圖（Portrait）', type: Types.ImageRelationship, ref: 'Image'},
   leading_image_description: { label: '首圖圖說', type: String, require: false },
   brief: { label: '前言', type: Types.Html, wysiwyg: true, height: 150 },
   content: { label: '內文', type: Types.Html, wysiwyg: true, height: 400 },
   categories: { label: '分類', type: Types.Relationship, ref: 'PostCategory', many: true },
-  style: { label: '文章樣式', type: Types.Select, options: articleStyles.join(','), default: 'article:v2:default', index: true },
+  style: { label: '文章樣式', type: Types.Select, options: articleStyles, default: 'article:v2:default', index: true },
   topics: { label: '專題', type: Types.Relationship, ref: 'Topic' },
   topics_ref: { type: Types.Relationship, ref: 'Topic', hidden: true },
   copyright: { label: '版權使用', type: Types.Select, options: 'Creative-Commons, Copyrighted', default: 'Copyrighted', index: true },
