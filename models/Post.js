@@ -19,8 +19,6 @@ var articleStyles = [
   'article:v2:default',
   'article:v2:pink',
   'article:v2:photo',
-  'longform',
-  'review',
   'interactive',
 ]
 
