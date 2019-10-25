@@ -17,7 +17,7 @@ build-config:
 	@node build-config
 
 build-config-if-needed:
-ifeq (,$(wildcard ./conifg.js))
+ifeq (,$(wildcard ./config.js))
 	@echo "build config on demand"	
 	@node build-config
 endif
@@ -32,4 +32,4 @@ start:build-config-if-needed
 clean:
 	@rm ./config.js
 
-.PHONY: help dev start build-config clean
+.PHONY: help dev start build-config clean build-config-if-needed
