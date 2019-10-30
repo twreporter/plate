@@ -1,4 +1,8 @@
 # Released
+## 2.0.2, 2019-10-30
+### Commits
+- [[59d4707](https://github.com/twreporter/plate/commit/59d47077edf5a2d033ce359146a29d7060b4bc63)] - upgrade @twreporter/keystone from 0.7.1 to 0.7.2
+
 ## 2.0.1, 2019-10-25
 ### Notable Changes
 - models/post:
@@ -7,7 +11,7 @@
   - add label on each option
 
 ### Commits
-- [[171c11](https://github.com/twreporter/plate/commit/171c11be9173e8504f5f2fba143e94509a7009ca)] - update models/Post.js(nickhsine)
+- [[171c11b](https://github.com/twreporter/plate/commit/171c11be9173e8504f5f2fba143e94509a7009ca)] - update models/Post.js(nickhsine)
 - [[1354d0f](https://github.com/twreporter/plate/commit/1354d0f8c98ee1c6fbe44656d9619e919e7c5164)] - update makefile: fix typo(nickhsine)
 - [[8918be9](https://github.com/twreporter/plate/commit/8918be924f2ffea5a2ff7d64bf4b9b28396f181a)] - remove old styles: longform and review from models/Post.js(nickhsine)
 - [[cf07272](https://github.com/twreporter/plate/commit/cf07272a44d6b0c84f6cafe5f70699814b304ba5)] - bug fix: can not create new post due to default style is not specified(nickhsine)
