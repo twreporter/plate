@@ -1,4 +1,20 @@
-# Released
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [2.0.3](https://github.com/YuCJ/plate/compare/v2.0.2...v2.0.3) (2019-11-21)
+
+
+### Bug Fixes
+
+* upgrade dependency ([5c3e1d6](https://github.com/YuCJ/plate/commit/5c3e1d648896331dd46f5c319f65b4a16da818e3))
+
+
+### Chores
+
+* add commitlint ([5423d6e](https://github.com/YuCJ/plate/commit/5423d6e55b16637b21723886ed5dc1a9c4a9f419))
+* add standard-version ([0bf5f36](https://github.com/YuCJ/plate/commit/0bf5f36e45633b5f792beeda86db3b56a7ff2110))
+
 ## 2.0.2, 2019-10-30
 ### Commits
 - [[59d4707](https://github.com/twreporter/plate/commit/59d47077edf5a2d033ce359146a29d7060b4bc63)] - upgrade @twreporter/keystone from 0.7.1 to 0.7.2
