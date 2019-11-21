@@ -37,7 +37,8 @@
     "babel-eslint": "^6.1.2",
     "eslint": "^2.11.1",
     "eslint-config-keystone": "^2.2.0",
-    "eslint-plugin-react": "^5.1.1"
+    "eslint-plugin-react": "^5.1.1",
+    "standard-version": "^7.0.1"
   },
   "engines": {
     "node": ">=10.*"
@@ -46,7 +47,8 @@
     "start": "make start",
     "dev": "make dev",
     "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
+    "lint-fix": "eslint . --fix",
+    "release": "standard-version"
   },
   "main": "keystone.js"
 }
