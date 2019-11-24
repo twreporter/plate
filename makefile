@@ -12,6 +12,9 @@ help:
 	@echo "$(P) make build-conifg"
 	@echo "to build config on demand"
 
+build-keystone-plugin:
+	@echo "build keystone plugin JS bundle"
+	NODE_ENV=production SOCKETIO_PORT=$(SOCKETIO_PORT) node build-keystone-plugin.js
 
 build-config:
 	@echo "build conifg on demand"
@@ -33,4 +36,4 @@ start:build-config-if-needed
 clean:
 	@rm ./config.js
 
-.PHONY: help dev start build-config clean build-config-if-needed
+.PHONY: help dev start build-config clean build-config-if-needed build-keystone-plugin
