@@ -2,6 +2,7 @@ P="\\033[32m[+]\\033[0m"
 
 MONGODB?=mongodb://localhost:27017/plate 
 KEYSTONE_DEV=true
+SOCKETIO_PORT?=3030
 
 help:
 	@echo "$(P) make dev"
@@ -27,7 +28,7 @@ dev:build-config-if-needed
 	NODE_ENV=development KEYSTONE_DEV=$(KEYSTONE_DEV) node keystone
 
 start:build-config-if-needed
-	NODE_ENV=production node keystone
+	NODE_ENV=production SOCKETIO_PORT=$(SOCKETIO_PORT) node keystone
 
 clean:
 	@rm ./config.js
