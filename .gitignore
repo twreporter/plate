@@ -1,3 +1,6 @@
+# keystone-plugin bundle
+public/keystone-plugin.bundle.js
+
 # Ignore config for keystone
 config.js
 

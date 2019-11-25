@@ -17,5 +17,5 @@ RUN mv config-for-docker-build.js config.js
 # Set time zone
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-EXPOSE 3000
-CMD NODE_ENV=production node keystone.js
+EXPOSE 3000 3030
+CMD NODE_ENV=production SOCKETIO_PORT=3030 node keystone.js

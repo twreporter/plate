@@ -11,13 +11,23 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      # Download and cache dependencies for running
+      # Download and cache the dependencies for building
+      - restore_cache:
+          keys:
+          - v1-dependencies-build-{{ checksum "yarn.lock" }}
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-build-{{ checksum "yarn.lock" }}
+      - run: SOCKETIO_PORT=3030 make build-keystone-plugin
+      - run: rm -rf node_modules
+
+      # Download and cache the dependencies for running
       - restore_cache:
           keys:
             - v1-dependencies-runtime-{{ checksum "yarn.lock" }}
-
       - run: yarn install --production
-
       - save_cache:
           paths:
             - node_modules
