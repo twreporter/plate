@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 2.1.0-rc.1 (2019-11-25)
+
+### Bug Fixes
+* fix: fix socketio connection refuse problem ([9681436](https://github.com/twreporter/plate/commit/9681436b4fcb91920a9432bd7c15d0ad4cc7ba72))
+
+
 ## [2.1.0-rc.0](https://github.com/YuCJ/plate/compare/v2.0.3...v2.1.0-rc.0) (2019-11-25)
 
 
