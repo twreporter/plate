@@ -22,4 +22,14 @@ buildSocketIO(server, {
     'https://test-keystone-editor.twreporter.org'
   ],
 })
-server.listen(process.env.SOCKETIO_PORT);
+
+const socketioPort = process.env.SOCKETIO_PORT || 3030
+server.listen(socketioPort, (err) => {
+  console.log('------------------------------------------------')
+  if (err) {
+    console.error(err) // eslint-disable-line no-console
+  }
+
+  console.info('Keystone Plugin SocketIO is ready on ', socketioPort, ' port') // eslint-disable-line no-console
+  console.log('------------------------------------------------')
+});
