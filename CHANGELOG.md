@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0-0](https://github.com/nickhsine/keystone-test-project/compare/v2.0.2...v3.0.0-0) (2019-11-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* start a Socket.IO server in process
+
+### Features
+
+* build and serve keystone-plugin bundle ([67dcd28](https://github.com/nickhsine/keystone-test-project/commit/67dcd282066c2d9dd508586c0a02eba07a52ca3d))
+* start a Socket.ID server in process ([a1b6912](https://github.com/nickhsine/keystone-test-project/commit/a1b6912c17afa456b3098567bfdee3d93c520166))
+
+
+### Bug Fixes
+
+* fix socketio connection refuse problem ([9681436](https://github.com/nickhsine/keystone-test-project/commit/9681436b4fcb91920a9432bd7c15d0ad4cc7ba72))
+* upgrade dependency ([5c3e1d6](https://github.com/nickhsine/keystone-test-project/commit/5c3e1d648896331dd46f5c319f65b4a16da818e3))
+
+
+### Chores
+
+* **release:** 2.1.0-rc.0 ([8978280](https://github.com/nickhsine/keystone-test-project/commit/89782809157bcedb5dc4e2127c0c96f0c28dd500))
+* add commitlint ([5423d6e](https://github.com/nickhsine/keystone-test-project/commit/5423d6e55b16637b21723886ed5dc1a9c4a9f419))
+* add keystone-plugin deps ([02593d0](https://github.com/nickhsine/keystone-test-project/commit/02593d091c017904e86694f91afe6a46f62f2f49))
+* add standard-version ([0bf5f36](https://github.com/nickhsine/keystone-test-project/commit/0bf5f36e45633b5f792beeda86db3b56a7ff2110))
+* bump @twreporter/keystone version ([1765482](https://github.com/nickhsine/keystone-test-project/commit/1765482a4fc62d2904b8dc6d9ebce439454309ce))
+* update .gitignore ([cd381ef](https://github.com/nickhsine/keystone-test-project/commit/cd381ef366e41940d87232409971f04b094d2a49))
+* update ci config and Dockerfile ([5e5825b](https://github.com/nickhsine/keystone-test-project/commit/5e5825becc093a0807db3b0e1c5346351046a19f))
+* **release:** 2.0.3 ([36f9a53](https://github.com/nickhsine/keystone-test-project/commit/36f9a5341537f0ea5f225536065c676f2b6bd140))
+
 ## [2.1.0-rc.0](https://github.com/YuCJ/plate/compare/v2.0.3...v2.1.0-rc.0) (2019-11-25)
 
 
