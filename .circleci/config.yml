@@ -20,7 +20,8 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-build-{{ checksum "yarn.lock" }}
-      - run: SOCKETIO_PORT=3030 make build-keystone-plugin
+      # keystone-nginx will proxy port 443 to port 3030
+      - run: CLIENT_SOCKETIO_PORT=443 make build-keystone-plugin
       - run: rm -rf node_modules
 
       # Download and cache the dependencies for running
