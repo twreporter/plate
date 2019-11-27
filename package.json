@@ -1,7 +1,11 @@
 {
   "name": "keystone-plate",
-  "version": "2.1.0-rc.2",
+  "version": "3.0.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/twreporter/plate"
+  },
   "dependencies": {
     "@twreporter/keystone": "0.8.0-rc.0",
     "@twreporter/keystone-plugin-socketio": "0.0.0-rc.1",
