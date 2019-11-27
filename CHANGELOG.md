@@ -2,50 +2,39 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## 2.1.0-rc.2 (2019-11-26)
+## [3.0.0](https://github.com/twreporter/plate/compare/v2.0.3...v3.0.0) (2019-11-27)
+
+### Notable Changes
+- features:
+  - build keystone-plugin bundles by integrating circleCI
+  - start keystone-plugin server to serve keystone-plugin bundle
+  - start keystone-plugin server to handle socketio connection
+
+### Commits
+* build and serve keystone-plugin bundle ([67dcd28](https://github.com/twreporter/plate/commit/67dcd282066c2d9dd508586c0a02eba07a52ca3d))
+* start a Socket.IO server in process ([a1b6912](https://github.com/twreporter/plate/commit/a1b6912c17afa456b3098567bfdee3d93c520166))
+* fix socketio connection refuse problem ([9681436](https://github.com/twreporter/plate/commit/9681436b4fcb91920a9432bd7c15d0ad4cc7ba72))
+* specify socketio connection host and protocol along with port ([b6aa513](https://github.com/twreporter/plate/commit/b6aa513b21165ea94022fe87cb953384918724d8))
+* add package.json#repository info ([a9923d2](https://github.com/twreporter/plate/commit/a9923d221fca8e6fa47281e70aa276139029db99))
+* add keystone-plugin deps ([02593d0](https://github.com/twreporter/plate/commit/02593d091c017904e86694f91afe6a46f62f2f49))
+* bump @twreporter/keystone version ([1765482](https://github.com/twreporter/plate/commit/1765482a4fc62d2904b8dc6d9ebce439454309ce))
+* update .gitignore ([cd381ef](https://github.com/twreporter/plate/commit/cd381ef366e41940d87232409971f04b094d2a49))
+* update ci config and Dockerfile ([5e5825b](https://github.com/twreporter/plate/commit/5e5825becc093a0807db3b0e1c5346351046a19f))
+* **release:** 2.1.0-rc.0 ([8978280](https://github.com/twreporter/plate/commit/89782809157bcedb5dc4e2127c0c96f0c28dd500))
+* **release:** 2.1.0-rc.1 ([f2eae8e](https://github.com/twreporter/plate/commit/f2eae8ef94311ffb2476c4f2fb8e873e4f8ffbc4))
+* **release:** 2.1.0-rc.2 ([02896c0](https://github.com/twreporter/plate/commit/02896c06ef954e6c2a3aa1c30873b2376c2a7b8b))
+
+### [2.0.3](https://github.com/twreporter/plate/compare/v2.0.2...v2.0.3) (2019-11-21)
 
 ### Bug Fixes
-* fix: specify socketio connection host and protocol along with port ([b6aa513](https://github.com/twreporter/plate/commit/b6aa513b21165ea94022fe87cb953384918724d8))
 
-
-## 2.1.0-rc.1 (2019-11-25)
-
-### Bug Fixes
-* fix: fix socketio connection refuse problem ([9681436](https://github.com/twreporter/plate/commit/9681436b4fcb91920a9432bd7c15d0ad4cc7ba72))
-
-
-## [2.1.0-rc.0](https://github.com/YuCJ/plate/compare/v2.0.3...v2.1.0-rc.0) (2019-11-25)
-
-
-### ⚠ BREAKING CHANGES
-
-* start a Socket.IO server in process
-
-### Features
-
-* build and serve keystone-plugin bundle ([33baa89](https://github.com/YuCJ/plate/commit/33baa8916e7720f3138d5e7246e377493bdbde44))
-* start a Socket.ID server in process ([9231475](https://github.com/YuCJ/plate/commit/923147535aaae7a9c7b8abfb7f45a8cb4189a731))
+* upgrade dependency ([5c3e1d6](https://github.com/twreporter/plate/commit/5c3e1d648896331dd46f5c319f65b4a16da818e3))
 
 
 ### Chores
 
-* add keystone-plugin deps ([910c5d4](https://github.com/YuCJ/plate/commit/910c5d46cfe5a39026a72a3e2338503c43777fff))
-* bump @twreporter/keystone version ([500371b](https://github.com/YuCJ/plate/commit/500371bf13c0367877c2da5a882734406ff595e0))
-* update .gitignore ([62b28c3](https://github.com/YuCJ/plate/commit/62b28c3807c86bba970282d3004ca0f2fb756b42))
-* update ci config and Dockerfile ([ee2e52a](https://github.com/YuCJ/plate/commit/ee2e52ae6001b8d976f5dd583d3f2410090d0168))
-
-### [2.0.3](https://github.com/YuCJ/plate/compare/v2.0.2...v2.0.3) (2019-11-21)
-
-
-### Bug Fixes
-
-* upgrade dependency ([5c3e1d6](https://github.com/YuCJ/plate/commit/5c3e1d648896331dd46f5c319f65b4a16da818e3))
-
-
-### Chores
-
-* add commitlint ([5423d6e](https://github.com/YuCJ/plate/commit/5423d6e55b16637b21723886ed5dc1a9c4a9f419))
-* add standard-version ([0bf5f36](https://github.com/YuCJ/plate/commit/0bf5f36e45633b5f792beeda86db3b56a7ff2110))
+* add commitlint ([5423d6e](https://github.com/twreporter/plate/commit/5423d6e55b16637b21723886ed5dc1a9c4a9f419))
+* add standard-version ([0bf5f36](https://github.com/twreporter/plate/commit/0bf5f36e45633b5f792beeda86db3b56a7ff2110))
 
 ## 2.0.2, 2019-10-30
 ### Commits
