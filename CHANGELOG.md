@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 2.1.0-rc.2 (2019-11-26)
+
+### Bug Fixes
+* fix: specify socketio connection host and protocol along with port ([b6aa513](https://github.com/twreporter/plate/commit/b6aa513b21165ea94022fe87cb953384918724d8))
+
+
 ## 2.1.0-rc.1 (2019-11-25)
 
 ### Bug Fixes
