@@ -3,6 +3,8 @@ P="\\033[32m[+]\\033[0m"
 MONGODB?=mongodb://localhost:27017/plate 
 KEYSTONE_DEV=true
 CLIENT_SOCKETIO_PORT?=3030
+CLIENT_SOCKETIO_HOST?=localhost
+CLIENT_SOCKETIO_PROTOCOL?=http
 SERVER_SOCKETIO_PORT?=3030
 
 help:
@@ -15,7 +17,7 @@ help:
 
 build-keystone-plugin:
 	@echo "build keystone plugin JS bundle"
-	NODE_ENV=production SOCKETIO_PORT=$(CLIENT_SOCKETIO_PORT) node build-keystone-plugin.js
+	NODE_ENV=production SOCKETIO_PROTOCOL=$(CLIENT_SOCKETIO_PROTOCOL) SOCKETIO_HOST=$(CLIENT_SOCKETIO_HOST) SOCKETIO_PORT=$(CLIENT_SOCKETIO_PORT) node build-keystone-plugin.js
 
 build-config:
 	@echo "build conifg on demand"
