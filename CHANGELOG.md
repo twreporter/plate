@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1](https://github.com/twreporter/plate/compare/v3.0.0...v3.0.1) (2019-11-28)
+
+
+### Chores
+
+* update @twreporter/keystone-plugin-(socketio|client) to v1.0.1 ([b4010b5](https://github.com/twreporter/plate/commit/b4010b54ef689475f8d1c9c1ccdb149b236ac82f))
+
 ## [3.0.0](https://github.com/twreporter/plate/compare/v2.0.3...v3.0.0) (2019-11-27)
 
 ### Notable Changes
