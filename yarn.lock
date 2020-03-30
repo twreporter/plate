@@ -1034,10 +1034,10 @@
     styled-components "^4.4.1"
     webpack "^4.41.2"
 
-"@twreporter/keystone-plugin-socketio@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-socketio/-/keystone-plugin-socketio-1.0.3.tgz#6daae8708bfdcb4a12bcc389a5627e7d99f9a666"
-  integrity sha512-HQydLimYFkELaT8uWuwHeqauawPW4Rvu8/DWLWZsZ/CzXQ03fjD90KbVVns+N4uhzyXo/mdYBUS/g5GLoAnpOQ==
+"@twreporter/keystone-plugin-socketio@1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-socketio/-/keystone-plugin-socketio-1.0.4.tgz#46cdc09380b7aa67c639444a603e7525f6066d68"
+  integrity sha512-zzGEfLkNs55uS4851EtX4vtxYpHm/NBCu68Dymap7KpqUVzgSqUU4eckoLpotEIZP/4QTFlDupnau7rhChLPVw==
   dependencies:
     axios "^0.18.0"
     json2csv "^3.11.5"
