@@ -2,13 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [3.0.1](https://github.com/twreporter/plate/compare/v3.0.0...v3.0.1) (2019-11-28)
+### 3.0.2 (2020-03-30)
 
+### Commits
+* [[`9ad3f4e46c`](https://github.com/twreporter/keystone-plate/commit/9ad3f4e46c)] - **chore**: npm run changelog-maker to create change log (nickhsine)
+* [[`b497f5d50f`](https://github.com/twreporter/keystone-plate/commit/b497f5d50f)] - **chore**: update @twreporter/keystone-plugin-(socketio|client) to v1.0.3 (nickhsine)
+* [[`94690d0bf0`](https://github.com/twreporter/keystone-plate/commit/94690d0bf0)] - **chore**: add @twreporter/keystone-plugin-socketio@1.0.4 (nickhsine)
 
-### Chores
-
-* update @twreporter/keystone-plugin-(socketio|client) to v1.0.1 ([b4010b5](https://github.com/twreporter/plate/commit/b4010b54ef689475f8d1c9c1ccdb149b236ac82f))
-* update @twreporter/keystone-plugin-(socketio|client) to v1.0.3 ([b497f5d](https://github.com/twreporter/plate/commit/b497f5d50f5c2977bbdd793041d596760ce40dd3))
+### 3.0.1 (DEPRECATED)
 
 ## [3.0.0](https://github.com/twreporter/plate/compare/v2.0.3...v3.0.0) (2019-11-27)
 
