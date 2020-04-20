@@ -87,6 +87,7 @@ Post.add({
   og_title: { label: '分享標題', type: String, require: false},
   og_description: { label: '分享說明', type: String, require: false},
   og_image: { label: '分享縮圖', type: Types.ImageRelationship, ref: 'Image' },
+  toAutoNotify: { label: '自動推播', type: Boolean, default: true},
   is_external: { label: '另開新頁', type: Boolean, index: true },
   isFeatured: { label: '置頂', type: Boolean, index: true },
   preview: { type: Types.Preview },

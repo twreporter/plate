@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.1.0 (2020-04-20)
+#### Commits
+* [[`49c1310f58`](https://github.com/twreporter/keystone-plate/commit/49c1310f58)] - **feat**: add `toAutoNotify` field in models/Post.js (nickhsine)
+
 ### 3.0.2 (2020-03-30)
 
 ### Commits
