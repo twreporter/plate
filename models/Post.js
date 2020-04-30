@@ -64,7 +64,7 @@ Post.add({
   title: { label: '標題', type: String, require: true, default: 'untitled' },
   subtitle: { label: '副標', type: String, require: false },
   state: { label: '狀態', type: Types.Select, options: 'draft, published, scheduled, archived', default: 'draft', index: true },
-  publishedDate: { label: '發佈日期', type: Types.Date, index: true, utc: true, default: Date.now, dependsOn: { '$or': { state: [ 'published', 'scheduled' ] } }},
+  publishedDate: { label: '發佈日期', type: Types.Date, index: true, default: Date.now, dependsOn: { '$or': { state: [ 'published', 'scheduled' ] } }},
   writters: { label: '作者', type: Types.Relationship, ref: 'Contact', many: true },
   photographers: { label: '攝影', type: Types.Relationship, ref: 'Contact', many: true },
   designers: { label: '設計', type: Types.Relationship, ref: 'Contact', many: true },
