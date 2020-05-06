@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.1.3 (2020-05-07)
+#### Commits
+* [[`6e8604d308`](https://github.com/twreporter/keystone-plate/commit/6e8604d308)] - **chore**: upgrade @twreporter/keystone to 0.8.0-rc.3 (nickhsine)
+
 ### 3.1.2 (2020-05-06)
 #### Commits
 * [[`a4bc1af177`](https://github.com/twreporter/keystone-plate/commit/a4bc1af177)] - **chore**: upgrade @twreporter/keystone to 0.8.0-rc.2 (nickhsine)
