@@ -4,7 +4,6 @@ This repo is used as the CMS of [報導者 The Reporter](https://www.twreporter.
 
 `Plate` uses [twreporter-keystone](https://github.com/twreporter/keystone) which is based on [keystone](https://github.com/twreporter/keystone).
 
-
 # Install Dependencies
 ```
 yarn install
@@ -41,3 +40,8 @@ make build-config
 - gcs bucket
   - google cloud platform storage bucket
   - default value: ''
+
+# Build New Docker Image and Push it to Google Container Registry
+We integrate CircleCI to build new docker image and push it to Google Container Registry.
+
+Every PR merged into `release` branch will trigger the build process.
