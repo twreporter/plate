@@ -1044,10 +1044,10 @@
     lodash "^4.17.15"
     socket.io "^2.0.4"
 
-"@twreporter/keystone@0.8.0-rc.3":
-  version "0.8.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@twreporter/keystone/-/keystone-0.8.0-rc.3.tgz#13833857a21a6d640d0ac627c75690d752c23dc7"
-  integrity sha512-RuDnVcjNpQPq4fBAa6aA1JuKAXKaFHbL6QkC/5qaWWSoXXOkoB/TbWODLxZ+FgOcB4U3KBVVXvhJIdCmWjyFFA==
+"@twreporter/keystone@0.8.0-rc.5":
+  version "0.8.0-rc.5"
+  resolved "https://registry.yarnpkg.com/@twreporter/keystone/-/keystone-0.8.0-rc.5.tgz#c708a5a4975762bc9da302d1e1eda94cf27445fe"
+  integrity sha512-kcUZyMIzeGPj7w1bK9fUrDyiiDAR+fpMVUDNn9Zh55Xta7tKQJWKwkeUPzq8NjX4Q2f6D7FSQLeWj6cQcgL+2Q==
   dependencies:
     "@google-cloud/storage" "~1.7.0"
     "@twreporter/react-article-components" "0.2.0"
