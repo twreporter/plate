@@ -11,7 +11,6 @@ User.add({
 	email: { type: Types.Email, initial: true, required: true, index: true, unique: true },
 	password: { type: Types.Password, initial: true, required: true },
 	role: { type: Types.Select, options: 'contributor, author, editor, moderator, admin', default: 'contributor', required: true },
-	company: { type: Types.Relationship, ref: 'Company', initial: true, index: true },
 	address: { type: Types.Location, collapse: true },
 }, 'Permissions', {
 	isAdmin: { type: Boolean, label: 'Can access Keystone', index: true },
