@@ -2,8 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.1.5 (2020-08-14)
+#### Commits
+* [[`ee704bacfc`](https://github.com/twreporter/keystone-plate/commit/ee704bacfc)] - **chore**: upgrade @twreporter/keystone to v0.8.0-rc.6 (nickhsine)
+* [[`505ca71820`](https://github.com/twreporter/keystone-plate/commit/505ca71820)] - **refactor**: update models/User.js (nickhsine)
+* [[`04a7955e5e`](https://github.com/twreporter/keystone-plate/commit/04a7955e5e)] - **refactor**: update models (nickhsine)
+* [[`158a635224`](https://github.com/twreporter/keystone-plate/commit/158a635224)] - Merge pull request #147 from nickhsine/master (nick)
+* [[`ade48ea71b`](https://github.com/twreporter/keystone-plate/commit/ade48ea71b)] - **docs**: update README.md (nickhsine)
+
 ### 3.1.4 (2020-06-01)
-### Commits
+#### Commits
+* [[`1487318b46`](https://github.com/twreporter/keystone-plate/commit/1487318b46)] - Merge pull request #145 from YuCJ/master (yucj)
 * [[`1ccf384cc3`](https://github.com/twreporter/keystone-plate/commit/1ccf384cc3)] - chore(release): 3.1.4 (yucj)
 
 ### 3.1.3 (2020-05-07)
