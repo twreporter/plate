@@ -30,6 +30,6 @@ exports.locals = {
 };
 
 exports.nav = {
-  'people': ['users', 'companies', 'contacts'],
-  'content': ['posts', 'post-categories', 'topics', 'image-collections', 'images', 'audios', 'videos', 'tags'],
+  'people': ['users', 'contacts'],
+  'content': ['posts', 'post-categories', 'topics', 'images', 'audios', 'videos', 'tags'],
 };
