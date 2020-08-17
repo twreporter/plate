@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.1.6 (2020-08-17)
+#### Commits
+* [[`39c6dc45c4`](https://github.com/twreporter/keystone-plate/commit/39c6dc45c4)] - **refactor**: update keystone.js (nickhsine)
+* [[`3c88b6c40d`](https://github.com/twreporter/keystone-plate/commit/3c88b6c40d)] - Merge pull request #150 from nickhsine/3.1.5 (nick)
+
 ### 3.1.5 (2020-08-14)
 #### Commits
 * [[`ee704bacfc`](https://github.com/twreporter/keystone-plate/commit/ee704bacfc)] - **chore**: upgrade @twreporter/keystone to v0.8.0-rc.6 (nickhsine)
