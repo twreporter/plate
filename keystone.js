@@ -19,7 +19,7 @@ var server = require('http').createServer(app);
 buildSocketIO(server, {
   allowedOrigins: process.env.NODE_ENV === 'development' ? '*' : [
     'https://keystone-editor.twreporter.org',
-    'https://test-keystone-editor.twreporter.org'
+    'https://staging-keystone-editor.twreporter.org'
   ],
 })
 
