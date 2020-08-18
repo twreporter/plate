@@ -20,7 +20,15 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-build-{{ checksum "yarn.lock" }}
-      - run: CLIENT_SOCKETIO_HOST=keystone-plugin.twreporter.org CLIENT_SOCKETIO_PROTOCOL=https CLIENT_SOCKETIO_PORT=443 make build-keystone-plugin
+      - run:
+          name: Build Keystone Plugin Bundles
+          command: |
+            CLIENT_SOCKETIO_HOST=keystone-plugin.twreporter.org
+            if [ "${CIRCLE_BRANCH}" == "staging" ]; then
+              CLIENT_SOCKETIO_HOST=staging-keystone-plugin.twreporter.org
+            fi
+            CLIENT_SOCKETIO_HOST=$CLIENT_SOCKETIO_HOST CLIENT_SOCKETIO_PROTOCOL=https CLIENT_SOCKETIO_PORT=443 make build-keystone-plugin
+
       - run: rm -rf node_modules
 
       # Download and cache the dependencies for running
@@ -52,27 +60,13 @@ jobs:
           at: .
 
       - run:
-          name: Connect to container cluster
-          command: |
-            # GOOGLE_AUTH, GOOGLE_PROJECT_ID, GOOGLE_COMPUTE_ZONE,
-            # GOOGLE_PREVIEW_CLUSTER_NAME, GOOGLE_STAGING_CLUSTER_NAME
-            # and GOOGLE_CLUSTER_NAME is defined in Environment Variables of circleci project
-            echo ${GOOGLE_AUTH} | base64 -i --decode > ${HOME}/gcp-key.json
-            gcloud auth activate-service-account --key-file ${HOME}/gcp-key.json
-            gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
-            gcloud --quiet config set compute/zone ${GOOGLE_COMPUTE_ZONE}
-            CLUSTER_NAME=""
-
-            if [ "${CIRCLE_BRANCH}" == "release" ]; then
-              CLUSTER_NAME=${GOOGLE_CLUSTER_NAME}
-            fi
-
-            echo "CLUSTER_NAME: ${CLUSTER_NAME}"
-            gcloud --quiet container clusters get-credentials $CLUSTER_NAME
-
-      - run:
           name: Build and push Docker image
           command: |
+            # GOOGLE_AUTH is defined in Environment Variables of circleci project
+            # GOOGLE_AUTH is used to grant CircleCI vm to have the permission to access GCP
+            echo ${GOOGLE_AUTH} | base64 -i --decode > ${HOME}/gcp-key.json
+            gcloud auth activate-service-account --key-file ${HOME}/gcp-key.json
+
             PKG_VER="$(cat .pkg-version)-$CIRCLE_BUILD_NUM"
 
             if [ "${CIRCLE_BRANCH}" == "release" ]; then
@@ -97,6 +91,7 @@ workflows:
             branches:
               only:
                 - master
+                - staging
                 - release
       - push:
           requires:
@@ -104,4 +99,5 @@ workflows:
           filters:
             branches:
               only:
-                - release
+                - staging
+                - releas
