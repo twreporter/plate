@@ -100,4 +100,4 @@ workflows:
             branches:
               only:
                 - staging
-                - releas
+                - release
