@@ -33,4 +33,5 @@ Topic.add({
 Topic.relationship({ ref: 'Post', refPath: 'topics' });
 
 transform.toJSON(Topic);
+Topic.defaultColumns = 'name, topic_name|40%, publishedDate|20%';
 Topic.register();

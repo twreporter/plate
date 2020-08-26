@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.1.7 (2020-08-26)
+#### Notable Changes
+- fix: 
+  - add `專題名稱` and `發佈日期` as topic default columns
+- chore:
+  - update circleci config. add staging branch 
+  - upgrade @twreporter/keystone-plugin-client to 3.1.5
+  - upgrade @twreporter/keystone-plugin-socketio to 3.1.5
+
+#### Commits
+* [[`93bf91f51d`](https://github.com/twreporter/keystone-plate/commit/93bf91f51d)] - **chore**: update package.json#dependencies (nickhsine)
+* [[`a41af86024`](https://github.com/twreporter/keystone-plate/commit/a41af86024)] - **fix**: add `專題名稱` and `發佈日期` as topic default columns (nickhsine)
+* [[`f636be84b6`](https://github.com/twreporter/keystone-plate/commit/f636be84b6)] - Merge pull request #154 from nickhsine/circleci-staging (nick)
+* [[`6069d422a5`](https://github.com/twreporter/keystone-plate/commit/6069d422a5)] - **refactor**: update circleci config. add staging branch (nickhsine)
+* [[`de56e993f7`](https://github.com/twreporter/keystone-plate/commit/de56e993f7)] - Merge pull request #152 from nickhsine/3.1.6 (nick)
+
 ### 3.1.6 (2020-08-17)
 #### Commits
 * [[`39c6dc45c4`](https://github.com/twreporter/keystone-plate/commit/39c6dc45c4)] - **refactor**: update keystone.js (nickhsine)
