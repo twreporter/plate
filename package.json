@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "@twreporter/keystone": "0.8.0-rc.6",
-    "@twreporter/keystone-plugin-socketio": "1.0.4",
+    "@twreporter/keystone-plugin-client": "1.0.5",
+    "@twreporter/keystone-plugin-socketio": "1.0.5",
     "babel-core": "^6.4.5",
     "babel-plugin-transform-object-assign": "^6.3.13",
     "babel-plugin-transform-object-rest-spread": "^6.3.13",
@@ -41,7 +42,6 @@
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
-    "@twreporter/keystone-plugin-client": "1.0.3",
     "babel-eslint": "^6.1.2",
     "changelog-maker": "^2.3.2",
     "eslint": "^2.11.1",
