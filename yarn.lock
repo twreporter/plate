@@ -1015,10 +1015,10 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@twreporter/keystone-plugin-client@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-client/-/keystone-plugin-client-1.0.3.tgz#34be61a78cd739dc9c92e277d0757bfb2d0ebafa"
-  integrity sha512-Nqbowi91QRS7lw1WX8faamLW9KXM1MntUjwb/Qzn09i5Qp2F//LO4YhKGrZc1mCpL2gwNXHb+0pLopJ/ZPRHAA==
+"@twreporter/keystone-plugin-client@1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-client/-/keystone-plugin-client-1.0.5.tgz#0910b67013c97aad3883c1ede22ac64839b476d8"
+  integrity sha512-nPHZXYuWd65/ikPteoPBW0cGAoCFGgcXmNzlefE3X5h27LLOUNTPdbGruks9SPlwJe66Ke6/XeL6xvEOK9Kipw==
   dependencies:
     "@babel/cli" "^7.7.0"
     "@babel/core" "^7.7.2"
@@ -1034,20 +1034,20 @@
     styled-components "^4.4.1"
     webpack "^4.41.2"
 
-"@twreporter/keystone-plugin-socketio@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-socketio/-/keystone-plugin-socketio-1.0.4.tgz#46cdc09380b7aa67c639444a603e7525f6066d68"
-  integrity sha512-zzGEfLkNs55uS4851EtX4vtxYpHm/NBCu68Dymap7KpqUVzgSqUU4eckoLpotEIZP/4QTFlDupnau7rhChLPVw==
+"@twreporter/keystone-plugin-socketio@1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-socketio/-/keystone-plugin-socketio-1.0.5.tgz#2ebe1944424b564382d9eb441ec9f07ae21c4084"
+  integrity sha512-o0+ZkMsaegWuLmgTRgE+cIjwRJZdy3xHOCa4xw//RbepouJLo/3phlQLn5i2mq2PNjXXdv88ayO1vCaJAnIOhw==
   dependencies:
     axios "^0.18.0"
     json2csv "^3.11.5"
     lodash "^4.17.15"
     socket.io "^2.0.4"
 
-"@twreporter/keystone@0.8.0-rc.6":
-  version "0.8.0-rc.6"
-  resolved "https://registry.yarnpkg.com/@twreporter/keystone/-/keystone-0.8.0-rc.6.tgz#1883efe4ed4572f5e8cfa89d3d4127492163b4c4"
-  integrity sha512-9jvaDknjROjDzwRctVC9aOh9q1iM/kvhSL2L90Tm8pdENMs0Te8ghhqcSwd88jey2zU+kDzMTLgjucDNz5OMxA==
+"@twreporter/keystone@0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@twreporter/keystone/-/keystone-0.8.0.tgz#6777e0a17472466d41b920d6f52dae3f560782f6"
+  integrity sha512-nHXFS7b1NSw2OhlgNzBPdlo4/CAb15pWG7nzPwCy1pO9fTUh1qngpSliDmPC9VxbpUFxYHjXzFOnwmBLSL9BUw==
   dependencies:
     "@google-cloud/storage" "~1.7.0"
     "@twreporter/react-article-components" "0.2.0"

@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.1.8 (2020-09-09)
+
+#### Notable Changes
+- refactor:
+	- [update config. `preview config` -> `preview origin`](https://github.com/twreporter/plate/pull/162)
+
+#### Commits
+* [[`f5577bba88`](https://github.com/twreporter/keystone-plate/commit/f5577bba88)] - Merge pull request #162 from nickhsine/preview-origin (nick)
+* [[`72a98d321a`](https://github.com/twreporter/keystone-plate/commit/72a98d321a)] - **refactor**: update config. `preview config` -\> `preview origin` (nickhsine)
+* [[`c5f3c34899`](https://github.com/twreporter/keystone-plate/commit/c5f3c34899)] - Merge pull request #159 from nickhsine/master (nick)
+* [[`bb30953b4b`](https://github.com/twreporter/keystone-plate/commit/bb30953b4b)] - **fix**: update .circleci/config.yml. fix typo (nickhsine)
+
 ### 3.1.7 (2020-08-26)
 #### Notable Changes
 - fix: 
