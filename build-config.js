@@ -93,11 +93,7 @@ exports.options = {
     keyFilename: __dirname + '/gcskeyfile.json', // Your keyFilename path
     bucket: '${gcsBucket}',
   },
-  'preview config': {
-    protocol: 'http',
-    host: 'twreporter-react', // Using host entries created by Docker in /etc/hosts
-    port: 3000
-  },
+  'preview origin': 'http://localhost:3000',
 };
 
 exports.locals = {
