@@ -18,11 +18,7 @@ exports.options = {
     keyFilename: __dirname + '/gcskeyfile.json',
     bucket: process.env.KEYSTONE_GCS_BUCKET,
   },
-  'preview config': {
-    protocol: 'http',
-    host: 'twreporter-react', // Using host entries created by Docker in /etc/hosts
-    port: 3000
-  },
+  'preview origin': process.env.KEYSTONE_PREVIEW_ORIGIN || 'https://keystone-preview.twreporter.org',
 };
 
 exports.locals = {
