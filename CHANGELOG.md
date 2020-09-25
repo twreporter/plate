@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.1.9 (2020-09-25)
+
+#### Commits
+* [[`dba9514163`](https://github.com/twreporter/keystone-plate/commit/dba9514163)] - **chore**: upgrade @twreporter/keystone-plugin-(socketio|client) (nickhsine)
+* [[`a408c2ae4b`](https://github.com/twreporter/keystone-plate/commit/a408c2ae4b)] - Merge pull request #163 from nickhsine/master (nick)
+
 ### 3.1.8 (2020-09-09)
 
 #### Notable Changes
