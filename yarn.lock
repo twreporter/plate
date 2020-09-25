@@ -1015,10 +1015,10 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@twreporter/keystone-plugin-client@1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-client/-/keystone-plugin-client-1.0.5.tgz#0910b67013c97aad3883c1ede22ac64839b476d8"
-  integrity sha512-nPHZXYuWd65/ikPteoPBW0cGAoCFGgcXmNzlefE3X5h27LLOUNTPdbGruks9SPlwJe66Ke6/XeL6xvEOK9Kipw==
+"@twreporter/keystone-plugin-client@1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-client/-/keystone-plugin-client-1.0.7.tgz#c6687ccf32d01ee3693e7d5e63672c5fdff27dd6"
+  integrity sha512-Mpp4WCC6dYdoJ13Sj2Xe6rdlbL2/TSOEhVgsp5xf6pNV5AZPOZ3Kfk0vClZaR8nD+ctQMnzWj7VaCGqqetkdUQ==
   dependencies:
     "@babel/cli" "^7.7.0"
     "@babel/core" "^7.7.2"
@@ -1034,10 +1034,10 @@
     styled-components "^4.4.1"
     webpack "^4.41.2"
 
-"@twreporter/keystone-plugin-socketio@1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-socketio/-/keystone-plugin-socketio-1.0.5.tgz#2ebe1944424b564382d9eb441ec9f07ae21c4084"
-  integrity sha512-o0+ZkMsaegWuLmgTRgE+cIjwRJZdy3xHOCa4xw//RbepouJLo/3phlQLn5i2mq2PNjXXdv88ayO1vCaJAnIOhw==
+"@twreporter/keystone-plugin-socketio@1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-socketio/-/keystone-plugin-socketio-1.0.7.tgz#64dfa9f34c8e6ffc118581b11fc8f9c37de7f4fd"
+  integrity sha512-Btr0SXf6OH5Kdgg8gyZWgZsPluAs9YSXNi8BZaULwQ7jQS56AtHCENy++W4Ug1VFJKaDmg4c8sL4DIsuvFBwvg==
   dependencies:
     axios "^0.18.0"
     json2csv "^3.11.5"
