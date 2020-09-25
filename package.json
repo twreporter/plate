@@ -8,8 +8,8 @@
   },
   "dependencies": {
     "@twreporter/keystone": "0.8.0",
-    "@twreporter/keystone-plugin-client": "1.0.5",
-    "@twreporter/keystone-plugin-socketio": "1.0.5",
+    "@twreporter/keystone-plugin-client": "1.0.7",
+    "@twreporter/keystone-plugin-socketio": "1.0.7",
     "babel-core": "^6.4.5",
     "babel-plugin-transform-object-assign": "^6.3.13",
     "babel-plugin-transform-object-rest-spread": "^6.3.13",
