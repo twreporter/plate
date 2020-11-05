@@ -2,7 +2,46 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
-version: 2
+version: 2.1
+orbs:
+  slack: circleci/slack@4.1.1
+
+steps:
+  gcloud-login: &gcloud-login
+    run:
+      name: Login google cloud platform
+      command: |
+        # GOOGLE_AUTH is defined in Environment Variables of circleci project
+        # GOOGLE_AUTH is used to grant CircleCI vm to have the permission to access GCP
+        echo ${GOOGLE_AUTH} | base64 -i --decode > ${HOME}/gcp-key.json
+        gcloud auth activate-service-account --key-file ${HOME}/gcp-key.json
+  setup-env: &setup-env
+    run:
+      name: Setup environment variables
+      command: |
+        APP="keystone-plate"
+        CLUSTER_NAME=${PRIVATE_CLUSTER_NAME}
+        CLUSTER_NAMESPACE="default"
+        DEPLOYMENT="go-api"
+        ENVIRONMENT=""
+        PKG_VER="latest"
+        if [ "${CIRCLE_BRANCH}" == "staging" ]; then
+          # pkg version for staging
+          PKG_VER="$CIRCLE_BRANCH-$(cat .pkg-version)-$CIRCLE_BUILD_NUM"
+          ENVIRONMENT="staging"
+        fi
+        if [ "${CIRCLE_BRANCH}" == "release" ]; then
+          # pkg version for release
+          PKG_VER="$CIRCLE_BRANCH-$(cat .pkg-version)"
+          ENVIRONMENT="release"
+        fi
+        echo "export PKG_VER=${PKG_VER}" >> $BASH_ENV
+        echo "export DEPLOYMENT=${DEPLOYMENT}" >> $BASH_ENV
+        echo "export APP=${APP}" >> $BASH_ENV
+        echo "export CLUSTER_NAME=${CLUSTER_NAME}" >> $BASH_ENV
+        echo "export CLUSTER_NAMESPACE=${CLUSTER_NAMESPACE}" >> $BASH_ENV
+        echo "export ENVIRONMENT=${ENVIRONMENT}" >> $BASH_ENV
+
 jobs:
   build:
     docker:
@@ -58,29 +97,60 @@ jobs:
 
       - attach_workspace:
           at: .
-
+      - *setup-env
+      - *gcloud-login
       - run:
           name: Build and push Docker image
-          command: |
-            # GOOGLE_AUTH is defined in Environment Variables of circleci project
-            # GOOGLE_AUTH is used to grant CircleCI vm to have the permission to access GCP
-            echo ${GOOGLE_AUTH} | base64 -i --decode > ${HOME}/gcp-key.json
-            gcloud auth activate-service-account --key-file ${HOME}/gcp-key.json
-
-            PKG_VER="$(cat .pkg-version)-$CIRCLE_BUILD_NUM"
-
-            if [ "${CIRCLE_BRANCH}" == "release" ]; then
-              PKG_VER="$(cat .pkg-version)"
-            fi
-
+          command: | 
             echo "PKG_VER: ${PKG_VER}"
 
             # gcs key file
             echo ${GCS_KEY_FILE} | base64 -i --decode > gcskeyfile.json
 
-            docker build -t gcr.io/coastal-run-106202/keystone-plate:$CIRCLE_BRANCH-$PKG_VER .
+            docker build -t gcr.io/${GOOGLE_PROJECT_ID}/${APP}:$PKG_VER .
             gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin https://gcr.io
-            docker push gcr.io/coastal-run-106202/keystone-plate:$CIRCLE_BRANCH-$PKG_VER
+            docker push gcr.io/${GOOGLE_PROJECT_ID}/${APP}:$PKG_VER
+  deploy:
+    docker:
+      - image: google/cloud-sdk
+    steps:
+      - attach_workspace:
+          at: .
+      - *setup-env
+      - *gcloud-login
+      - run:
+          name: Connect to container cluster 
+          command: |
+            gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
+            guloud --quiet container clusters get-credentials $CLUSTER_NAME --region=asia-east1
+      - run:
+          name: Fetch Kubernetes config source
+          command: |
+            gcloud source repos clone ${K8S_CONFIG_REPO} 
+      - run:
+          name: Install kustomize binary
+          command: |
+            opsys=linux
+            curl -s "https://api.github.com/repos/kubernetes-sigs/kustomize/releases" |\
+            grep browser_download |\
+            grep $opsys |\
+            cut -d '"' -f 4 |\
+            grep /kustomize/v |\
+            sort | tail -n 1 |\
+            xargs curl -O -L
+            tar xzf ./kustomize_v*_${opsys}_amd64.tar.gz -C /usr/local/bin
+            kustomize version
+      - run:
+          name: Prepare for kubernetes config build
+          command: |
+            # K8S_CONFIG_REPO is defined in the organization context twreporter.
+            cd "${K8S_CONFIG_REPO}/${APP}/overlays/${ENVIRONMENT}"
+            kustomize edit set image "gcr.io/${GOOGLE_PROJECT_ID}/${APP}:${PKG_VER}"
+      - run:
+          name: Deploy to Google Kubernetes Engine
+          command: |
+            kustomize build "${K8S_CONFIG_REPO}/${APP}/overlays/${ENVIRONMENT}" | kubectl apply -f -
+            kubectl rollout status deployment ${DEPLOYMENT} -n $CLUSTER_NAMESPACE 
 
 workflows:
   version: 2
@@ -94,6 +164,7 @@ workflows:
                 - staging
                 - release
       - push:
+          context: twreporter
           requires:
             - build
           filters:
@@ -101,3 +172,16 @@ workflows:
               only:
                 - staging
                 - release
+      - slack/on-hold: 
+          context: twreporter
+          requires:
+            - push
+      - wait_for_approval:
+          requires:
+            - push
+            - slack/on-hold
+          type: approval
+      - deploy:
+          context: twreporter
+          requires:
+            - wait_for_approval
