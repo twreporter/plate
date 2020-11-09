@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.1.10 (2020-11-09)
+
+#### Notable Changes
+
+- [refactor: send resize tasks to pubsub rather than executing `gm` locally](https://github.com/twreporter/plate/pull/166)
+- [chore: update dependency](https://github.com/twreporter/plate/pull/171)
+
+#### Commits
+* [[`28825c7207`](https://github.com/twreporter/keystone-plate/commit/28825c7207)] - **chore**: update dependency (nickhsine)
+* [[`796f25a798`](https://github.com/twreporter/keystone-plate/commit/796f25a798)] - Merge pull request #166 from nickhsine/drop-resize (nick)
+* [[`da7cf15883`](https://github.com/twreporter/keystone-plate/commit/da7cf15883)] - **refactor**: update description field in models/Image.js (nickhsine)
+* [[`ee2cb23130`](https://github.com/twreporter/keystone-plate/commit/ee2cb23130)] - **refactor**: update model/Image.js (nickhsine)
+* [[`a9c57f8253`](https://github.com/twreporter/keystone-plate/commit/a9c57f8253)] - Merge pull request #167 from nickhsine/master (nick)
+* [[`1037f3ab88`](https://github.com/twreporter/keystone-plate/commit/1037f3ab88)] - **chore**: bump version to 3.1.9 (nickhsine)
+* [[`af559a5fbb`](https://github.com/twreporter/keystone-plate/commit/af559a5fbb)] - **chore**: upgrade @twreporter/keystone-plugin-(socketio|client) (nickhsine)
+* [[`a408c2ae4b`](https://github.com/twreporter/keystone-plate/commit/a408c2ae4b)] - Merge pull request #163 from nickhsine/master (nick)
+
 ### 3.1.9 (2020-09-25)
 
 #### Commits
