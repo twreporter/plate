@@ -126,7 +126,9 @@ Image.add({
   },
   description: {
     type: String,
-    index: true
+    required: true,
+    index: true,
+    initial: true,
   },
   copyright: {
     type: Types.Select,
