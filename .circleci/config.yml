@@ -130,15 +130,7 @@ jobs:
       - run:
           name: Install kustomize binary
           command: |
-            opsys=linux
-            curl -s "https://api.github.com/repos/kubernetes-sigs/kustomize/releases" |\
-            grep browser_download |\
-            grep $opsys |\
-            cut -d '"' -f 4 |\
-            grep /kustomize/v |\
-            sort | tail -n 1 |\
-            xargs curl -O -L
-            tar xzf ./kustomize_v*_${opsys}_amd64.tar.gz -C /usr/local/bin
+            curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
             kustomize version
       - run:
           name: Prepare for kubernetes config build
