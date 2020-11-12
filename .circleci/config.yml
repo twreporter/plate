@@ -178,7 +178,6 @@ workflows:
             - push
       - wait_for_approval:
           requires:
-            - push
             - slack/on-hold
           type: approval
       - deploy:
