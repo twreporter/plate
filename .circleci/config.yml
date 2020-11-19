@@ -122,7 +122,7 @@ jobs:
           name: Connect to container cluster 
           command: |
             gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
-            guloud --quiet container clusters get-credentials $CLUSTER_NAME --region=asia-east1
+            gcloud --quiet container clusters get-credentials $CLUSTER_NAME --region=asia-east1
       - run:
           name: Fetch Kubernetes config source
           command: |
