@@ -1186,6 +1186,15 @@
   dependencies:
     any-observable "^0.3.0"
 
+"@twreporter/core@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@twreporter/core/-/core-1.2.1.tgz#b78649551f34e24aba1e0bbb4a62cbfed5ecb394"
+  integrity sha512-v74tn/U+PmGQ8zNRBKt1C+WBqNzzGj4ogAJxFiErPYgAJ+MrajpS0vUjYhrRgLDGTY0wO4F2w1cpS4+xDB642g==
+  dependencies:
+    lodash "^4.0.0"
+    prop-types "^15.0.0"
+    styled-components "^4.0.0"
+
 "@twreporter/errors@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@twreporter/errors/-/errors-1.1.0.tgz#af3ae10b53d8e9cf139e4ac0447945e828abd3dc"
@@ -9949,7 +9958,7 @@ promise@~2.0:
   dependencies:
     is-promise "~1"
 
-prop-types@15.x, prop-types@^15.5.10, prop-types@^15.5.3, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.2:
+prop-types@15.x, prop-types@^15.0.0, prop-types@^15.5.10, prop-types@^15.5.3, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -11960,7 +11969,7 @@ stubs@^3.0.0:
   resolved "https://registry.yarnpkg.com/stubs/-/stubs-3.0.0.tgz#e8d2ba1fa9c90570303c030b6900f7d5f89abe5b"
   integrity sha1-6NK6H6nJBXAwPAMLaQD31fiavls=
 
-styled-components@^4.4.1:
+styled-components@^4.0.0, styled-components@^4.4.1:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-4.4.1.tgz#e0631e889f01db67df4de576fedaca463f05c2f2"
   integrity sha512-RNqj14kYzw++6Sr38n7197xG33ipEOktGElty4I70IKzQF1jzaD1U4xQ+Ny/i03UUhHlC5NWEO+d8olRCDji6g==
