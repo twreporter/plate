@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.1.12 (2020-11-25)
+
+#### Commits
+
+* [[`ae8376f7e0`](https://github.com/twreporter/keystone-plate/commit/ae8376f7e0)] - **chore**: add @twreporter/keystone@0.9.1 (nickhsine)
+* [[`0708c1fa9a`](https://github.com/twreporter/keystone-plate/commit/0708c1fa9a)] - Merge pull request #178 from nickhsine/master (nick)
+
 ### 3.1.11 (2020-11-25)
 
 #### Notable Changes
