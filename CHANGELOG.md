@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.1.11 (2020-11-25)
+
+#### Notable Changes
+
+- [chore: fix deployment steps](https://github.com/twreporter/plate/pull/176)
+- [chore: test slack channel deployment approval on staging](https://github.com/twreporter/plate/pull/175)
+- [refactor: update models/Image.js. add slack channel notice](https://github.com/twreporter/plate/pull/174)
+
+#### Commits
+
+* [[`aad2c52073`](https://github.com/twreporter/keystone-plate/commit/aad2c52073)] - **refactor**: update models/Image.js. add slack channel notice (nickhsine)
+* [[`c4ae8b3b0e`](https://github.com/twreporter/keystone-plate/commit/c4ae8b3b0e)] - Merge pull request #176 from babygoat/master (babygoat)
+* [[`a805e862ab`](https://github.com/twreporter/keystone-plate/commit/a805e862ab)] - **chore**: fix cluster location (Ching-Yang, Tseng)
+* [[`52bf25ea86`](https://github.com/twreporter/keystone-plate/commit/52bf25ea86)] - **chore**: fix typo `gcloud` (Ching-Yang, Tseng)
+* [[`02d882f93f`](https://github.com/twreporter/keystone-plate/commit/02d882f93f)] - Merge pull request #170 from babygoat/master (babygoat)
+* [[`7572614808`](https://github.com/twreporter/keystone-plate/commit/7572614808)] - **chore**: update kustomize installation (Ching-Yang, Tseng)
+* [[`308325db08`](https://github.com/twreporter/keystone-plate/commit/308325db08)] - **chore**: remove redundant dependency (Ching-Yang, Tseng)
+* [[`6e33031f89`](https://github.com/twreporter/keystone-plate/commit/6e33031f89)] - Merge pull request #172 from nickhsine/master (nick)
+
 ### 3.1.10 (2020-11-09)
 
 #### Notable Changes
