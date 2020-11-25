@@ -22,18 +22,19 @@ steps:
         APP="keystone-plate"
         CLUSTER_NAME=${PRIVATE_CLUSTER_NAME}
         CLUSTER_NAMESPACE="default"
-        DEPLOYMENT="go-api"
         ENVIRONMENT=""
         PKG_VER="latest"
         if [ "${CIRCLE_BRANCH}" == "staging" ]; then
           # pkg version for staging
           PKG_VER="$CIRCLE_BRANCH-$(cat .pkg-version)-$CIRCLE_BUILD_NUM"
           ENVIRONMENT="staging"
+          DEPLOYMENT="staging-keystone-plate"
         fi
         if [ "${CIRCLE_BRANCH}" == "release" ]; then
           # pkg version for release
           PKG_VER="$CIRCLE_BRANCH-$(cat .pkg-version)"
           ENVIRONMENT="release"
+          DEPLOYMENT="keystone-plate"
         fi
         echo "export PKG_VER=${PKG_VER}" >> $BASH_ENV
         echo "export DEPLOYMENT=${DEPLOYMENT}" >> $BASH_ENV
