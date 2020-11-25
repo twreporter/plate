@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.2.0 (2020-11-25)
+
+#### Notable Changes
+
+Bump version v3.2.0 to correct the versioning.
+
 ### 3.1.12 (2020-11-25)
 
 #### Commits
