@@ -1231,10 +1231,10 @@
     lodash "^4.17.15"
     socket.io "^2.0.4"
 
-"@twreporter/keystone@0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@twreporter/keystone/-/keystone-0.9.0.tgz#3044f447bffbe66a61764f9a474cbb4f302d7105"
-  integrity sha512-HXKEfH0GlmFQNPN7fjv1kf/8fmh140lpghvWsLqKDw42jBha6mosMa4CIzhRf/xwvOPHUbat+BVlCwUhaj3cAw==
+"@twreporter/keystone@0.9.1":
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/@twreporter/keystone/-/keystone-0.9.1.tgz#00214eb0da2e3a1ef1987d44af39c7926ccf1317"
+  integrity sha512-6HWOIPZXYfb7ySz1xjlXyAUWHvWDvEKo2eM2SE1aAScmn0sXlDkjmdpiKMCwvWbYjucxbDwPKfOn/hPVnhuC6w==
   dependencies:
     "@google-cloud/storage" "~1.7.0"
     "@twreporter/core" "^1.2.1"
