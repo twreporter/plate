@@ -83,6 +83,10 @@ function getResizeMetadata(filename, originWidth, originHeight) {
   return targets;
 }
 
+Image.set('notes', {
+  image: '圖片上傳後，請前往 slack channel（`圖片處理系統回報`）看圖片壓縮結果。'
+})
+
 Image.add({
   image: {
     type: Types.GcsImage,
