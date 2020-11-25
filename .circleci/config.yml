@@ -26,7 +26,7 @@ steps:
         PKG_VER="latest"
         if [ "${CIRCLE_BRANCH}" == "staging" ]; then
           # pkg version for staging
-          PKG_VER="$CIRCLE_BRANCH-$(cat .pkg-version)-$CIRCLE_BUILD_NUM"
+          PKG_VER="$CIRCLE_BRANCH-$(cat .pkg-version)-$(echo $CIRCLE_SHA1 | cut -c -7)"
           ENVIRONMENT="staging"
           DEPLOYMENT="staging-keystone-plate"
         fi
