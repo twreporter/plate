@@ -1231,12 +1231,13 @@
     lodash "^4.17.15"
     socket.io "^2.0.4"
 
-"@twreporter/keystone@0.9.0-beta.0":
-  version "0.9.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@twreporter/keystone/-/keystone-0.9.0-beta.0.tgz#5770cc44d788c1fc3a68d0a92244565688ddef65"
-  integrity sha512-XP2/9795pOXQU5/+wb7MlX7Hj439QB1ugv2gXzlYu9HLUKSQ1r4pPCX4/xduPOqIODgriLIPv43/ZizT19HIqw==
+"@twreporter/keystone@0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@twreporter/keystone/-/keystone-0.9.0.tgz#3044f447bffbe66a61764f9a474cbb4f302d7105"
+  integrity sha512-HXKEfH0GlmFQNPN7fjv1kf/8fmh140lpghvWsLqKDw42jBha6mosMa4CIzhRf/xwvOPHUbat+BVlCwUhaj3cAw==
   dependencies:
     "@google-cloud/storage" "~1.7.0"
+    "@twreporter/core" "^1.2.1"
     "@twreporter/react-article-components" "0.2.0"
     async "1.5.2"
     asyncdi "1.1.0"
@@ -1356,11 +1357,6 @@
     react-visibility-sensor "^3.6.2"
     react-youtube "^7.3.0"
     video.js "^5.12.1"
-
-"@types/color-name@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
-  integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
 
 "@types/duplexify@^3.6.0":
   version "3.6.0"
