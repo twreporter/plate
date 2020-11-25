@@ -8,8 +8,9 @@
   },
   "dependencies": {
     "@google-cloud/pubsub": "^2.6.0",
+    "@twreporter/core": "^1.2.1",
     "@twreporter/errors": "^1.1.0",
-    "@twreporter/keystone": "0.9.0-beta.0",
+    "@twreporter/keystone": "0.9.0",
     "@twreporter/keystone-plugin-client": "1.0.7",
     "@twreporter/keystone-plugin-socketio": "1.0.7",
     "babel-core": "^6.4.5",
