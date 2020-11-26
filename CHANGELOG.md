@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.2.2 (2020-11-26)
+
+#### Notable Changes
+
+- [chore: update dependencies](https://github.com/twreporter/plate/pull/194)
+
+#### Commits
+
+* [[`7bef21e5dc`](https://github.com/twreporter/keystone-plate/commit/7bef21e5dc)] - Merge pull request #194 from nickhsine/master (nick)
+* [[`ce5ccd16f6`](https://github.com/twreporter/keystone-plate/commit/ce5ccd16f6)] - **chore**: update dependencies (nickhsine)
+
+
 ### 3.2.1 (2020-11-26)
 
 #### Notable Changes
