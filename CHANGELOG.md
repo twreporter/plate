@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.2.1 (2020-11-26)
+
+#### Notable Changes
+
+- [Revert "chore: yarn-deduplicate"](https://github.com/twreporter/plate/pull/190)
+
+#### Commits
+
+* [[`e39a0380f1`](https://github.com/twreporter/keystone-plate/commit/e39a0380f1)] - Merge pull request #190 from nickhsine/fix-yarn-lock (nick)
+* [[`6e70a69bcd`](https://github.com/twreporter/keystone-plate/commit/6e70a69bcd)] - ***Revert*** "**chore**: yarn-deduplicate" (nickhsine)
+
 ### 3.2.0 (2020-11-25)
 
 #### Notable Changes
