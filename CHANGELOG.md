@@ -2,6 +2,55 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.2.0 (2020-11-25)
+
+#### Notable Changes
+
+Bump version v3.2.0 to correct the versioning.
+
+### 3.1.12 (2020-11-25)
+
+#### Commits
+
+* [[`ae8376f7e0`](https://github.com/twreporter/keystone-plate/commit/ae8376f7e0)] - **chore**: add @twreporter/keystone@0.9.1 (nickhsine)
+* [[`0708c1fa9a`](https://github.com/twreporter/keystone-plate/commit/0708c1fa9a)] - Merge pull request #178 from nickhsine/master (nick)
+
+### 3.1.11 (2020-11-25)
+
+#### Notable Changes
+
+- [chore: fix deployment steps](https://github.com/twreporter/plate/pull/176)
+- [chore: test slack channel deployment approval on staging](https://github.com/twreporter/plate/pull/175)
+- [refactor: update models/Image.js. add slack channel notice](https://github.com/twreporter/plate/pull/174)
+
+#### Commits
+
+* [[`aad2c52073`](https://github.com/twreporter/keystone-plate/commit/aad2c52073)] - **refactor**: update models/Image.js. add slack channel notice (nickhsine)
+* [[`c4ae8b3b0e`](https://github.com/twreporter/keystone-plate/commit/c4ae8b3b0e)] - Merge pull request #176 from babygoat/master (babygoat)
+* [[`a805e862ab`](https://github.com/twreporter/keystone-plate/commit/a805e862ab)] - **chore**: fix cluster location (Ching-Yang, Tseng)
+* [[`52bf25ea86`](https://github.com/twreporter/keystone-plate/commit/52bf25ea86)] - **chore**: fix typo `gcloud` (Ching-Yang, Tseng)
+* [[`02d882f93f`](https://github.com/twreporter/keystone-plate/commit/02d882f93f)] - Merge pull request #170 from babygoat/master (babygoat)
+* [[`7572614808`](https://github.com/twreporter/keystone-plate/commit/7572614808)] - **chore**: update kustomize installation (Ching-Yang, Tseng)
+* [[`308325db08`](https://github.com/twreporter/keystone-plate/commit/308325db08)] - **chore**: remove redundant dependency (Ching-Yang, Tseng)
+* [[`6e33031f89`](https://github.com/twreporter/keystone-plate/commit/6e33031f89)] - Merge pull request #172 from nickhsine/master (nick)
+
+### 3.1.10 (2020-11-09)
+
+#### Notable Changes
+
+- [refactor: send resize tasks to pubsub rather than executing `gm` locally](https://github.com/twreporter/plate/pull/166)
+- [chore: update dependency](https://github.com/twreporter/plate/pull/171)
+
+#### Commits
+* [[`28825c7207`](https://github.com/twreporter/keystone-plate/commit/28825c7207)] - **chore**: update dependency (nickhsine)
+* [[`796f25a798`](https://github.com/twreporter/keystone-plate/commit/796f25a798)] - Merge pull request #166 from nickhsine/drop-resize (nick)
+* [[`da7cf15883`](https://github.com/twreporter/keystone-plate/commit/da7cf15883)] - **refactor**: update description field in models/Image.js (nickhsine)
+* [[`ee2cb23130`](https://github.com/twreporter/keystone-plate/commit/ee2cb23130)] - **refactor**: update model/Image.js (nickhsine)
+* [[`a9c57f8253`](https://github.com/twreporter/keystone-plate/commit/a9c57f8253)] - Merge pull request #167 from nickhsine/master (nick)
+* [[`1037f3ab88`](https://github.com/twreporter/keystone-plate/commit/1037f3ab88)] - **chore**: bump version to 3.1.9 (nickhsine)
+* [[`af559a5fbb`](https://github.com/twreporter/keystone-plate/commit/af559a5fbb)] - **chore**: upgrade @twreporter/keystone-plugin-(socketio|client) (nickhsine)
+* [[`a408c2ae4b`](https://github.com/twreporter/keystone-plate/commit/a408c2ae4b)] - Merge pull request #163 from nickhsine/master (nick)
+
 ### 3.1.9 (2020-09-25)
 
 #### Commits
