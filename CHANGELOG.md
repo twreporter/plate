@@ -10,9 +10,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 #### Commits
 
+* [[`42c0b21349`](https://github.com/twreporter/keystone-plate/commit/42c0b21349)] - Merge pull request #198 from nickhsine/master (nick)
+* [[`64ba4ab3aa`](https://github.com/twreporter/keystone-plate/commit/64ba4ab3aa)] - **chore**: yarn add @twreporter/keystone@0.9.2 (nickhsine)
 * [[`7bef21e5dc`](https://github.com/twreporter/keystone-plate/commit/7bef21e5dc)] - Merge pull request #194 from nickhsine/master (nick)
 * [[`ce5ccd16f6`](https://github.com/twreporter/keystone-plate/commit/ce5ccd16f6)] - **chore**: update dependencies (nickhsine)
-
 
 ### 3.2.1 (2020-11-26)
 
