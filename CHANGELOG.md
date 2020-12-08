@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.2.3 (2020-12-09)
+
+#### Notable Changes
+
+- [refactor: update gcs buckets](https://github.com/twreporter/plate/pull/202)
+
+#### Commits
+
+* [[`f03e847930`](https://github.com/twreporter/keystone-plate/commit/f03e847930)] - Merge pull request #202 from taylrj/fix-audio-path (Tai-Jiun Fang)
+* [[`b50eb6a594`](https://github.com/twreporter/keystone-plate/commit/b50eb6a594)] - **refactor**: update gcs buckets (Taylor Fang)
+* [[`21570f9f28`](https://github.com/twreporter/keystone-plate/commit/21570f9f28)] - **refactor**: update bucket in `config-for-docker-build.js` (Taylor Fang)
+* [[`2ffb99517e`](https://github.com/twreporter/keystone-plate/commit/2ffb99517e)] - Merge pull request #199 from nickhsine/master (nick)
+
 ### 3.2.2 (2020-11-26)
 
 #### Notable Changes
