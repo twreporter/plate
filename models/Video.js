@@ -6,7 +6,7 @@ var Types = keystone.Field.Types;
 var Video = new keystone.List('Video', {
     map: { name: 'title' }
 });
-var bucket = config['options']['gcs config']['bucket']
+var bucket = config['options']['gcs config']['bucket']['video']
 
 Video.add({
     title: { type: String, required: true, initial: true },

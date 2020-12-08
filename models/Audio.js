@@ -6,7 +6,7 @@ var Types = keystone.Field.Types;
 var Audio = new keystone.List('Audio', {
     map: { name: 'title' }
 });
-var bucket = config['options']['gcs config']['bucket']
+var bucket = config['options']['gcs config']['bucket']['audio']
 
 Audio.add({
     title: { type: String, required: true, initial: true },
