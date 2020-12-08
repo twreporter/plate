@@ -10,11 +10,9 @@ var Image = new keystone.List('Image', {
   map: { name: 'description' }
 });
 
-const bucket = config['options']['gcs config']['bucket'];
-
 const resizedOpts = [['mobile', 800], ['desktop', 2000], ['tablet', 1200], ['w400', 400], ['tiny', 150]];
-
-const outputBucket = process.env.KEYSTONE_PUBSUB_RESIZE_IMAGE_OUTPUT_BUCKET || 'twreporter-multimedia';
+const bucket = config['options']['gcs config']['bucket']['rawPhoto'] || 'twreporter-raw-photos';
+const outputBucket = config['options']['gcs config']['bucket']['resizedImage'] || 'twreporter-multimedia';
 const topicName = process.env.KEYSTONE_PUBSUB_RESIZE_IMAGE_TOPIC || 'resize-image';
 const resizeImageURLPrefix = process.env.KEYSTONE_RESIZE_IMAGE_URL_PREFIX || 'https://www.twreporter.org/images/'
 
