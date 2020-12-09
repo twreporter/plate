@@ -6,10 +6,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 #### Notable Changes
 
-- chore: upgrade @twreporter/keystone to v0.9.3-rc.0 
+- chore: upgrade @twreporter/keystone to v0.9.3 
 
 #### Commits
 
+* [[`7d90b42d64`](https://github.com/twreporter/keystone-plate/commit/7d90b42d64)] - Merge pull request #211 from taylrj/update-dep (Tai-Jiun Fang)
+* [[`c771d799b2`](https://github.com/twreporter/keystone-plate/commit/c771d799b2)] - **chore**: upgrade dep @twreporter/keystone to v0.9.3 (Taylor Fang)
+* [[`99ff41891d`](https://github.com/twreporter/keystone-plate/commit/99ff41891d)] - Merge pull request #209 from taylrj/master (Tai-Jiun Fang)
 * [[`f01a8cbfb4`](https://github.com/twreporter/keystone-plate/commit/f01a8cbfb4)] - Merge pull request #208 from taylrj/update-dep (Tai-Jiun Fang)
 * [[`84dd798cc8`](https://github.com/twreporter/keystone-plate/commit/84dd798cc8)] - **chore**: upgrade dep @twreporter/keystone to v0.9.3-rc.0 (Taylor Fang)
 * [[`12347f38af`](https://github.com/twreporter/keystone-plate/commit/12347f38af)] - Merge pull request #206 from taylrj/master (Tai-Jiun Fang)
