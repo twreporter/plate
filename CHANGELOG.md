@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.2.3 (2020-12-09)
+
+#### Notable Changes
+
+- [refactor: update gcs buckets](https://github.com/twreporter/plate/pull/202)
+
+#### Commits
+
+* [[`f03e847930`](https://github.com/twreporter/plate/commit/f03e847930)] - Merge pull request #202 from taylrj/fix-audio-path (Tai-Jiun Fang)
+* [[`b50eb6a594`](https://github.com/twreporter/plate/commit/b50eb6a594)] - **refactor**: update gcs buckets (Taylor Fang)
+* [[`21570f9f28`](https://github.com/twreporter/plate/commit/21570f9f28)] - **refactor**: update bucket in `config-for-docker-build.js` (Taylor Fang)
+* [[`2ffb99517e`](https://github.com/twreporter/plate/commit/2ffb99517e)] - Merge pull request #199 from nickhsine/master (nick)
+
 ### 3.2.2 (2020-11-26)
 
 #### Notable Changes
@@ -10,10 +23,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 #### Commits
 
-* [[`42c0b21349`](https://github.com/twreporter/keystone-plate/commit/42c0b21349)] - Merge pull request #198 from nickhsine/master (nick)
-* [[`64ba4ab3aa`](https://github.com/twreporter/keystone-plate/commit/64ba4ab3aa)] - **chore**: yarn add @twreporter/keystone@0.9.2 (nickhsine)
-* [[`7bef21e5dc`](https://github.com/twreporter/keystone-plate/commit/7bef21e5dc)] - Merge pull request #194 from nickhsine/master (nick)
-* [[`ce5ccd16f6`](https://github.com/twreporter/keystone-plate/commit/ce5ccd16f6)] - **chore**: update dependencies (nickhsine)
+* [[`42c0b21349`](https://github.com/twreporter/plate/commit/42c0b21349)] - Merge pull request #198 from nickhsine/master (nick)
+* [[`64ba4ab3aa`](https://github.com/twreporter/plate/commit/64ba4ab3aa)] - **chore**: yarn add @twreporter/keystone@0.9.2 (nickhsine)
+* [[`7bef21e5dc`](https://github.com/twreporter/plate/commit/7bef21e5dc)] - Merge pull request #194 from nickhsine/master (nick)
+* [[`ce5ccd16f6`](https://github.com/twreporter/plate/commit/ce5ccd16f6)] - **chore**: update dependencies (nickhsine)
 
 ### 3.2.1 (2020-11-26)
 
@@ -23,8 +36,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 #### Commits
 
-* [[`e39a0380f1`](https://github.com/twreporter/keystone-plate/commit/e39a0380f1)] - Merge pull request #190 from nickhsine/fix-yarn-lock (nick)
-* [[`6e70a69bcd`](https://github.com/twreporter/keystone-plate/commit/6e70a69bcd)] - ***Revert*** "**chore**: yarn-deduplicate" (nickhsine)
+* [[`e39a0380f1`](https://github.com/twreporter/plate/commit/e39a0380f1)] - Merge pull request #190 from nickhsine/fix-yarn-lock (nick)
+* [[`6e70a69bcd`](https://github.com/twreporter/plate/commit/6e70a69bcd)] - ***Revert*** "**chore**: yarn-deduplicate" (nickhsine)
 
 ### 3.2.0 (2020-11-25)
 
@@ -36,8 +49,8 @@ Bump version v3.2.0 to correct the versioning.
 
 #### Commits
 
-* [[`ae8376f7e0`](https://github.com/twreporter/keystone-plate/commit/ae8376f7e0)] - **chore**: add @twreporter/keystone@0.9.1 (nickhsine)
-* [[`0708c1fa9a`](https://github.com/twreporter/keystone-plate/commit/0708c1fa9a)] - Merge pull request #178 from nickhsine/master (nick)
+* [[`ae8376f7e0`](https://github.com/twreporter/plate/commit/ae8376f7e0)] - **chore**: add @twreporter/keystone@0.9.1 (nickhsine)
+* [[`0708c1fa9a`](https://github.com/twreporter/plate/commit/0708c1fa9a)] - Merge pull request #178 from nickhsine/master (nick)
 
 ### 3.1.11 (2020-11-25)
 
@@ -49,14 +62,14 @@ Bump version v3.2.0 to correct the versioning.
 
 #### Commits
 
-* [[`aad2c52073`](https://github.com/twreporter/keystone-plate/commit/aad2c52073)] - **refactor**: update models/Image.js. add slack channel notice (nickhsine)
-* [[`c4ae8b3b0e`](https://github.com/twreporter/keystone-plate/commit/c4ae8b3b0e)] - Merge pull request #176 from babygoat/master (babygoat)
-* [[`a805e862ab`](https://github.com/twreporter/keystone-plate/commit/a805e862ab)] - **chore**: fix cluster location (Ching-Yang, Tseng)
-* [[`52bf25ea86`](https://github.com/twreporter/keystone-plate/commit/52bf25ea86)] - **chore**: fix typo `gcloud` (Ching-Yang, Tseng)
-* [[`02d882f93f`](https://github.com/twreporter/keystone-plate/commit/02d882f93f)] - Merge pull request #170 from babygoat/master (babygoat)
-* [[`7572614808`](https://github.com/twreporter/keystone-plate/commit/7572614808)] - **chore**: update kustomize installation (Ching-Yang, Tseng)
-* [[`308325db08`](https://github.com/twreporter/keystone-plate/commit/308325db08)] - **chore**: remove redundant dependency (Ching-Yang, Tseng)
-* [[`6e33031f89`](https://github.com/twreporter/keystone-plate/commit/6e33031f89)] - Merge pull request #172 from nickhsine/master (nick)
+* [[`aad2c52073`](https://github.com/twreporter/plate/commit/aad2c52073)] - **refactor**: update models/Image.js. add slack channel notice (nickhsine)
+* [[`c4ae8b3b0e`](https://github.com/twreporter/plate/commit/c4ae8b3b0e)] - Merge pull request #176 from babygoat/master (babygoat)
+* [[`a805e862ab`](https://github.com/twreporter/plate/commit/a805e862ab)] - **chore**: fix cluster location (Ching-Yang, Tseng)
+* [[`52bf25ea86`](https://github.com/twreporter/plate/commit/52bf25ea86)] - **chore**: fix typo `gcloud` (Ching-Yang, Tseng)
+* [[`02d882f93f`](https://github.com/twreporter/plate/commit/02d882f93f)] - Merge pull request #170 from babygoat/master (babygoat)
+* [[`7572614808`](https://github.com/twreporter/plate/commit/7572614808)] - **chore**: update kustomize installation (Ching-Yang, Tseng)
+* [[`308325db08`](https://github.com/twreporter/plate/commit/308325db08)] - **chore**: remove redundant dependency (Ching-Yang, Tseng)
+* [[`6e33031f89`](https://github.com/twreporter/plate/commit/6e33031f89)] - Merge pull request #172 from nickhsine/master (nick)
 
 ### 3.1.10 (2020-11-09)
 
@@ -66,20 +79,20 @@ Bump version v3.2.0 to correct the versioning.
 - [chore: update dependency](https://github.com/twreporter/plate/pull/171)
 
 #### Commits
-* [[`28825c7207`](https://github.com/twreporter/keystone-plate/commit/28825c7207)] - **chore**: update dependency (nickhsine)
-* [[`796f25a798`](https://github.com/twreporter/keystone-plate/commit/796f25a798)] - Merge pull request #166 from nickhsine/drop-resize (nick)
-* [[`da7cf15883`](https://github.com/twreporter/keystone-plate/commit/da7cf15883)] - **refactor**: update description field in models/Image.js (nickhsine)
-* [[`ee2cb23130`](https://github.com/twreporter/keystone-plate/commit/ee2cb23130)] - **refactor**: update model/Image.js (nickhsine)
-* [[`a9c57f8253`](https://github.com/twreporter/keystone-plate/commit/a9c57f8253)] - Merge pull request #167 from nickhsine/master (nick)
-* [[`1037f3ab88`](https://github.com/twreporter/keystone-plate/commit/1037f3ab88)] - **chore**: bump version to 3.1.9 (nickhsine)
-* [[`af559a5fbb`](https://github.com/twreporter/keystone-plate/commit/af559a5fbb)] - **chore**: upgrade @twreporter/keystone-plugin-(socketio|client) (nickhsine)
-* [[`a408c2ae4b`](https://github.com/twreporter/keystone-plate/commit/a408c2ae4b)] - Merge pull request #163 from nickhsine/master (nick)
+* [[`28825c7207`](https://github.com/twreporter/plate/commit/28825c7207)] - **chore**: update dependency (nickhsine)
+* [[`796f25a798`](https://github.com/twreporter/plate/commit/796f25a798)] - Merge pull request #166 from nickhsine/drop-resize (nick)
+* [[`da7cf15883`](https://github.com/twreporter/plate/commit/da7cf15883)] - **refactor**: update description field in models/Image.js (nickhsine)
+* [[`ee2cb23130`](https://github.com/twreporter/plate/commit/ee2cb23130)] - **refactor**: update model/Image.js (nickhsine)
+* [[`a9c57f8253`](https://github.com/twreporter/plate/commit/a9c57f8253)] - Merge pull request #167 from nickhsine/master (nick)
+* [[`1037f3ab88`](https://github.com/twreporter/plate/commit/1037f3ab88)] - **chore**: bump version to 3.1.9 (nickhsine)
+* [[`af559a5fbb`](https://github.com/twreporter/plate/commit/af559a5fbb)] - **chore**: upgrade @twreporter/keystone-plugin-(socketio|client) (nickhsine)
+* [[`a408c2ae4b`](https://github.com/twreporter/plate/commit/a408c2ae4b)] - Merge pull request #163 from nickhsine/master (nick)
 
 ### 3.1.9 (2020-09-25)
 
 #### Commits
-* [[`dba9514163`](https://github.com/twreporter/keystone-plate/commit/dba9514163)] - **chore**: upgrade @twreporter/keystone-plugin-(socketio|client) (nickhsine)
-* [[`a408c2ae4b`](https://github.com/twreporter/keystone-plate/commit/a408c2ae4b)] - Merge pull request #163 from nickhsine/master (nick)
+* [[`dba9514163`](https://github.com/twreporter/plate/commit/dba9514163)] - **chore**: upgrade @twreporter/keystone-plugin-(socketio|client) (nickhsine)
+* [[`a408c2ae4b`](https://github.com/twreporter/plate/commit/a408c2ae4b)] - Merge pull request #163 from nickhsine/master (nick)
 
 ### 3.1.8 (2020-09-09)
 
@@ -88,10 +101,10 @@ Bump version v3.2.0 to correct the versioning.
 	- [update config. `preview config` -> `preview origin`](https://github.com/twreporter/plate/pull/162)
 
 #### Commits
-* [[`f5577bba88`](https://github.com/twreporter/keystone-plate/commit/f5577bba88)] - Merge pull request #162 from nickhsine/preview-origin (nick)
-* [[`72a98d321a`](https://github.com/twreporter/keystone-plate/commit/72a98d321a)] - **refactor**: update config. `preview config` -\> `preview origin` (nickhsine)
-* [[`c5f3c34899`](https://github.com/twreporter/keystone-plate/commit/c5f3c34899)] - Merge pull request #159 from nickhsine/master (nick)
-* [[`bb30953b4b`](https://github.com/twreporter/keystone-plate/commit/bb30953b4b)] - **fix**: update .circleci/config.yml. fix typo (nickhsine)
+* [[`f5577bba88`](https://github.com/twreporter/plate/commit/f5577bba88)] - Merge pull request #162 from nickhsine/preview-origin (nick)
+* [[`72a98d321a`](https://github.com/twreporter/plate/commit/72a98d321a)] - **refactor**: update config. `preview config` -\> `preview origin` (nickhsine)
+* [[`c5f3c34899`](https://github.com/twreporter/plate/commit/c5f3c34899)] - Merge pull request #159 from nickhsine/master (nick)
+* [[`bb30953b4b`](https://github.com/twreporter/plate/commit/bb30953b4b)] - **fix**: update .circleci/config.yml. fix typo (nickhsine)
 
 ### 3.1.7 (2020-08-26)
 #### Notable Changes
@@ -103,52 +116,52 @@ Bump version v3.2.0 to correct the versioning.
   - upgrade @twreporter/keystone-plugin-socketio to 3.1.5
 
 #### Commits
-* [[`93bf91f51d`](https://github.com/twreporter/keystone-plate/commit/93bf91f51d)] - **chore**: update package.json#dependencies (nickhsine)
-* [[`a41af86024`](https://github.com/twreporter/keystone-plate/commit/a41af86024)] - **fix**: add `專題名稱` and `發佈日期` as topic default columns (nickhsine)
-* [[`f636be84b6`](https://github.com/twreporter/keystone-plate/commit/f636be84b6)] - Merge pull request #154 from nickhsine/circleci-staging (nick)
-* [[`6069d422a5`](https://github.com/twreporter/keystone-plate/commit/6069d422a5)] - **refactor**: update circleci config. add staging branch (nickhsine)
-* [[`de56e993f7`](https://github.com/twreporter/keystone-plate/commit/de56e993f7)] - Merge pull request #152 from nickhsine/3.1.6 (nick)
+* [[`93bf91f51d`](https://github.com/twreporter/plate/commit/93bf91f51d)] - **chore**: update package.json#dependencies (nickhsine)
+* [[`a41af86024`](https://github.com/twreporter/plate/commit/a41af86024)] - **fix**: add `專題名稱` and `發佈日期` as topic default columns (nickhsine)
+* [[`f636be84b6`](https://github.com/twreporter/plate/commit/f636be84b6)] - Merge pull request #154 from nickhsine/circleci-staging (nick)
+* [[`6069d422a5`](https://github.com/twreporter/plate/commit/6069d422a5)] - **refactor**: update circleci config. add staging branch (nickhsine)
+* [[`de56e993f7`](https://github.com/twreporter/plate/commit/de56e993f7)] - Merge pull request #152 from nickhsine/3.1.6 (nick)
 
 ### 3.1.6 (2020-08-17)
 #### Commits
-* [[`39c6dc45c4`](https://github.com/twreporter/keystone-plate/commit/39c6dc45c4)] - **refactor**: update keystone.js (nickhsine)
-* [[`3c88b6c40d`](https://github.com/twreporter/keystone-plate/commit/3c88b6c40d)] - Merge pull request #150 from nickhsine/3.1.5 (nick)
+* [[`39c6dc45c4`](https://github.com/twreporter/plate/commit/39c6dc45c4)] - **refactor**: update keystone.js (nickhsine)
+* [[`3c88b6c40d`](https://github.com/twreporter/plate/commit/3c88b6c40d)] - Merge pull request #150 from nickhsine/3.1.5 (nick)
 
 ### 3.1.5 (2020-08-14)
 #### Commits
-* [[`ee704bacfc`](https://github.com/twreporter/keystone-plate/commit/ee704bacfc)] - **chore**: upgrade @twreporter/keystone to v0.8.0-rc.6 (nickhsine)
-* [[`505ca71820`](https://github.com/twreporter/keystone-plate/commit/505ca71820)] - **refactor**: update models/User.js (nickhsine)
-* [[`04a7955e5e`](https://github.com/twreporter/keystone-plate/commit/04a7955e5e)] - **refactor**: update models (nickhsine)
-* [[`158a635224`](https://github.com/twreporter/keystone-plate/commit/158a635224)] - Merge pull request #147 from nickhsine/master (nick)
-* [[`ade48ea71b`](https://github.com/twreporter/keystone-plate/commit/ade48ea71b)] - **docs**: update README.md (nickhsine)
+* [[`ee704bacfc`](https://github.com/twreporter/plate/commit/ee704bacfc)] - **chore**: upgrade @twreporter/keystone to v0.8.0-rc.6 (nickhsine)
+* [[`505ca71820`](https://github.com/twreporter/plate/commit/505ca71820)] - **refactor**: update models/User.js (nickhsine)
+* [[`04a7955e5e`](https://github.com/twreporter/plate/commit/04a7955e5e)] - **refactor**: update models (nickhsine)
+* [[`158a635224`](https://github.com/twreporter/plate/commit/158a635224)] - Merge pull request #147 from nickhsine/master (nick)
+* [[`ade48ea71b`](https://github.com/twreporter/plate/commit/ade48ea71b)] - **docs**: update README.md (nickhsine)
 
 ### 3.1.4 (2020-06-01)
 #### Commits
-* [[`1487318b46`](https://github.com/twreporter/keystone-plate/commit/1487318b46)] - Merge pull request #145 from YuCJ/master (yucj)
-* [[`1ccf384cc3`](https://github.com/twreporter/keystone-plate/commit/1ccf384cc3)] - chore(release): 3.1.4 (yucj)
+* [[`1487318b46`](https://github.com/twreporter/plate/commit/1487318b46)] - Merge pull request #145 from YuCJ/master (yucj)
+* [[`1ccf384cc3`](https://github.com/twreporter/plate/commit/1ccf384cc3)] - chore(release): 3.1.4 (yucj)
 
 ### 3.1.3 (2020-05-07)
 #### Commits
-* [[`6e8604d308`](https://github.com/twreporter/keystone-plate/commit/6e8604d308)] - **chore**: upgrade @twreporter/keystone to 0.8.0-rc.3 (nickhsine)
+* [[`6e8604d308`](https://github.com/twreporter/plate/commit/6e8604d308)] - **chore**: upgrade @twreporter/keystone to 0.8.0-rc.3 (nickhsine)
 
 ### 3.1.2 (2020-05-06)
 #### Commits
-* [[`a4bc1af177`](https://github.com/twreporter/keystone-plate/commit/a4bc1af177)] - **chore**: upgrade @twreporter/keystone to 0.8.0-rc.2 (nickhsine)
+* [[`a4bc1af177`](https://github.com/twreporter/plate/commit/a4bc1af177)] - **chore**: upgrade @twreporter/keystone to 0.8.0-rc.2 (nickhsine)
 
 ### 3.1.1 (2020-05-01)
 #### Commits
-* [[`65a61b387e`](https://github.com/twreporter/keystone-plate/commit/65a61b387e)] - **chore**: upgrade @twreporter/keystone to 0.8.0-rc.1 (nickhsine)
+* [[`65a61b387e`](https://github.com/twreporter/plate/commit/65a61b387e)] - **chore**: upgrade @twreporter/keystone to 0.8.0-rc.1 (nickhsine)
 
 ### 3.1.0 (2020-04-20)
 #### Commits
-* [[`49c1310f58`](https://github.com/twreporter/keystone-plate/commit/49c1310f58)] - **feat**: add `toAutoNotify` field in models/Post.js (nickhsine)
+* [[`49c1310f58`](https://github.com/twreporter/plate/commit/49c1310f58)] - **feat**: add `toAutoNotify` field in models/Post.js (nickhsine)
 
 ### 3.0.2 (2020-03-30)
 
 ### Commits
-* [[`9ad3f4e46c`](https://github.com/twreporter/keystone-plate/commit/9ad3f4e46c)] - **chore**: npm run changelog-maker to create change log (nickhsine)
-* [[`b497f5d50f`](https://github.com/twreporter/keystone-plate/commit/b497f5d50f)] - **chore**: update @twreporter/keystone-plugin-(socketio|client) to v1.0.3 (nickhsine)
-* [[`94690d0bf0`](https://github.com/twreporter/keystone-plate/commit/94690d0bf0)] - **chore**: add @twreporter/keystone-plugin-socketio@1.0.4 (nickhsine)
+* [[`9ad3f4e46c`](https://github.com/twreporter/plate/commit/9ad3f4e46c)] - **chore**: npm run changelog-maker to create change log (nickhsine)
+* [[`b497f5d50f`](https://github.com/twreporter/plate/commit/b497f5d50f)] - **chore**: update @twreporter/keystone-plugin-(socketio|client) to v1.0.3 (nickhsine)
+* [[`94690d0bf0`](https://github.com/twreporter/plate/commit/94690d0bf0)] - **chore**: add @twreporter/keystone-plugin-socketio@1.0.4 (nickhsine)
 
 ### 3.0.1 (DEPRECATED)
 
