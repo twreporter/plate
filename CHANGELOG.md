@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.2.4 (2020-12-09)
+
+#### Notable Changes
+
+- chore: upgrade @twreporter/keystone to v0.9.3-rc.0 
+
+#### Commits
+
+* [[`f01a8cbfb4`](https://github.com/twreporter/keystone-plate/commit/f01a8cbfb4)] - Merge pull request #208 from taylrj/update-dep (Tai-Jiun Fang)
+* [[`84dd798cc8`](https://github.com/twreporter/keystone-plate/commit/84dd798cc8)] - **chore**: upgrade dep @twreporter/keystone to v0.9.3-rc.0 (Taylor Fang)
+* [[`12347f38af`](https://github.com/twreporter/keystone-plate/commit/12347f38af)] - Merge pull request #206 from taylrj/master (Tai-Jiun Fang)
+
 ### 3.2.3 (2020-12-09)
 
 #### Notable Changes
