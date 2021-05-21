@@ -24,6 +24,7 @@
     "browserify-middleware": "^7.0.0",
     "compression": "^1.6.1",
     "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.0.0",
     "elemental": "^0.5.12",
     "express": "^4.13.4",
     "gm": "^1.21.1",
