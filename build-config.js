@@ -86,6 +86,12 @@ exports.options = {
   'auto update': true,
   'session': true,
   'session store': 'mongo',
+  'session store options':{
+    autoRemove: 'interval',
+    autoRemoveInterval: 10,
+    touchAfter: 0,
+    ttl: 10,
+  },
   'auth': ${auth},
   'user model': 'User',
   'cookie secret': '${cookieSecret}',
