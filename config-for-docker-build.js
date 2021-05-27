@@ -1,3 +1,8 @@
+// note the unit of session store options
+// autoRemoveInterval: the interval of expired session removal. the unit of it is minute.
+// touchAfter: the interval of unmodified session is refreshed. the unit of it is second.
+// ttl: the interval of the session ttl on server side if the cookie-session does not contain maxAge/expire.
+//      the unit of it is second.
 exports.options = {
   'name': 'Keystone',
   'brand': 'Keystone',
@@ -11,6 +16,12 @@ exports.options = {
   'auto update': true,
   'session': true,
   'session store': 'mongo',
+  'session store options': {
+    autoRemove: 'interval',
+    autoRemoveInterval: process.env.KEYSTONE_SESSION_AUTO_REMOVE_INTERVAL || 10,
+    touchAfter: process.env.KEYSTONE_SESSION_TOUCH_AFTER || 0,
+    ttl: process.env.KEYSTONE_SESSION_TTL || 14 * 24 * 60 * 60,
+  },
   'auth': true,
   'user model': 'User',
   'cookie secret': process.env.KEYSTONE_COOKIE_SECRET,
