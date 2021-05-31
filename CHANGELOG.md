@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.2.5-rc.0
+
+#### Notable Changes
+- feat
+  - enable mongo session store([#215](https://github.com/twreporter/plate/pull/215), [#216](https://github.com/twreporter/plate/pull/216))
+- docs
+  - add release-test-item([#149](https://github.com/twreporter/plate/pull/149))
+
+#### Commits
+* [[`5310581ca3`](https://github.com/twreporter/keystone-plate/commit/5310581ca3)] - **feat**: define the options of session store (Ching-Yang, Tseng)
+* [[`b575395843`](https://github.com/twreporter/keystone-plate/commit/b575395843)] - **feat**: use connect-mongo as express-session storage (Ching-Yang, Tseng)
+* [[`083e9490f7`](https://github.com/twreporter/keystone-plate/commit/083e9490f7)] - Merge pull request #149 from nickhsine/release-test-items (babygoat)
+
 ### 3.2.4 (2020-12-09)
 
 #### Notable Changes
