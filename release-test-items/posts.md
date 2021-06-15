@@ -145,6 +145,147 @@
 
 --- 
 
+#### 檢查編輯器
+
+##### 檢查複製貼上功能
+1. 複製一段純文字
+2. 能成功貼至目的區塊
+
+##### 檢查-inline-style-buttons
+###### 檢查 quote
+1. 輸入文字「這是 quote」
+2. 點擊 quote 按鈕
+3. 文字樣式如下圖所示
+
+![quote](assets/quote.png)
+
+###### 檢查 code block 
+1. 輸入文字 `function() {  return 1+2; }`
+2. 點擊 code block 按鈕
+3. 樣式如下圖所示
+
+![code-block](assets/code-block.png)
+
+###### 檢查 H1 
+1. 輸入文字「Header1」
+2. 點擊 H1 按鈕
+3. 文字顯示為H1樣式
+
+![h1](assets/header1.png)
+
+###### 檢查 H2 
+1. 輸入文字「Header2」
+2. 點擊 H2 按鈕
+3. 文字顯示為H2樣式
+
+![h2](assets/header2.png)
+
+###### 檢查列表(ordered list, unordered list) 
+1. 輸入文字「這是列表項目」
+2. 點擊 ordered list 按鈕
+3. 顯示 ordered list 樣式（如圖）
+
+![order-list](assets/order-list.png)
+
+4. 再次點擊 ordered list 按鈕，取消 ordered list 樣式
+5. 點擊 unordered list 按鈕
+6. 顯示 unordered list 樣式（如圖）
+
+![unorder-list](assets/unorder-list.png)
+
+7. 再次點擊 unordered list 按鈕，取消 unordered list 樣式
+
+###### 檢查粗體、斜體、底線、標註（monospace）
+1. 依序點擊粗體、斜體、底線、標註，並檢查字體是否正確，其中標註（monospace）樣式如圖:
+
+![monospace](assets/monospace.png) 
+
+##### 檢查 entity buttons
+
+###### 檢查-link
+1. 點擊 link button
+2. 在跳出的 insert link 對話框填入文字與超連結，新增一個 link
+3. 對現有的字串反白，再點擊 link button
+4. 在跳出的 insert link 對話框中，連結文字為前項之反白文字，接續執行第2項
+
+###### 檢查 annotation（註解）
+1. 點擊 annotation button
+2. 在註解內容區塊 [檢查複製貼上功能](#檢查複製貼上功能)
+3. 在註解內容區塊 [檢查 inline style buttons](#檢查-inline-style-buttons)
+4. 在註解內容區塊 [檢查 link](#檢查-link)
+5. 按 Save 新增 annotation
+6. 對現有的字串反白，再點擊 annotation button
+7. 在跳出的 insert annotation 對話框中，text 顯示前項之反白文字，接續執行第5項 
+
+###### 檢查 blockquote
+1. 點擊 blockquote button
+2. [檢查複製貼上功能](#檢查複製貼上功能)
+3. 填入quoteBy, quote
+4. 按 Save 新增 blockquote，樣式如下圖
+ 
+![blockquote](assets/blockquote.png)
+
+5. 對現有的字串反白，再點擊 blockquote button
+6. 在跳出的 insert blockquote 對話框中，quote 顯示前項之反白文字，接續執行第4項 
+
+###### 檢查 infobox 
+1. 點擊 infobox button
+2. 填入title
+3. 在內容區塊 [檢查複製貼上功能](#檢查複製貼上功能)
+4. 在內容區塊 [檢查 inline style buttons](#檢查-inline-style-buttons)
+5. 在內容區塊 [檢查 link](#檢查-link)
+6. 按 Save 新增 infobox，樣式如下圖
+
+![infobox](assets/infobox.png)
+
+7. 對現有的字串反白，再點擊 infobox button
+8. 在跳出的 insert infobox 對話框中，title 顯示前項之反白文字，接續執行第6項 
+
+###### 檢查 Embed 
+1. 點擊 Embed button
+2. 填入 caption
+3. 貼上下方文字於 embeddedCode 區塊
+
+`<div class="infogram-embed" data-id="_/GtwQyPEtc76cLuC4bOPq" data-type="interactive" data-title="2010-2019 台北捷運週邊獨立及分租套房每坪房租中位數漲幅（前10名） / 報導者"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script>`
+
+4. 按 Save 新增 embedded code block，編輯器顯示如下圖:
+
+![embedded](assets/embedded.png) 
+
+5. 在 embedded code block 下方輸入中文字新增段落，確認畫面不會跳動
+
+###### 檢查 Audio 
+1. 點擊 Audio button
+2. 選擇一個音檔：【倖存者的餘聲】夏雪想對姊姊說的話
+3. 在音檔區塊下方輸入中文字新增段落，確認音檔無閃動
+
+###### 檢查 Image 
+1. 點擊 Img button
+2. 選擇第一張照片
+3. 在照片下方輸入中文字新增段落，確認照片無閃動
+
+###### 檢查 Image Diff 
+1. 點擊 Diff button
+2. 選擇前兩張照片
+3. 在照片下方輸入中文字新增段落，確認區塊無閃動
+
+###### 檢查 Image Link 
+1. 點擊 ImgLink button
+2. 輸入 url, description，按 Save 
+3. 在圖片下方輸入中文字新增段落，確認圖片無閃動
+
+###### 檢查 slideshow 
+1. 點擊 slideshow button
+2. 選擇五張照片
+3. 在照片下方輸入中文字新增段落，確認 thumbnails 不會重新載入，確認畫面無閃動
+
+###### 檢查 Youtube 
+1. 點擊 youtube button
+2. 填入 youtubeId, description，按 Save 
+3. 在影片下方輸入中文字新增段落，確認影片不會重新載入，確認畫面無閃動
+
+--- 
+
 #### Preview Post
 1. 根據「[更新 Post](#更新-post)」，產生測試文章
 2. go to https://keystone-preview.twreporter.org/a/test-slug
@@ -155,7 +296,7 @@
 #### 檢查聊天室
 1. 根據「[更新 Post](#更新-post)」，產生測試文章
 2. 畫面會停留在該篇新增文章的頁面
-3. 確認畫面右方是否出現聊天室，見範例圖（）
+3. 確認畫面右方是否出現聊天室
 
 ---
 
