@@ -1,6 +1,6 @@
 {
   "name": "keystone-plate",
-  "version": "3.2.5-rc.0",
+  "version": "3.2.5-rc.1",
   "private": true,
   "repository": {
     "type": "git",
@@ -9,7 +9,7 @@
   "dependencies": {
     "@google-cloud/pubsub": "^2.6.0",
     "@twreporter/errors": "^1.1.0",
-    "@twreporter/keystone": "0.9.4-rc.2",
+    "@twreporter/keystone": "0.9.4-rc.3",
     "@twreporter/keystone-plugin-client": "1.0.7",
     "@twreporter/keystone-plugin-socketio": "1.0.7",
     "babel-core": "^6.4.5",
