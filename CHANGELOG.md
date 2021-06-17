@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.2.5-rc.1
+
+#### Notable Changes
+- chore 
+  - upgrade @twreporter/keystone@0.9.4-rc.3([#221](https://github.com/twreporter/plate/pull/221))
+
+#### Commits
+* [[`6e768e9c4c`](https://github.com/twreporter/keystone-plate/commit/6e768e9c4c)] - Merge pull request #221 from taylrj/master (Tai-Jiun Fang)
+* [[`325fac2e06`](https://github.com/twreporter/keystone-plate/commit/325fac2e06)] - **chore**: upgrade @twreporter/keystone@v0.9.4-rc.3 (Tai-Jiun Fang)
+
 ### 3.2.5-rc.0
 
 #### Notable Changes
