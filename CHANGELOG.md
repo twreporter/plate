@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.2.5-rc.3
+
+#### Notable Changes
+- chore 
+  - upgrade @twreporter/keystone@0.9.4-rc.5([#227](https://github.com/twreporter/plate/pull/227))
+- docs
+  - update release-test-items/posts.md([#220](https://github.com/twreporter/plate/pull/220)) to add test items for editor
+
+#### Commits
+* [[`9b68a9a1b6`](https://github.com/twreporter/keystone-plate/commit/9b68a9a1b6)] - **chore**: upgrade @twreporter/keystone to v0.9.4-rc.5 (Tai-Jiun Fang)
+* [[`4395bbdfe0`](https://github.com/twreporter/keystone-plate/commit/4395bbdfe0)] - **docs**: update release-test-items/posts.md (#220) (Tai-Jiun Fang)
+
 ### 3.2.5-rc.2
 
 #### Notable Changes
