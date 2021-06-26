@@ -3,6 +3,9 @@
 // touchAfter: the interval of unmodified session is refreshed. the unit of it is second.
 // ttl: the interval of the session ttl on server side if the cookie-session does not contain maxAge/expire.
 //      the unit of it is second.
+// note the unit of cookie singin options
+// maxAge: The maximumAge should a cookie be granted. The unit of it is millisecond.
+//         This should be consistent with the ttl option of session store options in general.
 exports.options = {
   'name': 'Keystone',
   'brand': 'Keystone',
@@ -25,6 +28,9 @@ exports.options = {
   'auth': true,
   'user model': 'User',
   'cookie secret': process.env.KEYSTONE_COOKIE_SECRET,
+  'cookie signin options': {
+    maxAge: process.env.KEYSTONE_COOKIE_SIGNIN_MAX_AGE || 14 * 24 * 60 * 60 * 1000,
+  },
   'gcs config': {
     projectId: process.env.KEYSTONE_GCS_PROJECT_ID,
     keyFilename: __dirname + '/gcskeyfile.json',

@@ -90,11 +90,14 @@ exports.options = {
     autoRemove: 'interval',
     autoRemoveInterval: 10,
     touchAfter: 0,
-    ttl: 10,
+    ttl: 14 * 24 * 60 * 60 * 1000,
   },
   'auth': ${auth},
   'user model': 'User',
   'cookie secret': '${cookieSecret}',
+  'cookie signin options': {
+    maxAge: 14 * 24 * 60 * 60 * 1000,
+  },
   'gcs config': {
     projectId: '${gcsProjectID}', // Your projectId
     keyFilename: __dirname + '/gcskeyfile.json', // Your keyFilename path
