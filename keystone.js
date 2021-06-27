@@ -8,14 +8,29 @@ keystone.set('locals', config.locals);
 keystone.set('routes', require('./routes'));
 keystone.set('nav', config.nav);
 
-keystone.start({
-  onMount () { console.log('Application Mounted'); },
-  onStart () { console.log('Application Started'); },
+var express = require('express');
+var http = require('http');
+
+// Create keystone app
+keystone.initExpressApp();
+
+var keystoneServer = http.createServer(keystone.app);
+keystone.openDatabaseConnection(function(){
+  var port = keystone.get('port') || 3000;
+
+  keystoneServer.listen(port, (err) => {
+    console.log('------------------------------------------------')
+    if (err) {
+      console.error(err) // eslint-disable-line no-console
+    }
+    console.info('KeystoneJS ready on ', port, ' port') // eslint-disable-line no-console
+    console.log('------------------------------------------------')
+  })
 });
 
-var express = require('express');
+// Create socket.io server
 var app = express();
-var server = require('http').createServer(app);
+var server = http.createServer(app);
 buildSocketIO(server, {
   allowedOrigins: process.env.NODE_ENV === 'development' ? '*' : [
     'https://keystone-editor.twreporter.org',
