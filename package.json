@@ -7,6 +7,7 @@
     "url": "https://github.com/twreporter/plate"
   },
   "dependencies": {
+    "@godaddy/terminus": "^4.9.0",
     "@google-cloud/pubsub": "^2.6.0",
     "@twreporter/errors": "^1.1.0",
     "@twreporter/keystone": "0.9.4-rc.5",

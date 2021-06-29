@@ -15,8 +15,15 @@ var http = require('http');
 keystone.initExpressApp();
 
 var keystoneServer = http.createServer(keystone.app);
+
+var shutdown = require('./lib/shutdown');
+keystoneServer = shutdown.addGracefulShutdownHook(keystoneServer, {
+  onSignal: shutdown.cleanupKeystone(keystone),
+  onShutdown: shutdown.logShutdownService('keystone'),
+});
+
 keystone.openDatabaseConnection(function(){
-  var port = keystone.get('port') || 3000;
+  var port = keystone.get('port') || 3000
 
   keystoneServer.listen(port, (err) => {
     console.log('------------------------------------------------')
@@ -38,6 +45,9 @@ buildSocketIO(server, {
   ],
 })
 
+server = shutdown.addGracefulShutdownHook(server,{
+  onShutdown: shutdown.logShutdownService('socket-io')
+});
 const socketioPort = process.env.SOCKETIO_PORT || 3030
 server.listen(socketioPort, (err) => {
   console.log('------------------------------------------------')
