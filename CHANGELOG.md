@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.2.5-rc.5
+
+#### Notable Changes
+- chore 
+  - downgrade @twreporter/keystone to v0.9.4-rc.5 ([#233](https://github.com/twreporter/plate/pull/233))
+
+#### Commits
+* [[`f683e90c20`](https://github.com/twreporter/keystone-plate/commit/f683e90c20)] - **chore**: downgrade @twreporter/keystone to v0.9.4-rc.5 (#233) (Tai-Jiun Fang)
+
 ### 3.2.5-rc.4
 
 #### Notable Changes
