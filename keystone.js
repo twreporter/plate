@@ -17,10 +17,15 @@ keystone.initExpressApp();
 var keystoneServer = http.createServer(keystone.app);
 
 var shutdown = require('./lib/shutdown');
+const healthCheckHandler = require('./lib/healthcheck')(keystone);
+
 keystoneServer = shutdown.addGracefulShutdownHook(keystoneServer, {
-  onSignal: shutdown.cleanupKeystone(keystone),
-  onShutdown: shutdown.logShutdownService('keystone'),
-});
+	healthChecks: {
+		'/healthcheck': healthCheckHandler,
+	},
+	onSignal: shutdown.cleanupKeystone(keystone),
+	onShutdown: shutdown.logShutdownService('keystone'),
+})
 
 keystone.openDatabaseConnection(function(){
   var port = keystone.get('port') || 3000
