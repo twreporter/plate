@@ -922,6 +922,13 @@
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.4.tgz#a87b4b04e5ae14a88d48ebef15015f6b7d1f5677"
   integrity sha512-kBa+cDHOR9jpRJ+kcGMsysrls0leukrm68DmFQoMIWQcXdr2cZvyvypWuGYT7U+9kAExUE7+T7r6G3C3A6L8MQ==
 
+"@godaddy/terminus@^4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@godaddy/terminus/-/terminus-4.9.0.tgz#c7de0b45ede05116854d1461832dd05df169f689"
+  integrity sha512-j1E22ZK5jW+DVb2vIEOx9I6epWT/geJyWzuxsUThyPcds5UxjCBeKcDTtNVkoWLRASM49o9OKRrCKKybX7z9bw==
+  dependencies:
+    stoppable "^1.1.0"
+
 "@google-cloud/common@^0.17.0":
   version "0.17.0"
   resolved "https://registry.yarnpkg.com/@google-cloud/common/-/common-0.17.0.tgz#8ef558750db481fc10a13757a49479ab9a1c8c07"
@@ -11962,6 +11969,11 @@ statuses@~1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.2.1.tgz#dded45cc18256d51ed40aec142489d5c61026d28"
   integrity sha1-3e1FzBglbVHtQK7BQkidXGECbSg=
+
+stoppable@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/stoppable/-/stoppable-1.1.0.tgz#32da568e83ea488b08e4d7ea2c3bcc9d75015d5b"
+  integrity sha512-KXDYZ9dszj6bzvnEMRYvxgeTHU74QBFL54XKtP3nyMuJ81CFYtABZ3bAzL2EdFUaEwJOBOgENyFj3R7oTzDyyw==
 
 store-prototype@1.1.1, store-prototype@^1.1.1:
   version "1.1.1"
