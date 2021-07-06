@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.2.5-rc.6
+
+#### Notable Changes
+- feat
+  - graceful shutdown of keystone server ([#236](https://github.com/twreporter/plate/pull/236))
+
+#### Commits
+* [[`2eca5ae1dc`](https://github.com/twreporter/keystone-plate/commit/2eca5ae1dc)] - **feat**: add healthcheck for keystone (Ching-Yang, Tseng)
+* [[`a5ce5574d3`](https://github.com/twreporter/keystone-plate/commit/a5ce5574d3)] - **feat**: graceful shutdown the servers (Ching-Yang, Tseng)
+* [[`aa57d3efbb`](https://github.com/twreporter/keystone-plate/commit/aa57d3efbb)] - **refactor**: use initExpressApp instead of start (Ching-Yang, Tseng)
+
 ### 3.2.5-rc.5
 
 #### Notable Changes
