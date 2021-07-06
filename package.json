@@ -1,12 +1,13 @@
 {
   "name": "keystone-plate",
-  "version": "3.2.5-rc.5",
+  "version": "3.2.5-rc.6",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/twreporter/plate"
   },
   "dependencies": {
+    "@godaddy/terminus": "^4.9.0",
     "@google-cloud/pubsub": "^2.6.0",
     "@twreporter/errors": "^1.1.0",
     "@twreporter/keystone": "0.9.4-rc.5",
