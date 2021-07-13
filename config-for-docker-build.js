@@ -21,15 +21,15 @@ exports.options = {
   'session store': 'mongo',
   'session store options': {
     autoRemove: 'interval',
-    autoRemoveInterval: process.env.KEYSTONE_SESSION_AUTO_REMOVE_INTERVAL || 10,
-    touchAfter: process.env.KEYSTONE_SESSION_TOUCH_AFTER || 0,
-    ttl: process.env.KEYSTONE_SESSION_TTL || 14 * 24 * 60 * 60,
+    autoRemoveInterval: process.env.KEYSTONE_SESSION_AUTO_REMOVE_INTERVAL ? parseInt(process.env.KEYSTONE_SESSION_AUTO_REMOVE_INTERVAL, 10) : 10,
+    touchAfter: process.env.KEYSTONE_SESSION_TOUCH_AFTER ? parseInt(process.env.KEYSTONE_SESSION_TOUCH_AFTER, 10) : 0,
+    ttl: process.env.KEYSTONE_SESSION_TTL ? parseInt(process.env.KEYSTONE_SESSION_TTL, 10) : 14 * 24 * 60 * 60,
   },
   'auth': true,
   'user model': 'User',
   'cookie secret': process.env.KEYSTONE_COOKIE_SECRET,
   'cookie signin options': {
-    maxAge: process.env.KEYSTONE_COOKIE_SIGNIN_MAX_AGE || 14 * 24 * 60 * 60 * 1000,
+    maxAge: process.env.KEYSTONE_COOKIE_SIGNIN_MAX_AGE ? parseInt(process.env.KEYSTONE_COOKIE_SIGNIN_MAX_AGE, 10) : 14 * 24 * 60 * 60 * 1000,
   },
   'gcs config': {
     projectId: process.env.KEYSTONE_GCS_PROJECT_ID,
