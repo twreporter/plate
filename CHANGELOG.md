@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.2.5 (2021-7-13)
+
+#### Notable Changes
+- feat
+	- graceful shutdown of keystone server ([#236](https://github.com/twreporter/plate/pull/236))
+	- enable mongo session store([#215](https://github.com/twreporter/plate/pull/215), [#216](https://github.com/twreporter/plate/pull/216))
+- docs
+	- update release-test-items/posts.md([#220](https://github.com/twreporter/plate/pull/220)) to add test items for editor
+	- add release-test-item([#149](https://github.com/twreporter/plate/pull/149))
+- chore
+    - update @twreporter/keystone to v0.9.4
+
+#### Commits
+* [[`c9107a8bf6`](https://github.com/twreporter/keystone-plate/commit/c9107a8bf6)] - **chore**: bump @twreporter/keystone to v0.9.4-rc.7 (Ching-Yang, Tseng)
+* [[`2eca5ae1dc`](https://github.com/twreporter/keystone-plate/commit/2eca5ae1dc)] - **feat**: add healthcheck for keystone (Ching-Yang, Tseng)
+* [[`a5ce5574d3`](https://github.com/twreporter/keystone-plate/commit/a5ce5574d3)] - **feat**: graceful shutdown the servers (Ching-Yang, Tseng)
+* [[`aa57d3efbb`](https://github.com/twreporter/keystone-plate/commit/aa57d3efbb)] - **refactor**: use initExpressApp instead of start (Ching-Yang, Tseng)
+* [[`f683e90c20`](https://github.com/twreporter/keystone-plate/commit/f683e90c20)] - **chore**: downgrade @twreporter/keystone to v0.9.4-rc.5 (#233) (Tai-Jiun Fang)
+* [[`53f5b9e1de`](https://github.com/twreporter/keystone-plate/commit/53f5b9e1de)] - **chore**: upgrade @twreporter/keystone to v0.9.4-rc.6 (#230) (Tai-Jiun Fang)
+* [[`9b68a9a1b6`](https://github.com/twreporter/keystone-plate/commit/9b68a9a1b6)] - **chore**: upgrade @twreporter/keystone to v0.9.4-rc.5 (Tai-Jiun Fang)
+* [[`4395bbdfe0`](https://github.com/twreporter/keystone-plate/commit/4395bbdfe0)] - **docs**: update release-test-items/posts.md (#220) (Tai-Jiun Fang)
+* [[`63721f1a86`](https://github.com/twreporter/keystone-plate/commit/63721f1a86)] - **chore**: upgrade @twreporter/keystone to v0.9.4-rc.4 (Tai-Jiun Fang)
+* [[`325fac2e06`](https://github.com/twreporter/keystone-plate/commit/325fac2e06)] - **chore**: upgrade @twreporter/keystone@v0.9.4-rc.3 (Tai-Jiun Fang)
+* [[`5310581ca3`](https://github.com/twreporter/keystone-plate/commit/5310581ca3)] - **feat**: define the options of session store (Ching-Yang, Tseng)
+* [[`b575395843`](https://github.com/twreporter/keystone-plate/commit/b575395843)] - **feat**: use connect-mongo as express-session storage (Ching-Yang, Tseng)
+* [[`083e9490f7`](https://github.com/twreporter/keystone-plate/commit/083e9490f7)] - Merge pull request #149 from nickhsine/release-test-items (babygoat)
+
 ### 3.2.4 (2020-12-09)
 
 #### Notable Changes

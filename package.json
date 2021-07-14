@@ -1,15 +1,16 @@
 {
   "name": "keystone-plate",
-  "version": "3.2.4",
+  "version": "3.2.5",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/twreporter/plate"
   },
   "dependencies": {
+    "@godaddy/terminus": "^4.9.0",
     "@google-cloud/pubsub": "^2.6.0",
     "@twreporter/errors": "^1.1.0",
-    "@twreporter/keystone": "0.9.3",
+    "@twreporter/keystone": "0.9.4",
     "@twreporter/keystone-plugin-client": "1.0.7",
     "@twreporter/keystone-plugin-socketio": "1.0.7",
     "babel-core": "^6.4.5",
@@ -24,6 +25,7 @@
     "browserify-middleware": "^7.0.0",
     "compression": "^1.6.1",
     "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.0.0",
     "elemental": "^0.5.12",
     "express": "^4.13.4",
     "gm": "^1.21.1",
