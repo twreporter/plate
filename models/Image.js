@@ -81,8 +81,13 @@ function getResizeMetadata(filename, originWidth, originHeight) {
   return targets;
 }
 
+const imageNotes = [
+  '上傳圖片的`Description`字數上限為`300個中文字`或`1000個英文字母`。',
+  '圖片上傳後，請前往 slack channel（`圖片處理系統回報`）看圖片壓縮結果。'
+]
+
 Image.set('notes', {
-  image: '圖片上傳後，請前往 slack channel（`圖片處理系統回報`）看圖片壓縮結果。'
+  image: imageNotes.join('<br>') 
 })
 
 Image.add({
