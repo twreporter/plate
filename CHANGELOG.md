@@ -1,5 +1,14 @@
 # Changelog
 
+### 3.2.6-rc.0 (2021-7-30)
+
+#### Notable Changes
+- refactor
+  - add Description word limits to note for image ([#247](https://github.com/twreporter/plate/pull/247))
+
+#### Commits
+* [[`606bc0cc57`](https://github.com/twreporter/keystone-plate/commit/606bc0cc57)] - **refactor**: add Description word limits to note for image (#247) (Tai-Jiun Fang)
+
 ### 3.2.5 (2021-7-13)
 
 #### Notable Changes
