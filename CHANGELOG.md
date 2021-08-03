@@ -1,6 +1,6 @@
 # Changelog
 
-### 3.2.6-rc.0 (2021-7-30)
+### 3.2.6 (2021-08-03)
 
 #### Notable Changes
 - refactor
