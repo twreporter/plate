@@ -1,6 +1,13 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+### 3.2.6 (2021-08-03)
+
+#### Notable Changes
+- refactor
+  - add Description word limits to note for image ([#247](https://github.com/twreporter/plate/pull/247))
+
+#### Commits
+* [[`606bc0cc57`](https://github.com/twreporter/keystone-plate/commit/606bc0cc57)] - **refactor**: add Description word limits to note for image (#247) (Tai-Jiun Fang)
 
 ### 3.2.5 (2021-7-13)
 
@@ -15,19 +22,19 @@ All notable changes to this project will be documented in this file. See [standa
     - update @twreporter/keystone to v0.9.4
 
 #### Commits
-* [[`c9107a8bf6`](https://github.com/twreporter/keystone-plate/commit/c9107a8bf6)] - **chore**: bump @twreporter/keystone to v0.9.4-rc.7 (Ching-Yang, Tseng)
-* [[`2eca5ae1dc`](https://github.com/twreporter/keystone-plate/commit/2eca5ae1dc)] - **feat**: add healthcheck for keystone (Ching-Yang, Tseng)
-* [[`a5ce5574d3`](https://github.com/twreporter/keystone-plate/commit/a5ce5574d3)] - **feat**: graceful shutdown the servers (Ching-Yang, Tseng)
-* [[`aa57d3efbb`](https://github.com/twreporter/keystone-plate/commit/aa57d3efbb)] - **refactor**: use initExpressApp instead of start (Ching-Yang, Tseng)
-* [[`f683e90c20`](https://github.com/twreporter/keystone-plate/commit/f683e90c20)] - **chore**: downgrade @twreporter/keystone to v0.9.4-rc.5 (#233) (Tai-Jiun Fang)
-* [[`53f5b9e1de`](https://github.com/twreporter/keystone-plate/commit/53f5b9e1de)] - **chore**: upgrade @twreporter/keystone to v0.9.4-rc.6 (#230) (Tai-Jiun Fang)
-* [[`9b68a9a1b6`](https://github.com/twreporter/keystone-plate/commit/9b68a9a1b6)] - **chore**: upgrade @twreporter/keystone to v0.9.4-rc.5 (Tai-Jiun Fang)
-* [[`4395bbdfe0`](https://github.com/twreporter/keystone-plate/commit/4395bbdfe0)] - **docs**: update release-test-items/posts.md (#220) (Tai-Jiun Fang)
-* [[`63721f1a86`](https://github.com/twreporter/keystone-plate/commit/63721f1a86)] - **chore**: upgrade @twreporter/keystone to v0.9.4-rc.4 (Tai-Jiun Fang)
-* [[`325fac2e06`](https://github.com/twreporter/keystone-plate/commit/325fac2e06)] - **chore**: upgrade @twreporter/keystone@v0.9.4-rc.3 (Tai-Jiun Fang)
-* [[`5310581ca3`](https://github.com/twreporter/keystone-plate/commit/5310581ca3)] - **feat**: define the options of session store (Ching-Yang, Tseng)
-* [[`b575395843`](https://github.com/twreporter/keystone-plate/commit/b575395843)] - **feat**: use connect-mongo as express-session storage (Ching-Yang, Tseng)
-* [[`083e9490f7`](https://github.com/twreporter/keystone-plate/commit/083e9490f7)] - Merge pull request #149 from nickhsine/release-test-items (babygoat)
+* [[`c9107a8bf6`](https://github.com/twreporter/plate/commit/c9107a8bf6)] - **chore**: bump @twreporter/keystone to v0.9.4-rc.7 (Ching-Yang, Tseng)
+* [[`2eca5ae1dc`](https://github.com/twreporter/plate/commit/2eca5ae1dc)] - **feat**: add healthcheck for keystone (Ching-Yang, Tseng)
+* [[`a5ce5574d3`](https://github.com/twreporter/plate/commit/a5ce5574d3)] - **feat**: graceful shutdown the servers (Ching-Yang, Tseng)
+* [[`aa57d3efbb`](https://github.com/twreporter/plate/commit/aa57d3efbb)] - **refactor**: use initExpressApp instead of start (Ching-Yang, Tseng)
+* [[`f683e90c20`](https://github.com/twreporter/plate/commit/f683e90c20)] - **chore**: downgrade @twreporter/keystone to v0.9.4-rc.5 (#233) (Tai-Jiun Fang)
+* [[`53f5b9e1de`](https://github.com/twreporter/plate/commit/53f5b9e1de)] - **chore**: upgrade @twreporter/keystone to v0.9.4-rc.6 (#230) (Tai-Jiun Fang)
+* [[`9b68a9a1b6`](https://github.com/twreporter/plate/commit/9b68a9a1b6)] - **chore**: upgrade @twreporter/keystone to v0.9.4-rc.5 (Tai-Jiun Fang)
+* [[`4395bbdfe0`](https://github.com/twreporter/plate/commit/4395bbdfe0)] - **docs**: update release-test-items/posts.md (#220) (Tai-Jiun Fang)
+* [[`63721f1a86`](https://github.com/twreporter/plate/commit/63721f1a86)] - **chore**: upgrade @twreporter/keystone to v0.9.4-rc.4 (Tai-Jiun Fang)
+* [[`325fac2e06`](https://github.com/twreporter/plate/commit/325fac2e06)] - **chore**: upgrade @twreporter/keystone@v0.9.4-rc.3 (Tai-Jiun Fang)
+* [[`5310581ca3`](https://github.com/twreporter/plate/commit/5310581ca3)] - **feat**: define the options of session store (Ching-Yang, Tseng)
+* [[`b575395843`](https://github.com/twreporter/plate/commit/b575395843)] - **feat**: use connect-mongo as express-session storage (Ching-Yang, Tseng)
+* [[`083e9490f7`](https://github.com/twreporter/plate/commit/083e9490f7)] - Merge pull request #149 from nickhsine/release-test-items (babygoat)
 
 ### 3.2.4 (2020-12-09)
 
@@ -37,12 +44,12 @@ All notable changes to this project will be documented in this file. See [standa
 
 #### Commits
 
-* [[`7d90b42d64`](https://github.com/twreporter/keystone-plate/commit/7d90b42d64)] - Merge pull request #211 from taylrj/update-dep (Tai-Jiun Fang)
-* [[`c771d799b2`](https://github.com/twreporter/keystone-plate/commit/c771d799b2)] - **chore**: upgrade dep @twreporter/keystone to v0.9.3 (Taylor Fang)
-* [[`99ff41891d`](https://github.com/twreporter/keystone-plate/commit/99ff41891d)] - Merge pull request #209 from taylrj/master (Tai-Jiun Fang)
-* [[`f01a8cbfb4`](https://github.com/twreporter/keystone-plate/commit/f01a8cbfb4)] - Merge pull request #208 from taylrj/update-dep (Tai-Jiun Fang)
-* [[`84dd798cc8`](https://github.com/twreporter/keystone-plate/commit/84dd798cc8)] - **chore**: upgrade dep @twreporter/keystone to v0.9.3-rc.0 (Taylor Fang)
-* [[`12347f38af`](https://github.com/twreporter/keystone-plate/commit/12347f38af)] - Merge pull request #206 from taylrj/master (Tai-Jiun Fang)
+* [[`7d90b42d64`](https://github.com/twreporter/plate/commit/7d90b42d64)] - Merge pull request #211 from taylrj/update-dep (Tai-Jiun Fang)
+* [[`c771d799b2`](https://github.com/twreporter/plate/commit/c771d799b2)] - **chore**: upgrade dep @twreporter/keystone to v0.9.3 (Taylor Fang)
+* [[`99ff41891d`](https://github.com/twreporter/plate/commit/99ff41891d)] - Merge pull request #209 from taylrj/master (Tai-Jiun Fang)
+* [[`f01a8cbfb4`](https://github.com/twreporter/plate/commit/f01a8cbfb4)] - Merge pull request #208 from taylrj/update-dep (Tai-Jiun Fang)
+* [[`84dd798cc8`](https://github.com/twreporter/plate/commit/84dd798cc8)] - **chore**: upgrade dep @twreporter/keystone to v0.9.3-rc.0 (Taylor Fang)
+* [[`12347f38af`](https://github.com/twreporter/plate/commit/12347f38af)] - Merge pull request #206 from taylrj/master (Tai-Jiun Fang)
 
 ### 3.2.3 (2020-12-09)
 
