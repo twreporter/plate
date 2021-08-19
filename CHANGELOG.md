@@ -1,5 +1,14 @@
 # Changelog
 
+### 3.2.7-rc.0 (2021-08-19)
+
+#### Notable Changes
+- chore 
+  - update @twreporter/keystone to v0.9.5-rc.0 ([#253](https://github.com/twreporter/plate/pull/253))
+
+#### Commits
+* [[`a0d5a55d6b`](https://github.com/twreporter/keystone-plate/commit/a0d5a55d6b)] - **chore**: update @twreporter/keystone to v0.9.5-rc.0 (Tai-Jiun Fang)
+
 ### 3.2.6 (2021-08-03)
 
 #### Notable Changes
