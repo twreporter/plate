@@ -1,6 +1,6 @@
 {
   "name": "keystone-plate",
-  "version": "3.2.6",
+  "version": "3.2.7-rc.0",
   "private": true,
   "repository": {
     "type": "git",
