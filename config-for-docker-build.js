@@ -28,6 +28,7 @@ exports.options = {
     touchAfter: process.env.KEYSTONE_SESSION_TOUCH_AFTER ? parseInt(process.env.KEYSTONE_SESSION_TOUCH_AFTER, 10) : 0,
     ttl: process.env.KEYSTONE_SESSION_TTL ? parseInt(process.env.KEYSTONE_SESSION_TTL, 10) : 14 * 24 * 60 * 60,
   },
+  'signout url': 'signout',
   'auth': true,
   'user model': 'User',
   'cookie secret': process.env.KEYSTONE_COOKIE_SECRET,

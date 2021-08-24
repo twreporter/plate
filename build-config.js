@@ -95,6 +95,7 @@ exports.options = {
     touchAfter: 0,
     ttl: 14 * 24 * 60 * 60 * 1000,
   },
+  'signout url': '/signout',
   'auth': ${auth},
   'user model': 'User',
   'cookie secret': '${cookieSecret}',
