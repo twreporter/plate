@@ -1,5 +1,22 @@
 # Changelog
 
+### 3.2.7-rc.1 (2021-08-27)
+
+#### Notable Changes
+- chore 
+  - update @twreporter/keystone to v0.9.5-rc.1 ([#260](https://github.com/twreporter/plate/pull/260))
+- refactor
+  - change session key to `keystone.sid`([#258](https://github.com/twreporter/plate/pull/258))
+- feat
+  - add signout page([#256](https://github.com/twreporter/plate/pull/256))
+
+#### Commits
+* [[`931dae0d1f`](https://github.com/twreporter/keystone-plate/commit/931dae0d1f)] - **chore**: update @twreporter/keystone to v0.9.5-rc.1 (#260) (Tai-Jiun Fang)
+* [[`50531bea4c`](https://github.com/twreporter/keystone-plate/commit/50531bea4c)] - **refactor**: change session key to `keystone.sid` (Ching-Yang, Tseng)
+* [[`f4d057dc91`](https://github.com/twreporter/keystone-plate/commit/f4d057dc91)] - ***Revert*** "**refactor**: change session key to `keystone.sid`" (babygoat)
+* [[`2f02b40a31`](https://github.com/twreporter/keystone-plate/commit/2f02b40a31)] - **feat**: add signout page (Ching-Yang, Tseng)
+* [[`bf3f0bdf17`](https://github.com/twreporter/keystone-plate/commit/bf3f0bdf17)] - **refactor**: change session key to `keystone.sid` (Ching-Yang, Tseng)
+
 ### 3.2.7-rc.0 (2021-08-19)
 
 #### Notable Changes
