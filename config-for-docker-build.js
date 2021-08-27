@@ -18,6 +18,9 @@ exports.options = {
   'cloudinary config': 'cloudinary://333779167276662:_8jbSi9FB3sWYrfimcl8VKh34rI@keystone-demo',
   'auto update': true,
   'session': true,
+  'session options': {
+    key: 'keystone.sid',
+  },
   'session store': 'mongo',
   'session store options': {
     autoRemove: 'interval',
