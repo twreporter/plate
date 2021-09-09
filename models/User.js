@@ -15,7 +15,6 @@ User.add({
 	password: { type: Types.Password, initial: true, required: true },
   avatar: { 
     type: Types.GcsAvatar,
-    field: 'avatar',
     initial: true,
     datePrefix: 'YYYYMMDDHHmmss',
     bucket: bucket,
