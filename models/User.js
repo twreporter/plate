@@ -16,7 +16,6 @@ User.add({
   avatar: { 
     type: Types.GcsAvatar,
     initial: true,
-    datePrefix: 'YYYYMMDDHHmmss',
     bucket: bucket,
     destination: 'avatars',
     publicRead: true
