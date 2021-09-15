@@ -5,7 +5,7 @@ var config = require('../config');
 
 var User = new keystone.List('User');
 
-const bucket = config['options']['gcs config']['bucket']['resizedImage'];
+const bucket = config['options']['gcs config']['bucket']['avatar'];
 
 User.add({
 	name: { type: String, required: true, index: true },
