@@ -1,5 +1,21 @@
 # Changelog
 
+### 3.2.7-rc.2 (2021-09-16)
+
+#### Notable Changes
+- chore 
+  - update @twreporter/keystone to v0.9.5-rc.2 ([#263](https://github.com/twreporter/plate/pull/263))
+- feat
+  - add avatar to user model ([#263](https://github.com/twreporter/plate/pull/263))
+
+#### Commits
+* [[`601fc8bf07`](https://github.com/twreporter/keystone-plate/commit/601fc8bf07)] - **chore**: update @twreporter/keystone to v0.9.5-rc.2 (Tai-Jiun Fang)
+* [[`0366f0d53f`](https://github.com/twreporter/keystone-plate/commit/0366f0d53f)] - **refactor**: add avatar bucket in gcs config (Tai-Jiun Fang)
+* [[`c4ce6ba296`](https://github.com/twreporter/keystone-plate/commit/c4ce6ba296)] - **refactor**: remove unused `datePrefix` key from User avatar option (Tai
+-Jiun Fang)
+* [[`9ae8b27d5f`](https://github.com/twreporter/keystone-plate/commit/9ae8b27d5f)] - **refactor**: remove field as a prop of user avatar (Tai-Jiun Fang)
+* [[`0af371be12`](https://github.com/twreporter/keystone-plate/commit/0af371be12)] - **feat**: add avatar to user model (Tai-Jiun Fang)
+
 ### 3.2.7-rc.1 (2021-08-27)
 
 #### Notable Changes
