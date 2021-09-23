@@ -1209,10 +1209,10 @@
   dependencies:
     lodash.get "4"
 
-"@twreporter/keystone-plugin-client@1.0.8-rc.0":
-  version "1.0.8-rc.0"
-  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-client/-/keystone-plugin-client-1.0.8-rc.0.tgz#9d1ffe6e78fb3b8ecee11ffb7658561b484d2063"
-  integrity sha512-QeCyVdQj7hLutm/YWO5KMaqFnBoHJouFvvSOtvwjjv8w+oyzXbiJTukCFjDEEZ+CAVi/1Jn/eAfX3Gbu81VsFQ==
+"@twreporter/keystone-plugin-client@1.0.8-rc.1":
+  version "1.0.8-rc.1"
+  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-client/-/keystone-plugin-client-1.0.8-rc.1.tgz#d8e1f64332cc2bc1bf05a0fb43cc3349fcc20bad"
+  integrity sha512-59TU/lUGqxOLVjbWe3Wiiy4K/YtoMHluaZeolFRG42JfDrriv6HY1oahrwY4Fkct2Qbs0+XXc9LSARj2DqpccQ==
   dependencies:
     "@babel/cli" "^7.7.0"
     "@babel/core" "^7.7.2"
@@ -1228,10 +1228,10 @@
     styled-components "^4.4.1"
     webpack "^4.41.2"
 
-"@twreporter/keystone-plugin-socketio@1.0.8-rc.0":
-  version "1.0.8-rc.0"
-  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-socketio/-/keystone-plugin-socketio-1.0.8-rc.0.tgz#ae75f77d93a1b2c750eb0bd8563e21b5b121bee7"
-  integrity sha512-IchGu630UrsKf7aLHgpDgcw6F5YwUmnO74GFukx2DZZRiEG88R9f20Sj8ZsCTz4ty7vH5bF5ObgqumcKyXc1IQ==
+"@twreporter/keystone-plugin-socketio@1.0.8-rc.1":
+  version "1.0.8-rc.1"
+  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-socketio/-/keystone-plugin-socketio-1.0.8-rc.1.tgz#5efa00acd9615248e12c5c8f6628ec07fa30ec79"
+  integrity sha512-CPT32UZ0E/A9tDhr2HfaO/APvD2/BdN+N6cg05L2BDHxjAAwvzI3WSPzl8PqSnyMx18b6kTRiRA8Ryj1szoPdA==
   dependencies:
     axios "^0.18.0"
     json2csv "^3.11.5"

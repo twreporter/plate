@@ -5,8 +5,8 @@
 #### Notable Changes
 - chore
   - update @twreporter/keystone to v0.9.5-rc.4
-  - update @twreporter/keystone-plugin-client to v1.0.8-rc.0
-  - update @twreporter/keystone-plugin-socketio to v1.0.8-rc.0
+  - update @twreporter/keystone-plugin-client to v1.0.8-rc.1
+  - update @twreporter/keystone-plugin-socketio to v1.0.8-rc.1
 
 #### Commits
 * [[`700ae795e4`](https://github.com/twreporter/keystone-plate/commit/700ae795e4)] - **chore**: update several dependencies (babygoat)
