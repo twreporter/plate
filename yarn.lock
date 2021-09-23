@@ -1209,10 +1209,10 @@
   dependencies:
     lodash.get "4"
 
-"@twreporter/keystone-plugin-client@1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-client/-/keystone-plugin-client-1.0.7.tgz#c6687ccf32d01ee3693e7d5e63672c5fdff27dd6"
-  integrity sha512-Mpp4WCC6dYdoJ13Sj2Xe6rdlbL2/TSOEhVgsp5xf6pNV5AZPOZ3Kfk0vClZaR8nD+ctQMnzWj7VaCGqqetkdUQ==
+"@twreporter/keystone-plugin-client@1.0.8-rc.1":
+  version "1.0.8-rc.1"
+  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-client/-/keystone-plugin-client-1.0.8-rc.1.tgz#d8e1f64332cc2bc1bf05a0fb43cc3349fcc20bad"
+  integrity sha512-59TU/lUGqxOLVjbWe3Wiiy4K/YtoMHluaZeolFRG42JfDrriv6HY1oahrwY4Fkct2Qbs0+XXc9LSARj2DqpccQ==
   dependencies:
     "@babel/cli" "^7.7.0"
     "@babel/core" "^7.7.2"
@@ -1228,20 +1228,20 @@
     styled-components "^4.4.1"
     webpack "^4.41.2"
 
-"@twreporter/keystone-plugin-socketio@1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-socketio/-/keystone-plugin-socketio-1.0.7.tgz#64dfa9f34c8e6ffc118581b11fc8f9c37de7f4fd"
-  integrity sha512-Btr0SXf6OH5Kdgg8gyZWgZsPluAs9YSXNi8BZaULwQ7jQS56AtHCENy++W4Ug1VFJKaDmg4c8sL4DIsuvFBwvg==
+"@twreporter/keystone-plugin-socketio@1.0.8-rc.1":
+  version "1.0.8-rc.1"
+  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-socketio/-/keystone-plugin-socketio-1.0.8-rc.1.tgz#5efa00acd9615248e12c5c8f6628ec07fa30ec79"
+  integrity sha512-CPT32UZ0E/A9tDhr2HfaO/APvD2/BdN+N6cg05L2BDHxjAAwvzI3WSPzl8PqSnyMx18b6kTRiRA8Ryj1szoPdA==
   dependencies:
     axios "^0.18.0"
     json2csv "^3.11.5"
     lodash "^4.17.15"
     socket.io "^2.0.4"
 
-"@twreporter/keystone@0.9.5-rc.3":
-  version "0.9.5-rc.3"
-  resolved "https://registry.yarnpkg.com/@twreporter/keystone/-/keystone-0.9.5-rc.3.tgz#6c2af8c4d566c5586e58ea8b1d1a2b6054dce945"
-  integrity sha512-G++vd5rRVZ2Gu0SBGAYD926p03m+SwReIyN/xxu1EfqbqcQ67p+j54xsaUT9Bn7oZKdQDWg2cuR64draFuSorg==
+"@twreporter/keystone@0.9.5-rc.4":
+  version "0.9.5-rc.4"
+  resolved "https://registry.yarnpkg.com/@twreporter/keystone/-/keystone-0.9.5-rc.4.tgz#517de72d3ceb550b07fdd769b081d52258467806"
+  integrity sha512-tJoO0UzO7lF7JfVWv0jTClebN8h8uBvCfYSD52E6oFCzqi1qXcAeys/CHoBHTkY6H3IGNOhzVdZTUh2k4dxizw==
   dependencies:
     "@google-cloud/storage" "~1.7.0"
     "@twreporter/draft-js" "0.11.8-rc.0"
