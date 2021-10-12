@@ -1,5 +1,16 @@
 # Changelog
 
+### 3.2.7-rc.5 (2021-10-12)
+
+#### Notable Changes
+- chore
+  - remove build filter([#270](https://github.com/twreporter/plate/pull/270))
+  - update @twreporter-plugin-client to v1.0.8-rc.2([#272](https://github.com/twreporter/plate/pull/272))
+
+#### Commits
+* [[`6c4b5e54d5`](https://github.com/twreporter/keystone-plate/commit/6c4b5e54d5)] - **chore**: update keystone-plugin-client dependency (Ching-Yang, Tseng)
+* [[`ebc412dc58`](https://github.com/twreporter/keystone-plate/commit/ebc412dc58)] - **chore**: removes build filter (Ching-Yang, Tseng)
+
 ### 3.2.7-rc.4 (2021-09-22)
 
 #### Notable Changes
