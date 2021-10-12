@@ -11,7 +11,7 @@
     "@google-cloud/pubsub": "^2.6.0",
     "@twreporter/errors": "^1.1.0",
     "@twreporter/keystone": "0.9.5-rc.4",
-    "@twreporter/keystone-plugin-client": "1.0.8-rc.1",
+    "@twreporter/keystone-plugin-client": "1.0.8-rc.2",
     "@twreporter/keystone-plugin-socketio": "1.0.8-rc.1",
     "babel-core": "^6.4.5",
     "babel-plugin-transform-object-assign": "^6.3.13",
