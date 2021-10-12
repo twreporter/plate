@@ -1209,10 +1209,10 @@
   dependencies:
     lodash.get "4"
 
-"@twreporter/keystone-plugin-client@1.0.8-rc.1":
-  version "1.0.8-rc.1"
-  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-client/-/keystone-plugin-client-1.0.8-rc.1.tgz#d8e1f64332cc2bc1bf05a0fb43cc3349fcc20bad"
-  integrity sha512-59TU/lUGqxOLVjbWe3Wiiy4K/YtoMHluaZeolFRG42JfDrriv6HY1oahrwY4Fkct2Qbs0+XXc9LSARj2DqpccQ==
+"@twreporter/keystone-plugin-client@1.0.8-rc.2":
+  version "1.0.8-rc.2"
+  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-client/-/keystone-plugin-client-1.0.8-rc.2.tgz#886b78279e3c205084222c34a50b812f1de0c426"
+  integrity sha512-ltPlQrawkOpecEerwK9mkwzfovZBlM/2lvu3Tr9V3oq8m7r7t3eWMnP43kuV75vl5GjKRVLbM9yVadB6RSIkSQ==
   dependencies:
     "@babel/cli" "^7.7.0"
     "@babel/core" "^7.7.2"
