@@ -18,6 +18,9 @@ exports.options = {
   'cloudinary config': 'cloudinary://333779167276662:_8jbSi9FB3sWYrfimcl8VKh34rI@keystone-demo',
   'auto update': true,
   'session': true,
+  'session options': {
+    key: 'keystone.sid',
+  },
   'session store': 'mongo',
   'session store options': {
     autoRemove: 'interval',
@@ -25,6 +28,7 @@ exports.options = {
     touchAfter: process.env.KEYSTONE_SESSION_TOUCH_AFTER ? parseInt(process.env.KEYSTONE_SESSION_TOUCH_AFTER, 10) : 0,
     ttl: process.env.KEYSTONE_SESSION_TTL ? parseInt(process.env.KEYSTONE_SESSION_TTL, 10) : 14 * 24 * 60 * 60,
   },
+  'signout url': '/signout',
   'auth': true,
   'user model': 'User',
   'cookie secret': process.env.KEYSTONE_COOKIE_SECRET,
@@ -38,7 +42,8 @@ exports.options = {
       audio: process.env.KEYSTONE_GCS_AUDIO_BUCKET,
       video: process.env.KEYSTONE_GCS_VIDEO_BUCKET,
       rawPhoto: process.env.KEYSTONE_GCS_RAW_PHOTO_BUCKET,
-      resizedImage: process.env.KEYSTONE_GCS_RESIZE_IMAGE_BUCKET
+      resizedImage: process.env.KEYSTONE_GCS_RESIZE_IMAGE_BUCKET,
+      avatar: process.env.KEYSTONE_GCS_AVATAR_BUCKET
     },
   },
   'preview origin': process.env.KEYSTONE_PREVIEW_ORIGIN || 'https://keystone-preview.twreporter.org',

@@ -1209,10 +1209,10 @@
   dependencies:
     lodash.get "4"
 
-"@twreporter/keystone-plugin-client@1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-client/-/keystone-plugin-client-1.0.7.tgz#c6687ccf32d01ee3693e7d5e63672c5fdff27dd6"
-  integrity sha512-Mpp4WCC6dYdoJ13Sj2Xe6rdlbL2/TSOEhVgsp5xf6pNV5AZPOZ3Kfk0vClZaR8nD+ctQMnzWj7VaCGqqetkdUQ==
+"@twreporter/keystone-plugin-client@1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-client/-/keystone-plugin-client-1.0.8.tgz#b845537fb21ef7a8afebbd692651f079d38cff35"
+  integrity sha512-cu5RsccCl0bW/1iXGRtW8Ho2KzpwDjLOPTpkUdjCQF67EIHYkKeHIDuTcET+oLRwyFETJHDsGWgYvyLD3Ja3Hw==
   dependencies:
     "@babel/cli" "^7.7.0"
     "@babel/core" "^7.7.2"
@@ -1228,20 +1228,20 @@
     styled-components "^4.4.1"
     webpack "^4.41.2"
 
-"@twreporter/keystone-plugin-socketio@1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-socketio/-/keystone-plugin-socketio-1.0.7.tgz#64dfa9f34c8e6ffc118581b11fc8f9c37de7f4fd"
-  integrity sha512-Btr0SXf6OH5Kdgg8gyZWgZsPluAs9YSXNi8BZaULwQ7jQS56AtHCENy++W4Ug1VFJKaDmg4c8sL4DIsuvFBwvg==
+"@twreporter/keystone-plugin-socketio@1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@twreporter/keystone-plugin-socketio/-/keystone-plugin-socketio-1.0.8.tgz#bf7a7056956655a7b4145f226ac52b00948c77ac"
+  integrity sha512-l5tOFWkfluRvP8TE/VJNTvEekJqLzMxwDuFvOJk8EvxbsrHJiZBqE9YVoVb19MeSLwuuDsXJEJBXndP5/9bRjw==
   dependencies:
     axios "^0.18.0"
     json2csv "^3.11.5"
     lodash "^4.17.15"
     socket.io "^2.0.4"
 
-"@twreporter/keystone@0.9.4":
-  version "0.9.4"
-  resolved "https://registry.yarnpkg.com/@twreporter/keystone/-/keystone-0.9.4.tgz#34b4e125ac73b6194c72989cc16c0a7172f884fe"
-  integrity sha512-SFcqAdTQF32NjzJEAn2z6NRbpg5eFUCKsedE26f7dx3R/erHoVHJwmS6T5vB0rpX0TAUH+n4fvKUCqxz7gWy2Q==
+"@twreporter/keystone@0.9.5":
+  version "0.9.5"
+  resolved "https://registry.yarnpkg.com/@twreporter/keystone/-/keystone-0.9.5.tgz#6d1525a6c511d6b13ec39112f993d3792c4bf9ea"
+  integrity sha512-UUN5KnqJZNU4OVKkFdJxRD/UETpLAJoxHDkGWmLtM6cry3817XWQRy7P+389wXHMTh/jRSFbuKA4vbqdQUHkAg==
   dependencies:
     "@google-cloud/storage" "~1.7.0"
     "@twreporter/draft-js" "0.11.8-rc.0"

@@ -149,13 +149,7 @@ workflows:
   version: 2
   build_and_push:
     jobs:
-      - build:
-          filters:
-            branches:
-              only:
-                - master
-                - staging
-                - release
+      - build
       - push:
           context: twreporter
           requires:
