@@ -1,76 +1,35 @@
 # Changelog
 
-### 3.2.7-rc.5 (2021-10-12)
+### 3.2.7 (2021-10-13)
 
 #### Notable Changes
 - chore
   - remove build filter([#270](https://github.com/twreporter/plate/pull/270))
-  - update @twreporter-plugin-client to v1.0.8-rc.2([#272](https://github.com/twreporter/plate/pull/272))
+  - update @twreporter/keystone to 0.9.5([#275](https://github.com/twreporter/plate/pull/275))
+  - update @twreporter/keystone-plugin-client to 1.0.8([#275](https://github.com/twreporter/plate/pull/275))
+  - update @twreporter/keystone-plugin-socketio to 1.0.8([#275](https://github.com/twreporter/plate/pull/275))
+- feat
+  - add avatar to user model ([#263](https://github.com/twreporter/plate/pull/263))
+  - add signout page([#256](https://github.com/twreporter/plate/pull/256))
+- refactor
+  - change session key to `keystone.sid`([#258](https://github.com/twreporter/plate/pull/258))
 
 #### Commits
 * [[`6c4b5e54d5`](https://github.com/twreporter/keystone-plate/commit/6c4b5e54d5)] - **chore**: update keystone-plugin-client dependency (Ching-Yang, Tseng)
 * [[`ebc412dc58`](https://github.com/twreporter/keystone-plate/commit/ebc412dc58)] - **chore**: removes build filter (Ching-Yang, Tseng)
-
-### 3.2.7-rc.4 (2021-09-22)
-
-#### Notable Changes
-- chore
-  - update @twreporter/keystone to v0.9.5-rc.4
-  - update @twreporter/keystone-plugin-client to v1.0.8-rc.1
-  - update @twreporter/keystone-plugin-socketio to v1.0.8-rc.1
-
-#### Commits
 * [[`700ae795e4`](https://github.com/twreporter/keystone-plate/commit/700ae795e4)] - **chore**: update several dependencies (babygoat)
-
-### 3.2.7-rc.3 (2021-09-16)
-
-#### Notable Changes
-- chore 
-  - update @twreporter/keystone to v0.9.5-rc.3
-
-#### Commits
 * [[`616c9f012b`](https://github.com/twreporter/keystone-plate/commit/616c9f012b)] - **chore**: update @twreporter/keystone to v0.9.5-rc.3 (Tai-Jiun Fang)
-
-### 3.2.7-rc.2 (2021-09-16)
-
-#### Notable Changes
-- chore 
-  - update @twreporter/keystone to v0.9.5-rc.2 ([#263](https://github.com/twreporter/plate/pull/263))
-- feat
-  - add avatar to user model ([#263](https://github.com/twreporter/plate/pull/263))
-
-#### Commits
 * [[`601fc8bf07`](https://github.com/twreporter/keystone-plate/commit/601fc8bf07)] - **chore**: update @twreporter/keystone to v0.9.5-rc.2 (Tai-Jiun Fang)
 * [[`0366f0d53f`](https://github.com/twreporter/keystone-plate/commit/0366f0d53f)] - **refactor**: add avatar bucket in gcs config (Tai-Jiun Fang)
 * [[`c4ce6ba296`](https://github.com/twreporter/keystone-plate/commit/c4ce6ba296)] - **refactor**: remove unused `datePrefix` key from User avatar option (Tai
 -Jiun Fang)
 * [[`9ae8b27d5f`](https://github.com/twreporter/keystone-plate/commit/9ae8b27d5f)] - **refactor**: remove field as a prop of user avatar (Tai-Jiun Fang)
 * [[`0af371be12`](https://github.com/twreporter/keystone-plate/commit/0af371be12)] - **feat**: add avatar to user model (Tai-Jiun Fang)
-
-### 3.2.7-rc.1 (2021-08-27)
-
-#### Notable Changes
-- chore 
-  - update @twreporter/keystone to v0.9.5-rc.1 ([#260](https://github.com/twreporter/plate/pull/260))
-- refactor
-  - change session key to `keystone.sid`([#258](https://github.com/twreporter/plate/pull/258))
-- feat
-  - add signout page([#256](https://github.com/twreporter/plate/pull/256))
-
-#### Commits
 * [[`931dae0d1f`](https://github.com/twreporter/keystone-plate/commit/931dae0d1f)] - **chore**: update @twreporter/keystone to v0.9.5-rc.1 (#260) (Tai-Jiun Fang)
 * [[`50531bea4c`](https://github.com/twreporter/keystone-plate/commit/50531bea4c)] - **refactor**: change session key to `keystone.sid` (Ching-Yang, Tseng)
 * [[`f4d057dc91`](https://github.com/twreporter/keystone-plate/commit/f4d057dc91)] - ***Revert*** "**refactor**: change session key to `keystone.sid`" (babygoat)
 * [[`2f02b40a31`](https://github.com/twreporter/keystone-plate/commit/2f02b40a31)] - **feat**: add signout page (Ching-Yang, Tseng)
 * [[`bf3f0bdf17`](https://github.com/twreporter/keystone-plate/commit/bf3f0bdf17)] - **refactor**: change session key to `keystone.sid` (Ching-Yang, Tseng)
-
-### 3.2.7-rc.0 (2021-08-19)
-
-#### Notable Changes
-- chore 
-  - update @twreporter/keystone to v0.9.5-rc.0 ([#253](https://github.com/twreporter/plate/pull/253))
-
-#### Commits
 * [[`a0d5a55d6b`](https://github.com/twreporter/keystone-plate/commit/a0d5a55d6b)] - **chore**: update @twreporter/keystone to v0.9.5-rc.0 (Tai-Jiun Fang)
 
 ### 3.2.6 (2021-08-03)
