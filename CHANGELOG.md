@@ -1,5 +1,15 @@
 # Changelog
 
+### 3.2.8-rc.0 (2022-04-22)
+
+#### Notable Changes
+- chore
+    - update @twreporter/keystone to v0.9.6-rc.0([#278](https://github.com/twreporter/plate/pull/278))
+
+#### Commits
+* [72ddd64401] - Merge pull request #278 from duidae/jason/upgrade_keystone_v0.9.6-rc.0 (許守傑 Shou-Chieh Hsu (Jason))
+* [8d22f13131] - chore: upgrade keystone to v0.9.6-rc.0 (duidae)
+
 ### 3.2.7 (2021-10-13)
 
 #### Notable Changes
