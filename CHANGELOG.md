@@ -1,6 +1,6 @@
 # Changelog
 
-### 3.2.8 (2022-04-26)
+### 3.2.10 (2022-05-04)
 
 #### Notable Changes
 - chore
