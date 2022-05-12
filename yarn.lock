@@ -1238,10 +1238,10 @@
     lodash "^4.17.15"
     socket.io "^2.0.4"
 
-"@twreporter/keystone@0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@twreporter/keystone/-/keystone-0.9.5.tgz#6d1525a6c511d6b13ec39112f993d3792c4bf9ea"
-  integrity sha512-UUN5KnqJZNU4OVKkFdJxRD/UETpLAJoxHDkGWmLtM6cry3817XWQRy7P+389wXHMTh/jRSFbuKA4vbqdQUHkAg==
+"@twreporter/keystone@0.9.7-rc.0":
+  version "0.9.7-rc.0"
+  resolved "https://registry.yarnpkg.com/@twreporter/keystone/-/keystone-0.9.7-rc.0.tgz#d29a2baefb6f1e54369fef9a450d80230af7f9e2"
+  integrity sha512-kv0M9qgz3rI6TKRYJMsV+riAB16SuiG8FHVu5UC0g8OmfXXWoq80YH2m1C3s9lq6QsXLKaOozR1MoaGdzosQAg==
   dependencies:
     "@google-cloud/storage" "~1.7.0"
     "@twreporter/draft-js" "0.11.8-rc.0"
