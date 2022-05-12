@@ -1,6 +1,38 @@
 # Changelog
 
+### 3.2.11-rc.0 (2022-05-12)
+
+#### Notable Changes
+- chore
+    - update @twreporter/keystone to v0.9.7-rc.0 ([#299](https://github.com/twreporter/plate/pull/299))
+
+#### Commits
+* [aca4fe3c02] - Merge pull request #299 from duidae/jason/upgrade_keystone_v0.9.7-rc.0 (許守傑 Shou-Chieh Hsu (Jason))
+* [dc28f11266] - chore: upgrade keystone v0.9.7-rc.0 (duidae)
+
 ### 3.2.10 (2022-05-04)
+
+#### Notable Changes
+- chore
+    - bump version to v3.2.10 due to CI anomaly
+
+#### Commits
+* [ef1efbce59] - Merge pull request #294 from duidae/jason/bump_version_v3.2.10 (許守傑 Shou-Chieh Hsu (Jason))
+* [e7f53fb4cc] - fix: bump version (duidae)
+* [3b2fb97a5b] - Merge pull request #291 from duidae/master (許守傑 Shou-Chieh Hsu (Jason))
+* [545a0a5c34] - chore: bump version (duidae)
+
+### 3.2.9 (2022-05-04)
+
+#### Notable Changes
+- chore
+    - downgrade @twreporter/keystone to v0.9.5 ([#284](https://github.com/twreporter/plate/pull/284))
+
+#### Commits
+* [64ac61a04b] - fix: downgrade keystone to v0.9.5 (duidae)
+* [90c65ddb6a] - Merge pull request #285 from duidae/jason/bump_version_v3.2.8 (許守傑 Shou-Chieh Hsu (Jason))
+
+### 3.2.8 (2022-04-26)
 
 #### Notable Changes
 - chore
