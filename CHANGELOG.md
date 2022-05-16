@@ -1,14 +1,14 @@
 # Changelog
 
-### 3.2.11-rc.0 (2022-05-12)
+### 3.2.11 (2022-05-16)
 
 #### Notable Changes
 - chore
-    - update @twreporter/keystone to v0.9.7-rc.0 ([#299](https://github.com/twreporter/plate/pull/299))
+    - update @twreporter/keystone to v0.9.7 ([#302](https://github.com/twreporter/plate/pull/302))
 
 #### Commits
-* [aca4fe3c02] - Merge pull request #299 from duidae/jason/upgrade_keystone_v0.9.7-rc.0 (許守傑 Shou-Chieh Hsu (Jason))
-* [dc28f11266] - chore: upgrade keystone v0.9.7-rc.0 (duidae)
+* [634629cca8] - Merge pull request #302 from duidae/jason/upgrade_keystone_v0.9.7 (許守傑 Shou-Chieh Hsu (Jason))
+* [27128d8bff] - chore: upgrade keystone to v0.9.7 (duidae)
 
 ### 3.2.10 (2022-05-04)
 
