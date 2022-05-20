@@ -1,5 +1,14 @@
 # Changelog
 
+### 3.2.12-rc.0 (2022-05-20)
+
+#### Notable Changes
+- fix
+    - replace version source with package.json instead of changelog.md ([#298](https://github.com/twreporter/plate/pull/298))
+
+#### Commits
+* [652dda2f58] - Merge branch 'master' into jason/read_version (duidae)
+
 ### 3.2.11 (2022-05-16)
 
 #### Notable Changes
