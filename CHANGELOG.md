@@ -1,5 +1,14 @@
 # Changelog
 
+### 3.2.12-rc.1 (2022-06-08)
+
+#### Notable Changes
+- refactor 
+    - add 'status' to default columns in topic page ([#308](https://github.com/twreporter/plate/pull/308))
+
+#### Commits
+* [[`cca58b4c24`](https://github.com/twreporter/keystone-plate/commit/cca58b4c24)] - **refactor**: add 'status' to default columns in topic page (#308) (Tai-Jiun Fang)
+
 ### 3.2.12-rc.0 (2022-05-20)
 
 #### Notable Changes
