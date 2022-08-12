@@ -77,7 +77,7 @@ Post.add({
   leading_image_description: { label: '首圖圖說', type: String, require: false },
   brief: { label: '前言', type: Types.Html, wysiwyg: true, height: 150 },
   content: { label: '內文', type: Types.Html, wysiwyg: true, height: 400 },
-  categories: { label: '分類(舊)', type: Types.Relationship, ref: 'PostCategory', many: true },
+  categories: { label: '分類（舊）', type: Types.Relationship, ref: 'PostCategory', many: true },
   categorySet: { label: '分類', type: Types.Relationship, ref: 'PostCategory', many: true },
   style: { label: '文章樣式', type: Types.Select, options: articleStyles, default: 'article:v2:default', index: true },
   topics: { label: '專題', type: Types.Relationship, ref: 'Topic' },
