@@ -1,5 +1,17 @@
 # Changelog
 
+### 3.2.12 (2022-06-09)
+
+#### Notable Changes
+- refactor 
+    - add 'status' to default columns in topic page ([#308](https://github.com/twreporter/plate/pull/308))
+- fix
+    - replace version source with package.json instead of changelog.md ([#298](https://github.com/twreporter/plate/pull/298))
+
+#### Commits
+* [[`cca58b4c24`](https://github.com/twreporter/keystone-plate/commit/cca58b4c24)] - **refactor**: add 'status' to default columns in topic page (#308) (Tai-Jiun Fang)
+* [[`88364ce85a`](https://github.com/twreporter/keystone-plate/commit/88364ce85a)] - **fix**: read version from package.json instead of changelog.md (duidae)
+
 ### 3.2.11 (2022-05-16)
 
 #### Notable Changes
