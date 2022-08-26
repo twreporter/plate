@@ -7,7 +7,7 @@ var Tag = new keystone.List('Tag', {
 
 Tag.add({
 	name: { label: '標籤名稱', type: String, required: true },
-	latestOrder: { label: '最新',  type: Number, noedit: true },
+	latestOrder: { label: '最新(順序)', type: Number, noedit: true },
 });
 
 Tag.relationship({ ref: 'Post', refPath: 'tags' });
