@@ -19,7 +19,5 @@ Latest.add({
 	name: { label: '最新', type: String, required: true },
 });
 
-// Latest.relationship({ ref: 'Post', refPath: 'latests' });
-
 transform.toJSON(Latest);
 Latest.register();
