@@ -1,5 +1,14 @@
 # Changelog
 
+### 3.2.13-rc.0 (2022-09-19)
+
+#### Notable Changes
+- chore
+    - update npm package @twreporter/keystone@0.9.8-rc.0
+
+#### Commits
+* [[`ae4b556146`](https://github.com/twreporter/keystone-plate/commit/ae4b556146)] - **chore**: update @twreporter/keystone@0.9.8-rc.0 (Tai-Jiun Fang)
+
 ### 3.2.12 (2022-06-09)
 
 #### Notable Changes
