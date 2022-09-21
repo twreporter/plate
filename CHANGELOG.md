@@ -1,5 +1,14 @@
 # Changelog
 
+### 3.2.14-rc.0 (2022-09-21)
+
+#### Notable Changes
+- chore
+    - support category set & update npm package @twreporter/keystone@0.9.9-rc.0
+
+#### Commits
+* \[[`6500a215fe`](https://github.com/twreporter/keystone-plate/commit/6500a215fe)] - Jason/issue 327 (#314) (許守傑 Shou-Chieh Hsu (Jason))
+
 ### 3.2.13 (2022-09-20)
 
 #### Notable Changes
