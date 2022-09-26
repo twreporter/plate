@@ -13,7 +13,15 @@ var Latest = new keystone.List('Latest', {
 	autokey: { from: 'name', path: 'key', unique: true },
 	sortable: true,
     nodelete: true,
-	preFilter: { latest_order: { mode: 'gt', value: 0 }}, // TODO
+	preFilter: { // TODO: check fields
+		field: {
+			path: 'latest_order',
+			label: "最新(順序)",
+			size: "small",
+			type: "number"
+		},
+		value: { mode: 'gt', value: 0 }
+	},
 });
 
 Latest.add({
