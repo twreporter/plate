@@ -83,7 +83,7 @@ Post.add({
   topics: { label: '專題', type: Types.Relationship, ref: 'Topic' },
   topics_ref: { type: Types.Relationship, ref: 'Topic', hidden: true },
   copyright: { label: '版權使用', type: Types.Select, options: 'Creative-Commons, Copyrighted', default: 'Copyrighted', index: true },
-  tags: { label: '標籤', type: Types.Relationship, ref: 'Tag', many: true },
+  tags: { label: '標籤（舊）', type: Types.Relationship, ref: 'Tag', many: true },
   relateds: { label: '相關文章', type: Types.Relationship, ref: 'Post', many: true },
   og_title: { label: '分享標題', type: String, require: false},
   og_description: { label: '分享說明', type: String, require: false},
