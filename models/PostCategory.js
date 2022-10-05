@@ -1,5 +1,6 @@
 var keystone = require('@twreporter/keystone');
 var transform = require('model-transform');
+var Types = keystone.Field.Types;
 
 var PostCategory = new keystone.List('PostCategory', {
 	autokey: { from: 'name', path: 'key', unique: true },
@@ -8,6 +9,7 @@ var PostCategory = new keystone.List('PostCategory', {
 
 PostCategory.add({
 	name: { label: "名稱", type: String, required: true },
+	subcategory: { label: '子分類', type: Types.Relationship, ref: 'Tag', many: true, noedit: true }
 });
 
 PostCategory.relationship({ ref: 'Post', refPath: 'categories' });
