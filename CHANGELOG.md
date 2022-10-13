@@ -1,5 +1,14 @@
 # Changelog
 
+### 3.2.14-rc.1 (2022-10-13)
+
+#### Notable Changes
+- chore
+    - update npm package @twreporter/keystone@0.9.9-rc.1
+
+#### Commits
+* \[[`fa9a776a5a`](https://github.com/twreporter/keystone-plate/commit/fa9a776a5a)] - **chore**: upgrade keystone to v0.9.9-rc.1 (#325) (許守傑 Shou-Chieh Hsu (Jason))
+
 ### 3.2.14-rc.0 (2022-09-21)
 
 #### Notable Changes
