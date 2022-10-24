@@ -1,21 +1,15 @@
 # Changelog
 
-### 3.2.14-rc.1 (2022-10-13)
+### 3.2.14 (2022-10-24)
 
 #### Notable Changes
 - chore
-    - update npm package @twreporter/keystone@0.9.9-rc.1
+    - update npm package @twreporter/keystone@0.9.9
 
 #### Commits
+* \[[`1226a85f6d`](https://github.com/twreporter/keystone-plate/commit/1226a85f6d)] - Merge pull request #328 from duidae/jason/upgrade\_keystone\_v0.9.9 (許守傑 Shou-Chieh Hsu (Jason))
+* \[[`59e243c2de`](https://github.com/twreporter/keystone-plate/commit/59e243c2de)] - **chore**: upgrade keystone to v0.9.9 (duidae)
 * \[[`fa9a776a5a`](https://github.com/twreporter/keystone-plate/commit/fa9a776a5a)] - **chore**: upgrade keystone to v0.9.9-rc.1 (#325) (許守傑 Shou-Chieh Hsu (Jason))
-
-### 3.2.14-rc.0 (2022-09-21)
-
-#### Notable Changes
-- chore
-    - support category set & update npm package @twreporter/keystone@0.9.9-rc.0
-
-#### Commits
 * \[[`6500a215fe`](https://github.com/twreporter/keystone-plate/commit/6500a215fe)] - Jason/issue 327 (#314) (許守傑 Shou-Chieh Hsu (Jason))
 
 ### 3.2.13 (2022-09-20)
