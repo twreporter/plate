@@ -1,5 +1,15 @@
 # Changelog
 
+### 3.2.15 (2022-10-28)
+
+#### Notable Changes
+- fix
+    - fix category set key to 'category_set'
+
+#### Commits
+* \[[`852a811fb6`](https://github.com/twreporter/keystone-plate/commit/852a811fb6)] - Merge pull request #332 from duidae/jason/fix\_category\_set\_key (許守傑 Shou-Chieh Hsu (Jason))
+* \[[`ecf7aca73c`](https://github.com/twreporter/keystone-plate/commit/ecf7aca73c)] - **fix**: fix key name (duidae)
+
 ### 3.2.14 (2022-10-24)
 
 #### Notable Changes
