@@ -1,12 +1,25 @@
 # Changelog
 
-### 3.2.14-rc.0 (2022-09-21)
+### 3.2.15 (2022-10-28)
+
+#### Notable Changes
+- fix
+    - fix category set key to 'category_set'
+
+#### Commits
+* \[[`852a811fb6`](https://github.com/twreporter/keystone-plate/commit/852a811fb6)] - Merge pull request #332 from duidae/jason/fix\_category\_set\_key (許守傑 Shou-Chieh Hsu (Jason))
+* \[[`ecf7aca73c`](https://github.com/twreporter/keystone-plate/commit/ecf7aca73c)] - **fix**: fix key name (duidae)
+
+### 3.2.14 (2022-10-24)
 
 #### Notable Changes
 - chore
-    - support category set & update npm package @twreporter/keystone@0.9.9-rc.0
+    - update npm package @twreporter/keystone@0.9.9
 
 #### Commits
+* \[[`1226a85f6d`](https://github.com/twreporter/keystone-plate/commit/1226a85f6d)] - Merge pull request #328 from duidae/jason/upgrade\_keystone\_v0.9.9 (許守傑 Shou-Chieh Hsu (Jason))
+* \[[`59e243c2de`](https://github.com/twreporter/keystone-plate/commit/59e243c2de)] - **chore**: upgrade keystone to v0.9.9 (duidae)
+* \[[`fa9a776a5a`](https://github.com/twreporter/keystone-plate/commit/fa9a776a5a)] - **chore**: upgrade keystone to v0.9.9-rc.1 (#325) (許守傑 Shou-Chieh Hsu (Jason))
 * \[[`6500a215fe`](https://github.com/twreporter/keystone-plate/commit/6500a215fe)] - Jason/issue 327 (#314) (許守傑 Shou-Chieh Hsu (Jason))
 
 ### 3.2.13 (2022-09-20)
