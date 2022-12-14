@@ -20,7 +20,7 @@ var Latest = new keystone.List('Latest', {
 			size: "small",
 			type: "number"
 		},
-		value: { mode: 'gte', value: 0 }
+		value: { mode: 'gt', value: 0 }
 	},
 });
 
