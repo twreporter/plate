@@ -1,5 +1,6 @@
 var keystone = require('@twreporter/keystone');
 var transform = require('model-transform');
+var Types = keystone.Field.Types;
 
 const tagsCollectionName = 'tags';
 
@@ -12,7 +13,6 @@ var Latest = new keystone.List('Latest', {
 	},
 	autokey: { from: 'name', path: 'key', unique: true },
 	sortable: true,
-    nodelete: true,
 	preFilter: { // TODO: check fields
 		field: {
 			path: 'latest_order',
@@ -26,8 +26,11 @@ var Latest = new keystone.List('Latest', {
 
 Latest.add({
 	name: { label: '最新', type: String, required: true },
+	postNum: { label: '文章數量', type: Number, noedit: true },
+	latestDate: { label: '最新文章日期', type: Types.Date, noedit: true },
 	latest_order: { label: '最新(順序)', type: Number, noedit: true },
 });
+Latest.defaultColumns = 'name, postNum, latestDate';
 
 transform.toJSON(Latest);
 Latest.register();
