@@ -1,5 +1,27 @@
 # Changelog
 
+### 3.2.17 (2023-01-13)
+
+#### Notable Changes
+
+- circleci
+  - use gke-gcloud-auth-plugin in circleci
+
+### Commits
+
+- [[`451340f23e`](https://github.com/twreporter/keystone-plate/commit/451340f23e)] - **fix**: use gke-gcloud-auth-plugin in circleci (Aylie Chou)
+
+### 3.2.16 (2023-01-13)
+
+#### Notable Changes
+
+- circleci
+  - use twreporter-gcp context for gcp related credential
+
+#### Commits
+
+- [[`2b3121d4de`](https://github.com/twreporter/keystone-plate/commit/2b3121d4de)] - **fix**: use twreporter-gcp context for gcp related credential (Aylie Chou)
+
 ### 3.2.15 (2022-10-28)
 
 #### Notable Changes
