@@ -11,7 +11,7 @@ steps:
     run:
       name: Login google cloud platform
       command: |
-        # GOOGLE_AUTH is defined in Environment Variables of circleci project
+        # GOOGLE_AUTH is defined in Organization Context of circleci project
         # GOOGLE_AUTH is used to grant CircleCI vm to have the permission to access GCP
         echo ${GOOGLE_AUTH} | base64 -i --decode > ${HOME}/gcp-key.json
         gcloud auth activate-service-account --key-file ${HOME}/gcp-key.json
@@ -20,7 +20,7 @@ steps:
       name: Setup environment variables
       command: |
         APP="keystone-plate"
-        CLUSTER_NAME=${PRIVATE_CLUSTER_NAME}
+        CLUSTER_NAME=${K8S_PRIVATE_CLUSTER_NAME}
         CLUSTER_NAMESPACE="default"
         ENVIRONMENT=""
         PKG_VER="latest"
@@ -151,7 +151,7 @@ workflows:
     jobs:
       - build
       - push:
-          context: twreporter
+          context: twreporter-gcp
           requires:
             - build
           filters:
@@ -168,6 +168,6 @@ workflows:
             - slack/on-hold
           type: approval
       - deploy:
-          context: twreporter
+          context: twreporter-gcp
           requires:
             - wait_for_approval
