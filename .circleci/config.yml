@@ -42,6 +42,7 @@ steps:
         echo "export CLUSTER_NAME=${CLUSTER_NAME}" >> $BASH_ENV
         echo "export CLUSTER_NAMESPACE=${CLUSTER_NAMESPACE}" >> $BASH_ENV
         echo "export ENVIRONMENT=${ENVIRONMENT}" >> $BASH_ENV
+        echo "export USE_GKE_GCLOUD_AUTH_PLUGIN=True" >> $BASH_ENV
 
 jobs:
   build:
