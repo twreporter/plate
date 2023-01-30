@@ -1,5 +1,15 @@
 # Changelog
 
+### 3.2.18-rc.0 (2023-01-30)
+
+#### Notable Changes
+
+- feat: enable latest page
+
+### Commits
+
+* \[[`7c55a91d65`](https://github.com/twreporter/keystone-plate/commit/7c55a91d65)] - Jason/latest page (#336) (許守傑 Shou-Chieh Hsu (Jason))
+
 ### 3.2.17 (2023-01-13)
 
 #### Notable Changes
