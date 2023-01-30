@@ -12,7 +12,7 @@ help:
 	@echo "to start server in development mode"
 	@echo "$(P) make start"
 	@echo "to start server in production mode"
-	@echo "$(P) make build-conifg"
+	@echo "$(P) make build-config"
 	@echo "to build config on demand"
 
 build-keystone-plugin:
@@ -20,7 +20,7 @@ build-keystone-plugin:
 	NODE_ENV=production SOCKETIO_PROTOCOL=$(CLIENT_SOCKETIO_PROTOCOL) SOCKETIO_HOST=$(CLIENT_SOCKETIO_HOST) SOCKETIO_PORT=$(CLIENT_SOCKETIO_PORT) node build-keystone-plugin.js
 
 build-config:
-	@echo "build conifg on demand"
+	@echo "build config on demand"
 	@node build-config
 
 build-config-if-needed:
