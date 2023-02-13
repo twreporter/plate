@@ -1,5 +1,17 @@
 # Changelog
 
+### 3.2.18-rc.1 (2023-02-13)
+
+#### Notable Changes
+
+- fix
+  - show `latest_order` only when `latest_order` > 0 in tag page
+
+### Commits
+
+- [[`49797a5514`](https://github.com/twreporter/keystone-plate/commit/49797a5514)] - **fix**: latest\_order use built-in number type (Aylie Chou)
+- [[`1af7c97825`](https://github.com/twreporter/keystone-plate/commit/1af7c97825)] - **feat**: apply latest tag on tag.latest\_order field (Aylie Chou)
+
 ### 3.2.18-rc.0 (2023-01-30)
 
 #### Notable Changes
