@@ -1,5 +1,6 @@
 var keystone = require('@twreporter/keystone');
 var transform = require('model-transform');
+const { Types } = keystone.Field
 
 var Tag = new keystone.List('Tag', {
 	autokey: { from: 'name', path: 'key', unique: true },
@@ -7,7 +8,12 @@ var Tag = new keystone.List('Tag', {
 
 Tag.add({
 	name: { label: '標籤名稱', type: String, required: true },
-	latest_order: { label: '最新(順序)', type: Number, noedit: true },
+	latest_order: {
+          type: Types.Number,
+          label: '最新（順序）',
+          noedit: true,
+          dependsOn: { $gt: { latest_order: 0} },
+        },
 });
 
 Tag.relationship({ ref: 'Post', refPath: 'tags' });
