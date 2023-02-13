@@ -9,8 +9,8 @@ var Tag = new keystone.List('Tag', {
 Tag.add({
 	name: { label: '標籤名稱', type: String, required: true },
 	latest_order: {
-          type: Types.Tag,
-          label: '最新',
+          type: Types.Number,
+          label: '最新（順序）',
           noedit: true,
           dependsOn: { $gt: { latest_order: 0} },
         },
