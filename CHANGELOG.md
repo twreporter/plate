@@ -1,5 +1,19 @@
 # Changelog
 
+### 3.2.18-rc.3 (2023-02-16)
+
+#### Notable Changes
+
+- chore
+  - update keystone version
+
+#### Commits
+
+* \[[`6e0a0f0c4f`](https://github.com/twreporter/keystone-plate/commit/6e0a0f0c4f)] - Merge pull request #353 from duidae/jason/update\_keystone (許守傑 Shou-Chieh Hsu (Jason))
+* \[[`3370b12af7`](https://github.com/twreporter/keystone-plate/commit/3370b12af7)] - **fix**: fix lint (duidae)
+* \[[`01b152a8c0`](https://github.com/twreporter/keystone-plate/commit/01b152a8c0)] - **fix**: fix lint (duidae)
+* \[[`fa6dbb7e18`](https://github.com/twreporter/keystone-plate/commit/fa6dbb7e18)] - **chore**: update keystone & fix lint (duidae)
+
 ### 3.2.18-rc.2 (2023-02-13)
 
 #### Notable Changes
