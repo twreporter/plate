@@ -13,7 +13,7 @@ Tag.add({
 		label: '最新頁的顯示順序',
 		noedit: true,
 		dependsOn: { $gt: { latest_order: 0 } },
-  },
+	},
 });
 
 Tag.relationship({ ref: 'Post', refPath: 'tags' });
