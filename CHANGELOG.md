@@ -1,5 +1,17 @@
 # Changelog
 
+### 3.2.18-rc.4 (2023-02-21)
+
+#### Notable Changes
+
+- chore
+  - update @twreporter/keystone version
+    - fix search style
+
+#### Commits
+
+- [[`d1b62fe8c0`](https://github.com/twreporter/keystone-plate/commit/d1b62fe8c0)] - **chore**: update @twreporter package (Aylie Chou)
+
 ### 3.2.18-rc.3 (2023-02-16)
 
 #### Notable Changes
