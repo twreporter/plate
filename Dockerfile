@@ -6,6 +6,9 @@ ENV TZ=Asia/Taipei
 WORKDIR /usr/src/react
 
 RUN set -x \
+    && sed -i -e 's/deb.debian.org/archive.debian.org/g' \
+           -e 's|security.debian.org|archive.debian.org/|g' \
+           -e '/stretch-updates/d' /etc/apt/sources.list \
     && apt-get update \
     && apt-get install -y --no-install-recommends ca-certificates graphicsmagick imagemagick\
     && rm -rf /var/lib/apt/lists/*
