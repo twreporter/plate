@@ -1,5 +1,32 @@
 # Changelog
 
+### 3.2.18 (2023-10-23)
+
+#### Notable Changes
+
+- chore
+  - update @twreporter/keystone version
+    - fix search style
+- chore
+  - update keystone version
+- fix
+  - `latest_order` label wording
+- fix
+  - show `latest_order` only when `latest_order` > 0 in tag page
+- feat: enable latest page
+
+#### Commits
+
+- [[`d1b62fe8c0`](https://github.com/twreporter/keystone-plate/commit/d1b62fe8c0)] - **chore**: update @twreporter package (Aylie Chou)
+* \[[`6e0a0f0c4f`](https://github.com/twreporter/keystone-plate/commit/6e0a0f0c4f)] - Merge pull request #353 from duidae/jason/update\_keystone (許守傑 Shou-Chieh Hsu (Jason))
+* \[[`3370b12af7`](https://github.com/twreporter/keystone-plate/commit/3370b12af7)] - **fix**: fix lint (duidae)
+* \[[`01b152a8c0`](https://github.com/twreporter/keystone-plate/commit/01b152a8c0)] - **fix**: fix lint (duidae)
+* \[[`fa6dbb7e18`](https://github.com/twreporter/keystone-plate/commit/fa6dbb7e18)] - **chore**: update keystone & fix lint (duidae)
+- [[`123879e8d3`](https://github.com/twreporter/keystone-plate/commit/123879e8d3)] - **fix**: `latest\_order` label wording (Aylie Chou)
+- [[`49797a5514`](https://github.com/twreporter/keystone-plate/commit/49797a5514)] - **fix**: latest\_order use built-in number type (Aylie Chou)
+- [[`1af7c97825`](https://github.com/twreporter/keystone-plate/commit/1af7c97825)] - **feat**: apply latest tag on tag.latest\_order field (Aylie Chou)
+* \[[`7c55a91d65`](https://github.com/twreporter/keystone-plate/commit/7c55a91d65)] - Jason/latest page (#336) (許守傑 Shou-Chieh Hsu (Jason))
+
 ### 3.2.17 (2023-01-13)
 
 #### Notable Changes

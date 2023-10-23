@@ -55,5 +55,5 @@ exports.locals = {
 
 exports.nav = {
   'people': ['users', 'contacts'],
-  'content': ['posts', 'post-categories', 'topics', 'images', 'audios', 'videos', 'tags'],
+  'content': ['posts', 'post-categories', 'topics', 'images', 'audios', 'videos', 'tags', 'latests'],
 };
