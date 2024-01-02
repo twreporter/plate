@@ -1,5 +1,17 @@
 # Changelog
 
+### 3.2.19 (2024-01-02)
+
+#### Notable Changes
+
+- chore
+  - update @twreporter packages
+
+#### Commits
+
+- [[`087607ff9d`](https://github.com/twreporter/keystone-plate/commit/087607ff9d)] - **chore**: update @twreporter/keystone (Aylie Chou)
+- [[`5e5434412b`](https://github.com/twreporter/keystone-plate/commit/5e5434412b)] - **chore**: update @twreporter packages (Aylie Chou)
+
 ### 3.2.18 (2023-10-23)
 
 #### Notable Changes
