@@ -1,5 +1,16 @@
 # Changelog
 
+### 3.2.20-rc.0
+
+#### Notable Changes
+
+- feat
+  - no edit for old category
+
+#### Commits
+
+- [[`4a13cd9692`](https://github.com/twreporter/keystone-plate/commit/4a13cd9692)] - **feat**: set categories to noedit (Lucien)
+
 ### 3.2.19 (2024-01-02)
 
 #### Notable Changes
