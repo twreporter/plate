@@ -1,6 +1,6 @@
 # Changelog
 
-### 3.2.20-rc.0
+### 3.2.20 (2024-03-13)
 
 #### Notable Changes
 
