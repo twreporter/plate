@@ -1,5 +1,19 @@
 # Changelog
 
+### 3.2.21-rc.0 (2024-03-26)
+
+#### Notable Changes
+
+- feat
+  - add `PostReview` modal
+- chore
+  - update @twreporter/keystone version
+
+#### Commits
+
+- [[`5f6998b7e9`](https://github.com/twreporter/keystone-plate/commit/5f6998b7e9)] - **chore**: update @twreporter/keystone version (Aylie Chou)
+- [[`e8d74adc03`](https://github.com/twreporter/keystone-plate/commit/e8d74adc03)] - **feat**: add `PostReview` modal (Aylie Chou)
+
 ### 3.2.20 (2024-03-13)
 
 #### Notable Changes
