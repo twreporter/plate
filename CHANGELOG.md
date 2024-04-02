@@ -1,5 +1,15 @@
 # Changelog
 
+### 3.2.21-rc.1 (2024-04-02)
+
+#### Notable Changes
+
+#### Commits
+
+- [[`42e6c51d5b`](https://github.com/twreporter/keystone-plate/commit/42e6c51d5b)] - **chore**: update @twreporter/keystone version (Aylie Chou)
+- [[`a46fff2892`](https://github.com/twreporter/keystone-plate/commit/a46fff2892)] - **fix**: typo (Aylie Chou)
+- [[`e8a2292318`](https://github.com/twreporter/keystone-plate/commite8a2292318)] - **fix**: add `maxLength` for `reviewWord` field (Aylie Chou)
+
 ### 3.2.21-rc.0 (2024-03-26)
 
 #### Notable Changes
