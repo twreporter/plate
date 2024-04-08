@@ -1,5 +1,24 @@
 # Changelog
 
+### 3.2.21 (2024-04-08)
+
+#### Notable Changes
+
+- feat
+  - add `PostReview` modal
+  - add `reviewWord` column for `Post` modal
+- chore
+  - update @twreporter/keystone version
+
+#### Commits
+
+- [[`c0a9d0b46b`](https://github.com/twreporter/keystone-plate/commit/c0a9d0b46b)] - **chore**: update @twreporter/keystone version (Aylie Chou)
+- [[`42e6c51d5b`](https://github.com/twreporter/keystone-plate/commit/42e6c51d5b)] - **chore**: update @twreporter/keystone version (Aylie Chou)
+- [[`a46fff2892`](https://github.com/twreporter/keystone-plate/commit/a46fff2892)] - **fix**: typo (Aylie Chou)
+- [[`e8a2292318`](https://github.com/twreporter/keystone-plate/commite8a2292318)] - **fix**: add `maxLength` for `reviewWord` field (Aylie Chou)
+- [[`5f6998b7e9`](https://github.com/twreporter/keystone-plate/commit/5f6998b7e9)] - **chore**: update @twreporter/keystone version (Aylie Chou)
+- [[`e8d74adc03`](https://github.com/twreporter/keystone-plate/commit/e8d74adc03)] - **feat**: add `PostReview` modal (Aylie Chou)
+
 ### 3.2.20 (2024-03-13)
 
 #### Notable Changes
