@@ -1,5 +1,20 @@
 # Changelog
 
+### 3.2.22-rc.0 (2024-05-28)
+
+#### Notable Changes
+
+- feat
+  - add post followup config
+- chore
+  - update @twreporter/keystone version
+
+#### Commits
+
+- [[`f7e77ef778`](https://github.com/twreporter/keystone-plate/commit/f7e77ef778)] - **chore**: update @twreporter/keystone version (Aylie Chou)
+- [[`7da9a4fce6`](https://github.com/twreporter/keystone-plate/commit/7da9a4fce6)] - **fix**: apply `simple` options on followup content (Aylie Chou)
+- [[`326049271b`](https://github.com/twreporter/keystone-plate/commit/326049271b)] - **feat**: add post followup config (Aylie Chou)
+
 ### 3.2.21 (2024-04-08)
 
 #### Notable Changes
