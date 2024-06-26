@@ -1,5 +1,16 @@
 # Changelog
 
+### 3.2.23 (2024-06-26)
+
+#### Notable Changes
+
+- fix
+  - update max length of Post.reviewWord from 15 to 18
+
+#### Commits
+
+- [[`f9ead102f3`](https://github.com/twreporter/keystone-plate/commit/f9ead102f3)] - **fix**: update max length of Post.reviewWord (Aylie Chou)
+
 ### 3.2.22 (2024-06-04)
 
 #### Notable Changes
