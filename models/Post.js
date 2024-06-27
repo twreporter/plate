@@ -28,11 +28,14 @@ var articleStyles = [{
   label: '預設版型',
   value: 'article:v2:default',
 }, {
-  label: '粉紅版型',
-  value: 'article:v2:pink',
-}, {
   label: '影像版型',
   value:'article:v2:photo',
+}, {
+  label: 'Embeded 滿版一般版型',
+  value: 'article:v2:embeded',
+}, {
+  label: '粉紅版型',
+  value:'article:v2:pink',
 }, {
   label: '多媒體',
   value: 'interactive',
@@ -75,6 +78,7 @@ Post.add({
   heroImageSize: { label: '首圖尺寸', type: Types.Select, options: heroImageSizes, default: 'normal', dependsOn: { heroImage: {'$regex': '.+/i'}}},
   leading_image_portrait: { label: '首圖（Portrait）', type: Types.ImageRelationship, ref: 'Image'},
   leading_image_description: { label: '首圖圖說', type: String, require: false },
+  leading_embeded: { label: '首圖 embeded', type: Types.Html, wysiwyg: true, height: 150, embededOnly: true},
   brief: { label: '前言', type: Types.Html, wysiwyg: true, height: 150 },
   content: { label: '內文', type: Types.Html, wysiwyg: true, height: 400 },
   followup: { label: '後續追蹤', type: Types.Relationship, ref: 'PostFollowup', many: true, selectWithSort: true },
