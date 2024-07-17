@@ -1,6 +1,6 @@
 # Changelog
 
-### 3.2.24-rc.0 (2024-07-08)
+### 3.2.24 (2024-07-17)
 
 #### Notable Changes
 
@@ -11,6 +11,7 @@
 
 #### Commits
 
+- [[`970ac33297`](https://github.com/twreporter/keystone-plate/commit/970ac33297)] - **chore**: update @twreporter/keystone version (Aylie Chou)
 - [[`66efe8fe1a`](https://github.com/twreporter/keystone-plate/commit/66efe8fe1a)] - **chore**: update @twreporter/keystone package (Aylie Chou)
 - [[`9895e321e0`](https://github.com/twreporter/keystone-plate/commit/9895e321e0)] - **feat**: add `leading\_embeded` field for Post (Aylie Chou)
 
