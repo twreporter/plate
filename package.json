@@ -1,6 +1,6 @@
 {
   "name": "keystone-plate",
-  "version": "3.2.24",
+  "version": "3.2.25-rc.0",
   "private": true,
   "repository": {
     "type": "git",
@@ -10,7 +10,7 @@
     "@godaddy/terminus": "^4.9.0",
     "@google-cloud/pubsub": "^2.6.0",
     "@twreporter/errors": "^1.1.0",
-    "@twreporter/keystone": "0.9.14",
+    "@twreporter/keystone": "0.9.15-rc.0",
     "@twreporter/keystone-plugin-client": "1.0.8",
     "@twreporter/keystone-plugin-socketio": "1.0.8",
     "babel-core": "^6.4.5",
@@ -61,12 +61,18 @@
     "dev": "make dev",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
-    "changelog-maker": "changelog-maker"
+    "changelog-maker": "changelog-maker",
+    "validate": "npm ls"
   },
   "main": "keystone.js",
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
-  }
+  },
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ]
 }
