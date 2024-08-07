@@ -1,5 +1,18 @@
 # Changelog
 
+### 3.2.25 (2024-08-07)
+
+#### Notable Changes
+
+- fix
+  - embeded typo
+- chore
+  - update @twreporter/keystone package
+
+#### Commits
+
+- [[`550494455e`](https://github.com/twreporter/keystone-plate/commit/550494455e)] - **fix**: embeded typo (Lucien)
+
 ### 3.2.24 (2024-07-17)
 
 #### Notable Changes
