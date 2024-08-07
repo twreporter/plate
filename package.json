@@ -61,18 +61,12 @@
     "dev": "make dev",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
-    "changelog-maker": "changelog-maker",
-    "validate": "npm ls"
+    "changelog-maker": "changelog-maker"
   },
   "main": "keystone.js",
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
-  },
-  "pre-commit": [
-    "lint",
-    "validate",
-    "test"
-  ]
+  }
 }
