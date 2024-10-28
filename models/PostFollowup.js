@@ -5,7 +5,7 @@ var Types = keystone.Field.Types;
 
 var PostFollowup = new keystone.List('PostFollowup', {
     map: { name: 'title' },
-    defaultSort: 'date'
+    defaultSort: '-date'
 });
 
 PostFollowup.add({
