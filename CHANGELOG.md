@@ -1,5 +1,16 @@
 # Changelog
 
+### 3.2.26 (2024-11-19)
+
+#### Notable Changes
+
+- fix
+  - update `PostFollowups` list sorting
+
+#### Commits
+
+- [[`ea97e433c5`](https://github.com/twreporter/keystone-plate/commit/ea97e433c5)] - **fix**: update `PostFollowups` list sorting (Aylie Chou)
+
 ### 3.2.25 (2024-08-07)
 
 #### Notable Changes
