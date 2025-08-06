@@ -5,12 +5,19 @@ RUN groupadd user && useradd --create-home --home-dir /home/user -g user user
 ENV TZ=Asia/Taipei
 WORKDIR /usr/src/react
 
+# 使用 archive.debian.org + 忽略過期簽章
 RUN set -x \
-    && sed -i -e 's/deb.debian.org/archive.debian.org/g' \
-           -e 's|security.debian.org|archive.debian.org/|g' \
-           -e '/stretch-updates/d' /etc/apt/sources.list \
-    && apt-get update \
-    && apt-get install -y --no-install-recommends ca-certificates graphicsmagick imagemagick\
+    && echo 'deb http://archive.debian.org/debian stretch main contrib non-free' > /etc/apt/sources.list \
+    && echo 'deb http://archive.debian.org/debian-security stretch/updates main contrib non-free' >> /etc/apt/sources.list \
+    && echo 'Acquire::Check-Valid-Until "false";' > /etc/apt/apt.conf.d/99ignore-check-valid-until \
+    && echo 'Acquire::AllowInsecureRepositories "true";' > /etc/apt/apt.conf.d/99allow-insecure \
+    && echo 'APT::Get::AllowUnauthenticated "true";' > /etc/apt/apt.conf.d/99allow-unauthenticated \
+    && apt-get -o Acquire::AllowInsecureRepositories=true \
+               -o APT::Get::AllowUnauthenticated=true update \
+    && apt-get install -y --no-install-recommends \
+       ca-certificates \
+       graphicsmagick \
+       imagemagick \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy source files
