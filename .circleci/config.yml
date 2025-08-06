@@ -102,8 +102,14 @@ jobs:
       - *setup-env
       - *gcloud-login
       - run:
+          name: Install Docker CLI (if not present)
+          command: |
+            if ! command -v docker; then
+              apt-get update && apt-get install -y docker.io
+            fi
+      - run:
           name: Build and push Docker image
-          command: | 
+          command: |
             echo "PKG_VER: ${PKG_VER}"
 
             # gcs key file
@@ -121,14 +127,14 @@ jobs:
       - *setup-env
       - *gcloud-login
       - run:
-          name: Connect to container cluster 
+          name: Connect to container cluster
           command: |
             gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
             gcloud --quiet container clusters get-credentials $CLUSTER_NAME --zone=asia-east1-a
       - run:
           name: Fetch Kubernetes config source
           command: |
-            gcloud source repos clone ${K8S_CONFIG_REPO} 
+            gcloud source repos clone ${K8S_CONFIG_REPO}
       - run:
           name: Install kustomize binary
           command: |
@@ -144,7 +150,7 @@ jobs:
           name: Deploy to Google Kubernetes Engine
           command: |
             kustomize build "${K8S_CONFIG_REPO}/${APP}/overlays/${ENVIRONMENT}" | kubectl apply -f -
-            kubectl rollout status deployment ${DEPLOYMENT} -n $CLUSTER_NAMESPACE 
+            kubectl rollout status deployment ${DEPLOYMENT} -n $CLUSTER_NAMESPACE
 
 workflows:
   version: 2
@@ -160,7 +166,7 @@ workflows:
               only:
                 - staging
                 - release
-      - slack/on-hold: 
+      - slack/on-hold:
           context: twreporter
           requires:
             - push
