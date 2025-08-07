@@ -1,5 +1,13 @@
 # Changelog
 
+### 3.2.27 (2025-08-07)
+
+#### Commits
+- [[`afc2bbbbd3`](https://github.com/twreporter/keystone-plate/commit/afc2bbbbd3)] - **chore**: update Dockerfile. Fix circleci build failure (nickhsine)
+- [[`bf37b84630`](https://github.com/twreporter/keystone-plate/commit/bf37b84630)] - **chore**: update circleCI config.yaml. Install Docker Cli if needed (nickhsine)
+- [[`41610899e4`](https://github.com/twreporter/keystone-plate/commit/41610899e4)] - **chore**: upgrade @twreporter/keystone to 0.9.16 (nickhsine)
+
+
 ### 3.2.26 (2024-11-19)
 
 #### Notable Changes
