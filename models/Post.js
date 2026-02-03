@@ -96,6 +96,7 @@ Post.add({
   toAutoNotify: { label: '自動推播', type: Boolean, default: true},
   is_external: { label: '另開新頁', type: Boolean, index: true },
   isFeatured: { label: '置頂', type: Boolean, index: true },
+  is_hide_title_block: { label: '隱藏標題區塊', type: Boolean },
   reviewWord: { label: '回顧說明', type: Types.Text, require: false, note: '###### 18 字元以內', maxLength: 18, maxLengthErr: '回顧說明上限 18 字' },
   preview: { type: Types.Preview },
 });
