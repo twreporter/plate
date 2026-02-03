@@ -1,12 +1,29 @@
 # Changelog
 
-### 3.2.27 (2025-08-07)
+### 3.2.28 (2026-02-03)
+
+#### Notable Changes
+
+- feat
+  - add `is_hide_title_block` in post list
 
 #### Commits
+
+- [[`ff33804665`](https://github.com/twreporter/keystone-plate/commit/ff33804665)] - **feat**: add `is\_hide\_title\_block` in post list (Aylie Chou)
+
+### 3.2.27 (2025-08-07)
+
+#### Notable Changes
+
+- chore
+  - update @twreporter/keystone version to v0.9.16
+  - fix circleci build fail
+
+#### Commits
+
 - [[`afc2bbbbd3`](https://github.com/twreporter/keystone-plate/commit/afc2bbbbd3)] - **chore**: update Dockerfile. Fix circleci build failure (nickhsine)
 - [[`bf37b84630`](https://github.com/twreporter/keystone-plate/commit/bf37b84630)] - **chore**: update circleCI config.yaml. Install Docker Cli if needed (nickhsine)
 - [[`41610899e4`](https://github.com/twreporter/keystone-plate/commit/41610899e4)] - **chore**: upgrade @twreporter/keystone to 0.9.16 (nickhsine)
-
 
 ### 3.2.26 (2024-11-19)
 
