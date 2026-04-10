@@ -1,5 +1,16 @@
 # Changelog
 
+### 3.2.29-rc.1 (2026-04-10)
+
+#### Notable Changes
+
+- chore
+  - upgrade @twreporter/keystone to 0.9.18
+
+#### Commits
+
+- [[`c83b3b82cc`](https://github.com/twreporter/keystone-plate/commit/c83b3b82cc)] - **chore**: upgrade @twreporter/keystone to 0.9.18 (Lucien)
+
 ### 3.2.29-rc.0 (2026-04-10)
 
 #### Notable Changes
