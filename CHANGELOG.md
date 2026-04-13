@@ -1,5 +1,26 @@
 # Changelog
 
+### 3.2.29 (2026-04-13)
+
+#### Notable Changes
+
+- feat
+  - add `is_sensitive` field to Image model
+- fix
+  - add default false for `is_sensitive`
+- chore
+  - upgrade @twreporter/keystone to 0.9.19
+  - upgrade @twreporter/keystone to 0.9.18
+  - upgrade @twreporter/keystone to 0.9.17
+
+#### Commits
+
+- [[`8bf7e3fc61`](https://github.com/twreporter/keystone-plate/commit/8bf7e3fc61)] - **chore**: upgrade @twreporter/keystone to 0.9.19 (Lucien)
+- [[`c83b3b82cc`](https://github.com/twreporter/keystone-plate/commit/c83b3b82cc)] - **chore**: upgrade @twreporter/keystone to 0.9.18 (Lucien)
+- [[`b3a02852c1`](https://github.com/twreporter/keystone-plate/commit/b3a02852c1)] - **chore**: upgrade @twreporter/keystone to 0.9.17 (Lucien)
+- [[`2edf887836`](https://github.com/twreporter/keystone-plate/commit/2edf887836)] - **fix**: add default false for is\_sensitive (Lucien)
+- [[`2f6c60ce61`](https://github.com/twreporter/keystone-plate/commit/2f6c60ce61)] - **feat**: add is\_sensitive field to Image model (Lucien)
+
 ### 3.2.28 (2026-02-03)
 
 #### Notable Changes

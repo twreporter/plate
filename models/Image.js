@@ -150,6 +150,11 @@ Image.add({
     type: Boolean,
     index: true
   },
+  is_sensitive: {
+    label: '不直接顯示',
+    type: Boolean,
+    default: false,
+  }
 });
 
 Image.relationship({
