@@ -1,6 +1,6 @@
 # plate 的 Cloud Run 部署
 
-這套流程部署舊版 Keystone 3，不修改 Keystone 套件。`staging`、`prod` 分支的 push triggers 由 `gcp-infrastructure/projects/coastal-run-106202` 管理；prod trigger 需設定建置前人工核准。這份設定不會自行建立 trigger、IAM、LB 或 IAP。
+這套流程部署舊版 Keystone 3，不修改 Keystone 套件。`staging`、`prod` 分支的 push triggers 由 `gcp-infrastructure/projects/coastal-run-106202` 管理；prod trigger 需設定建置前人工核准。plate repo 管理應用程式的 secret 引用、公開環境變數與部署參數；infrastructure repo 管理 triggers、approval、共用 IAM／service accounts、網路、LB／IAP。逐 secret 的 runtime 授權由本 repo 的 secrets 腳本管理。
 
 ## 建置與部署
 
@@ -25,15 +25,15 @@ Ingress 限制為 internal-and-cloud-load-balancing，允許 allUsers invocation
 
 ## 部署前要準備的設定
 
-在各環境 trigger 填入下列 substitutions，尚未提供的值刻意留空，檢查不通過就不會部署：
+應用程式設定隨版本控制管理，不需要 trigger 傳入 `_MONGODB_SECRET`、`_COOKIE_SECRET` 或 `_GCS_PROJECT_ID` substitutions；既有 trigger 的這些設定可移除。Cloud Build 只使用內建 project、branch、commit SHA 與 build ID，validate 會檢查 project、staging／prod 分支、識別碼與 public env file 是否存在。
 
-- `_MONGODB_SECRET`：MongoDB URI 的 Secret Manager `secret-name:數字版本`。staging 指向 staging-plate database，prod 指向 plate database。
-- `_COOKIE_SECRET`：既有 session cookie secret 的 `secret-name:數字版本`，搬遷時維持相同值。
-- `_GCS_PROJECT_ID`：預設為已確認的 `coastal-run-106202`。
+- `cloudbuild.yaml`：依分支選擇 `{env}-keystone3-plate_mongodb-uri:latest` 與 `{env}-keystone3-plate_cookie-secret:latest`，分別注入 `KEYSTONE_MONGODB`、`KEYSTONE_COOKIE_SECRET`。
+- `deploy/env.staging.public.yaml`、`deploy/env.prod.public.yaml`：管理 GCS project、各媒體 bucket 與 Pub/Sub topic。部署以 `--env-vars-file` 套用整份設定；手動加在 service 的公開環境變數不會保留，新增設定應更新這些檔案。
+- Secret Manager：保存實際 MongoDB URI 與 cookie secret 值。首次部署前必須加入可用版本並授予 runtime SA 存取權；validate 不查詢線上 secret 是否存在。staging URI 指向 staging-plate database，prod 指向 plate database，搬遷時保留原 cookie secret。
 
-音訊、影片、原圖、縮圖、頭像共用同環境 bucket：prod 使用 `twreporter-multimedia`，staging 使用 `staging-twreporter-multimedia`。名稱由部署腳本統一設定，不需 trigger substitutions。物件路徑沿用既有程式，沒有搬移檔案或改寫 MongoDB 中的舊路徑。staging bucket 的建立與 runtime SA 授權見 infrastructure repo 的 `projects/coastal-run-106202/keystone3-storage.md`。
+音訊、影片、原圖、縮圖、頭像共用同環境 bucket：prod 使用 `twreporter-multimedia`，staging 使用 `staging-twreporter-multimedia`。名稱由 public env file 管理。物件路徑沿用既有程式，沒有搬移檔案或改寫 MongoDB 中的舊路徑。staging bucket 的建立與 runtime SA 授權見 infrastructure repo 的 `projects/coastal-run-106202/keystone3-storage.md`。
 
-只填資源名稱，不填密碼或金鑰內容。Runtime SA 需取得這兩個 secrets 的存取權；CI SA 需有部署、寫入 Artifact Registry 及使用對應 runtime SA 的權限。
+`.gcloudignore` 包含 public env files，讓 Cloud Build deploy step 可讀取；這些檔案不含憑證，也不需放進 runtime image。Runtime SA 需取得兩個 secrets 的存取權；CI SA 需有部署、寫入 Artifact Registry 及使用對應 runtime SA 的權限，不需讀取 secret 值。
 
 GCS 使用 Cloud Run runtime SA 的 Application Default Credentials，不指定 keyFilename、不掛載金鑰，也不要設定 GOOGLE_APPLICATION_CREDENTIALS。舊版 SDK 在沒有金鑰設定時會走 ADC。
 
@@ -53,6 +53,8 @@ gcloud run services update-traffic staging-keystone3-plate \
   --to-revisions=PREVIOUS_REVISION=100
 ```
 
+Secret 環境變數的 `latest` 在 instance 啟動時解析，既有 instance 不會自動更新。輪替後需安排重新部署或替換 instances，驗證新 instances 後再停用舊憑證。回退 revision 不會回退 secret；舊程式必須相容於目前有效的設定。Cookie secret 輪替還需評估既有 session 與新舊 instances 並存時的簽章驗證行為，詳見 [secret 輪替說明](secrets/README.md)。
+
 舊聊天室的啟動與 bundle 建置已移除，原有依賴與 lockfile 暫時保留，以免這次遷移同時改變套件解析結果。
 
 ## 圖片縮圖的 Pub/Sub
@@ -61,7 +63,7 @@ gcloud run services update-traffic staging-keystone3-plate \
 
 暫時接受 review P2（staging 缺少環境專用縮圖 URL prefix），不以此阻擋 staging 部署；這是已知限制，並非已修復。staging 上傳仍維持啟用、使用 staging bucket，且仍會發布到共用 topic；儲存的縮圖 metadata 可能沿用 production URL，不能據此認定縮圖可用，也不要將這些測試圖片紀錄帶入正式資料。未來若要實際使用 staging 上傳圖片，須先確認 consumer 行為與權限、縮圖輸出路徑及公開存取方式，將已驗證的 `KEYSTONE_RESIZE_IMAGE_URL_PREFIX` 納入部署 env file，並完成端對端驗證。
 
-staging、prod 共用 `projects/coastal-run-106202/topics/resize-image`，部署腳本明確設定 `KEYSTONE_PUBSUB_RESIZE_IMAGE_TOPIC`。plate 使用 runtime SA 的 ADC 發布訊息，不需要金鑰。每張圖片發布五個尺寸任務，訊息的 input_bucket／output_bucket 使用該環境的 bucket。
+staging、prod 共用 `projects/coastal-run-106202/topics/resize-image`，public env files 明確設定 `KEYSTONE_PUBSUB_RESIZE_IMAGE_TOPIC`。plate 使用 runtime SA 的 ADC 發布訊息，不需要金鑰。每張圖片發布五個尺寸任務，訊息的 input_bucket／output_bucket 使用該環境的 bucket。
 
 兩個 runtime SA 都需要該 topic 的 `roles/pubsub.publisher`；授權腳本位於 infrastructure repo 的 `projects/coastal-run-106202/grant-keystone3-pubsub.sh`。這不代表縮圖服務已經能處理 staging：還需確認 consumer 使用訊息中的 bucket，而非固定 prod bucket，並授予其執行身分對 staging bucket 的必要讀寫權限。兩環境共用 consumer 的處理容量與失敗重試流程。
 
@@ -69,4 +71,8 @@ staging、prod 共用 `projects/coastal-run-106202/topics/resize-image`，部署
 
 ## Secrets 建立與授權
 
-使用 [secrets 管理腳本](secrets/README.md) 建立該環境的 MongoDB URI／cookie secret resources 與逐 secret runtime 授權。腳本不讀寫 secret 值，數字版本由管理員加入後填入 trigger。
+使用 [secrets 管理腳本](secrets/README.md) 建立該環境的 MongoDB URI／cookie secret resources 與逐 secret runtime 授權。腳本不讀寫 secret 值；管理員另行加入 secret version，部署引用 `latest`，不需更新 trigger。
+
+## 離線驗證
+
+執行 `node scripts/check-cloud-build.js`，使用假的 gcloud 驗證 staging／prod 無應用程式 substitutions 時的 validate 與部署參數，不呼叫 GCP、不讀取 secrets、不部署。此檢查使用本機已安裝的 `js-yaml`。

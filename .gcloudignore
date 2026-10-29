@@ -29,3 +29,5 @@ public/keystone-plugin.bundle.js
 !cloudbuild.yaml
 !deploy/
 !deploy/**
+# Public runtime settings must be available to Cloud Build's deploy step.
+!deploy/env.*.public.yaml

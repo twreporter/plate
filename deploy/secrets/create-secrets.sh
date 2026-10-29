@@ -35,4 +35,4 @@ for suffix in mongodb-uri cookie-secret; do
   echo "Runtime access configured: $secret"
 done
 
-echo 'Add secret versions separately, then set the numeric version references in the build trigger.'
+echo 'Add secret versions separately; cloudbuild.yaml references latest. Redeploy after rotation.'

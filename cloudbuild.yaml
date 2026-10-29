@@ -3,7 +3,18 @@ steps:
   - id: validate
     name: gcr.io/google.com/cloudsdktool/google-cloud-cli:stable
     entrypoint: bash
-    args: [deploy/cloud-build.sh, validate]
+    args:
+      - -c
+      - |
+        set -euo pipefail
+        [[ "$${BUILD_PROJECT:-}" == coastal-run-106202 ]] || { echo 'Unexpected project.' >&2; exit 1; }
+        case "$${BUILD_ENV:-}" in
+          staging|prod) ;;
+          *) echo 'Only staging and prod branches can deploy.' >&2; exit 1 ;;
+        esac
+        [[ "$${BUILD_COMMIT:-}" =~ ^[a-f0-9]{40}$$ ]] || { echo 'Missing commit SHA.' >&2; exit 1; }
+        [[ "$${BUILD_RUN_ID:-}" =~ ^[a-f0-9-]{36}$$ ]] || { echo 'Missing build ID.' >&2; exit 1; }
+        [[ -f "deploy/env.$${BUILD_ENV}.public.yaml" ]] || { echo 'Missing public environment file.' >&2; exit 1; }
   - id: build
     name: gcr.io/cloud-builders/docker
     args:
@@ -20,7 +31,41 @@ steps:
   - id: deploy
     name: gcr.io/google.com/cloudsdktool/google-cloud-cli:stable
     entrypoint: bash
-    args: [deploy/cloud-build.sh, deploy]
+    args:
+      - -c
+      - |
+        set -euo pipefail
+        case "$$BUILD_ENV" in
+          staging) runtime_env=nonprod; subnet=asia-east1-cloud-run-nonprod; max_instances=1 ;;
+          prod) runtime_env=prod; subnet=asia-east1-cloud-run-prod-services; max_instances=3 ;;
+          *) echo 'Only staging and prod branches can deploy.' >&2; exit 1 ;;
+        esac
+
+        region=asia-east1
+        service="$${BUILD_ENV}-keystone3-plate"
+        image="$${region}-docker.pkg.dev/$${BUILD_PROJECT}/cloud-run-source-deploy/keystone3-plate"
+        tag="$${BUILD_ENV}-$${BUILD_COMMIT}-$${BUILD_RUN_ID}"
+        digest="$$(gcloud artifacts docker images describe "$$image:$$tag" --project="$$BUILD_PROJECT" --format='value(image_summary.digest)')"
+        [[ "$$digest" =~ ^sha256:[a-f0-9]{64}$$ ]] || { echo 'Invalid image digest.' >&2; exit 1; }
+
+        # Application configuration belongs here, not in infrastructure triggers.
+        public_env_file="deploy/env.$${BUILD_ENV}.public.yaml"
+        secrets="KEYSTONE_MONGODB=$${service}_mongodb-uri:latest,KEYSTONE_COOKIE_SECRET=$${service}_cookie-secret:latest"
+
+        revision_suffix="b$${BUILD_RUN_ID}"
+        gcloud run deploy "$$service" --project="$$BUILD_PROJECT" --region="$$region" \
+          --image="$$image@$$digest" \
+          --service-account="sa-keystone3-$${runtime_env}-runtime@$${BUILD_PROJECT}.iam.gserviceaccount.com" \
+          --execution-environment=gen1 --cpu=1 --memory=512Mi --cpu-throttling \
+          --concurrency=20 --min-instances=0 --max-instances="$$max_instances" --port=3000 \
+          --network=twreporter-custom-network --subnet="$$subnet" --vpc-egress=private-ranges-only \
+          --ingress=internal-and-cloud-load-balancing --allow-unauthenticated \
+          --env-vars-file="$$public_env_file" \
+          --set-secrets="$$secrets" \
+          --revision-suffix="$$revision_suffix" --no-traffic --quiet
+
+        gcloud run services update-traffic "$$service" --project="$$BUILD_PROJECT" --region="$$region" \
+          --to-revisions="$${service}-$${revision_suffix}=100" --quiet
 options:
   logging: CLOUD_LOGGING_ONLY
   env:
@@ -28,12 +73,4 @@ options:
     - BUILD_ENV=$BRANCH_NAME
     - BUILD_COMMIT=$COMMIT_SHA
     - BUILD_RUN_ID=$BUILD_ID
-    - MONGODB_SECRET=${_MONGODB_SECRET}
-    - COOKIE_SECRET=${_COOKIE_SECRET}
-    - KEYSTONE_GCS_PROJECT_ID=${_GCS_PROJECT_ID}
-# Supply resource names only, never secret contents. Secret references use name:version.
-substitutions:
-  _MONGODB_SECRET: ''
-  _COOKIE_SECRET: ''
-  _GCS_PROJECT_ID: 'coastal-run-106202'
 timeout: 1800s
