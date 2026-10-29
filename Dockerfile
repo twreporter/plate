@@ -1,4 +1,4 @@
-FROM node:10.15-slim
+FROM node:10.15.3-slim AS base
 
 RUN groupadd user && useradd --create-home --home-dir /home/user -g user user
 
@@ -20,12 +20,28 @@ RUN set -x \
        imagemagick \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy source files
-COPY . .
-RUN mv config-for-docker-build.js config.js
+# Install from the lockfile; never copy a developer's node_modules.
+FROM base AS build
+RUN npm install --global --force yarn@1.22.22
+COPY package.json yarn.lock ./
+RUN yarn install --production --frozen-lockfile --non-interactive
+COPY scripts/check-admin-bundles.js scripts/check-admin-bundles.js
+RUN node scripts/check-admin-bundles.js
 
-# Set time zone
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
-EXPOSE 3000 3030
-CMD NODE_ENV=production SOCKETIO_PORT=3030 node keystone.js
+FROM base AS runtime
+ENV NODE_ENV=production PORT=3000
+COPY --from=build /usr/src/react/node_modules ./node_modules
+COPY package.json keystone.js config-for-docker-build.js ./
+COPY client ./client
+COPY lib ./lib
+COPY models ./models
+COPY public ./public
+COPY routes ./routes
+COPY templates ./templates
+RUN mv config-for-docker-build.js config.js \
+    && chown -R user:user /usr/src/react \
+    && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
+    && echo $TZ > /etc/timezone
+USER user
+EXPOSE 3000
+CMD ["node", "keystone.js"]

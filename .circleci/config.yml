@@ -61,15 +61,6 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-build-{{ checksum "yarn.lock" }}
-      - run:
-          name: Build Keystone Plugin Bundles
-          command: |
-            CLIENT_SOCKETIO_HOST=keystone-plugin.twreporter.org
-            if [ "${CIRCLE_BRANCH}" == "staging" ]; then
-              CLIENT_SOCKETIO_HOST=staging-keystone-plugin.twreporter.org
-            fi
-            CLIENT_SOCKETIO_HOST=$CLIENT_SOCKETIO_HOST CLIENT_SOCKETIO_PROTOCOL=https CLIENT_SOCKETIO_PORT=443 make build-keystone-plugin
-
       - run: rm -rf node_modules
 
       # Download and cache the dependencies for running

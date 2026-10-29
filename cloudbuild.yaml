@@ -1,0 +1,39 @@
+# Push triggers and prod approval are managed in gcp-infrastructure.
+steps:
+  - id: validate
+    name: gcr.io/google.com/cloudsdktool/google-cloud-cli:stable
+    entrypoint: bash
+    args: [deploy/cloud-build.sh, validate]
+  - id: build
+    name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - --platform=linux/amd64
+      - -t
+      - asia-east1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/keystone3-plate:$BRANCH_NAME-$COMMIT_SHA-$BUILD_ID
+      - .
+  - id: push
+    name: gcr.io/cloud-builders/docker
+    args:
+      - push
+      - asia-east1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/keystone3-plate:$BRANCH_NAME-$COMMIT_SHA-$BUILD_ID
+  - id: deploy
+    name: gcr.io/google.com/cloudsdktool/google-cloud-cli:stable
+    entrypoint: bash
+    args: [deploy/cloud-build.sh, deploy]
+options:
+  logging: CLOUD_LOGGING_ONLY
+  env:
+    - BUILD_PROJECT=$PROJECT_ID
+    - BUILD_ENV=$BRANCH_NAME
+    - BUILD_COMMIT=$COMMIT_SHA
+    - BUILD_RUN_ID=$BUILD_ID
+    - MONGODB_SECRET=${_MONGODB_SECRET}
+    - COOKIE_SECRET=${_COOKIE_SECRET}
+    - KEYSTONE_GCS_PROJECT_ID=${_GCS_PROJECT_ID}
+# Supply resource names only, never secret contents. Secret references use name:version.
+substitutions:
+  _MONGODB_SECRET: ''
+  _COOKIE_SECRET: ''
+  _GCS_PROJECT_ID: 'coastal-run-106202'
+timeout: 1800s
