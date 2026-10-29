@@ -1,6 +1,5 @@
 var keystone = require('@twreporter/keystone');
 var config = require('./config');
-var buildSocketIO = require('@twreporter/keystone-plugin-socketio').buildSocketIO
 
 keystone.init(config.options);
 keystone.import('models');
@@ -8,8 +7,17 @@ keystone.set('locals', config.locals);
 keystone.set('routes', require('./routes'));
 keystone.set('nav', config.nav);
 
-var express = require('express');
 var http = require('http');
+
+// Reuse the item template's plugin script URL before static files are served.
+var previousPreStatic = keystone.get('pre:static');
+keystone.set('pre:static', function(app) {
+  app.get('/keystone-plugin.bundle.js', function(req, res) {
+    res.set('Cache-Control', 'no-cache');
+    res.sendFile(require('path').join(__dirname, 'client/online-users.js'));
+  });
+  if (typeof previousPreStatic === 'function') previousPreStatic(app);
+});
 
 // Create keystone app
 keystone.initExpressApp();
@@ -38,28 +46,4 @@ keystone.openDatabaseConnection(function(){
     console.info('KeystoneJS ready on ', port, ' port') // eslint-disable-line no-console
     console.log('------------------------------------------------')
   })
-});
-
-// Create socket.io server
-var app = express();
-var server = http.createServer(app);
-buildSocketIO(server, {
-  allowedOrigins: process.env.NODE_ENV === 'development' ? '*' : [
-    'https://keystone-editor.twreporter.org',
-    'https://staging-keystone-editor.twreporter.org'
-  ],
-})
-
-server = shutdown.addGracefulShutdownHook(server,{
-  onShutdown: shutdown.logShutdownService('socket-io')
-});
-const socketioPort = process.env.SOCKETIO_PORT || 3030
-server.listen(socketioPort, (err) => {
-  console.log('------------------------------------------------')
-  if (err) {
-    console.error(err) // eslint-disable-line no-console
-  }
-
-  console.info('Keystone Plugin SocketIO is ready on ', socketioPort, ' port') // eslint-disable-line no-console
-  console.log('------------------------------------------------')
 });
