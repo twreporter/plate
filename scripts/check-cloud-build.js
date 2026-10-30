@@ -55,8 +55,9 @@ fs.appendFileSync(process.env.CALL_LOG, JSON.stringify(args) + '\\n');
 if (args.slice(0, 4).join(' ') === 'artifacts docker images describe') {
   console.log(process.env.FAKE_DIGEST);
 } else if (args.slice(0, 2).join(' ') === 'run deploy') {
+  if (args.includes('--no-traffic')) process.exit(1);
   if (process.env.FAIL_DEPLOY) process.exit(1);
-} else if (args.slice(0, 3).join(' ') !== 'run services update-traffic') {
+} else {
   process.exit(1);
 }
 `, { mode: 0o755 });
@@ -69,7 +70,7 @@ if (args.slice(0, 4).join(' ') === 'artifacts docker images describe') {
     const deployment = run('deploy', branch);
     assert.strictEqual(deployment.status, 0, deployment.stderr);
     const recorded = calls();
-    assert.strictEqual(recorded.length, 3);
+    assert.strictEqual(recorded.length, 2);
     const deploy = recorded[1];
     const service = branch + '-keystone3-plate';
     const runtime = branch === 'staging' ? 'nonprod' : 'prod';
@@ -80,10 +81,9 @@ if (args.slice(0, 4).join(' ') === 'artifacts docker images describe') {
       '--set-secrets=KEYSTONE_MONGODB=' + service + '_mongodb-uri:latest,KEYSTONE_COOKIE_SECRET=' + service + '_cookie-secret:latest',
       '--service-account=sa-keystone3-' + runtime + '-runtime@' + project + '.iam.gserviceaccount.com',
       '--image=asia-east1-docker.pkg.dev/' + project + '/cloud-run-source-deploy/keystone3-plate@' + digest,
-      '--no-traffic',
+      '--revision-suffix=b' + buildId,
     ].forEach(arg => assert(deploy.includes(arg), 'Missing deploy argument: ' + arg));
-    assert.deepStrictEqual(recorded[2].slice(0, 4), ['run', 'services', 'update-traffic', service]);
-    assert(recorded[2].includes('--to-revisions=' + service + '-b' + buildId + '=100'));
+    assert(!deploy.includes('--no-traffic'), 'Deploy must allow immediate traffic');
     const settings = yaml.safeLoad(fs.readFileSync(path.join(root, envFile), 'utf8'));
     const bucket = (branch === 'staging' ? 'staging-' : '') + 'twreporter-multimedia';
     assert.strictEqual(Object.keys(settings).length, 7);
@@ -103,9 +103,10 @@ if (args.slice(0, 4).join(' ') === 'artifacts docker images describe') {
   for (const overrides of [{ FAKE_DIGEST: 'invalid' }, { FAIL_DEPLOY: '1' }]) {
     fs.writeFileSync(log, '');
     assert.notStrictEqual(run('deploy', 'staging', overrides).status, 0);
+    assert.strictEqual(calls().length, overrides.FAIL_DEPLOY ? 2 : 1);
     assert(!calls().some(args => args[2] === 'update-traffic'), 'Failed deployment must not promote traffic');
   }
-  console.log('Cloud Build checks passed: staging/prod validation, env files, secrets, runtime identity, and failure handling.');
+  console.log('Cloud Build checks passed: staging/prod validation, env files, secrets, runtime identity, immediate deployment, and failure handling.');
 } finally {
   fs.readdirSync(temp).forEach(file => fs.unlinkSync(path.join(temp, file)));
   fs.rmdirSync(temp);

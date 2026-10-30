@@ -10,7 +10,14 @@ Docker 使用 Node 10.15.3、Yarn 1.22.22 與現有 yarn.lock，在 image 內安
 docker build --platform linux/amd64 -t keystone3-plate:local .
 ```
 
-Cloud Build 先檢查設定，再 build、push，最後以查得的 image digest 部署。Tag 使用分支、完整 commit SHA 與 Build ID。新 revision 就緒後，流量才切到該 revision；部署失敗會停止。首次建立 service 沒有舊 revision 可回退。
+Cloud Build 先檢查設定，再 build、push，最後以查得的 image digest 部署。Tag 使用分支、完整 commit SHA 與 Build ID。與 online-users 一致，部署不使用 `--no-traffic`，也不另行執行 traffic update；在服務追蹤 latest 的前提下，新 revision 就緒後直接接收流量。prod 的人工核准在 build 前完成。首次建立 service 沒有舊 revision 可回退。
+
+服務流量需維持追蹤 latest。若曾使用舊部署流程或手動回退而固定到特定 revision，需在準備恢復最新 revision 上線時，一次性執行以下指令；這會立即將流量切到最新就緒的 revision，執行前應確認該版本可上線。prod 請改用 `prod-keystone3-plate`。
+
+```sh
+gcloud run services update-traffic staging-keystone3-plate \
+  --project=coastal-run-106202 --region=asia-east1 --to-latest
+```
 
 | 設定 | staging | prod |
 | --- | --- | --- |
