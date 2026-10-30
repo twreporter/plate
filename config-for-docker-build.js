@@ -8,6 +8,7 @@
 //         This should be consistent with the ttl option of session store options in general.
 exports.options = {
   'name': 'Keystone',
+  'port': Number(process.env.PORT) || 3000,
   'brand': 'Keystone',
   'less': 'public',
   'static': 'public',
@@ -16,7 +17,7 @@ exports.options = {
   'view engine': 'jade',
   'mongo': process.env.KEYSTONE_MONGODB,
   'cloudinary config': 'cloudinary://333779167276662:_8jbSi9FB3sWYrfimcl8VKh34rI@keystone-demo',
-  'auto update': true,
+  'auto update': false,
   'session': true,
   'session options': {
     key: 'keystone.sid',
@@ -37,7 +38,7 @@ exports.options = {
   },
   'gcs config': {
     projectId: process.env.KEYSTONE_GCS_PROJECT_ID,
-    keyFilename: __dirname + '/gcskeyfile.json',
+    // Use Application Default Credentials from the Cloud Run service identity.
     bucket: {
       audio: process.env.KEYSTONE_GCS_AUDIO_BUCKET,
       video: process.env.KEYSTONE_GCS_VIDEO_BUCKET,

@@ -1,0 +1,33 @@
+# Only send source required to build the application.
+**
+!Dockerfile
+!.dockerignore
+!package.json
+!yarn.lock
+!keystone.js
+!config-for-docker-build.js
+!scripts/
+!scripts/check-admin-bundles.js
+!client/
+!client/**
+!lib/
+!lib/**
+!models/
+!models/**
+!public/
+!public/**
+!routes/
+!routes/**
+!templates/
+!templates/**
+**/node_modules
+**/.env*
+**/*.pem
+**/*.key
+**/gcskeyfile.json
+public/keystone-plugin.bundle.js
+!cloudbuild.yaml
+!deploy/
+!deploy/**
+# Public runtime settings must be available to Cloud Build's deploy step.
+!deploy/env.*.public.yaml
