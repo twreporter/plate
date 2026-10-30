@@ -62,10 +62,8 @@ steps:
           --ingress=internal-and-cloud-load-balancing --allow-unauthenticated \
           --env-vars-file="$$public_env_file" \
           --set-secrets="$$secrets" \
-          --revision-suffix="$$revision_suffix" --no-traffic --quiet
+          --revision-suffix="$$revision_suffix" --quiet
 
-        gcloud run services update-traffic "$$service" --project="$$BUILD_PROJECT" --region="$$region" \
-          --to-revisions="$${service}-$${revision_suffix}=100" --quiet
 options:
   logging: CLOUD_LOGGING_ONLY
   env:
