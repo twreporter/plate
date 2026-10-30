@@ -1,15 +1,28 @@
-# Directories
-.git
-
-# Files
-*.md
-*.txt
-*.png
-Makefile
-makefile
-package.json
-yarn.lock
-LICENSE
-Dockerfile
-build-config.js
-Procfile
+# Only send source required to build the application.
+**
+!Dockerfile
+!.dockerignore
+!package.json
+!yarn.lock
+!keystone.js
+!config-for-docker-build.js
+!scripts/
+!scripts/check-admin-bundles.js
+!client/
+!client/**
+!lib/
+!lib/**
+!models/
+!models/**
+!public/
+!public/**
+!routes/
+!routes/**
+!templates/
+!templates/**
+**/node_modules
+**/.env*
+**/*.pem
+**/*.key
+**/gcskeyfile.json
+public/keystone-plugin.bundle.js
