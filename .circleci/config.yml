@@ -146,6 +146,8 @@ jobs:
 workflows:
   version: 2
   build_and_push:
+    # Paused during the Cloud Run migration. Remove this condition to resume.
+    when: false
     jobs:
       - build
       - push:

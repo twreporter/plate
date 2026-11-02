@@ -41,7 +41,8 @@ make build-config
   - google cloud platform storage bucket
   - default value: ''
 
-# Build New Docker Image and Push it to Google Container Registry
-We integrate CircleCI to build new docker image and push it to Google Container Registry.
+# Deployment
 
-Every PR merged into `release` branch will trigger the build process.
+Cloud Run deployment for `staging` and `prod` is configured in [cloudbuild.yaml](cloudbuild.yaml). See the [deployment guide](deploy/README.md) for setup, rollback, and known limitations.
+
+The legacy CircleCI workflow for `staging` and `release` is paused with `when: false` in `.circleci/config.yml` during the Cloud Run migration. Remove that condition to resume its build and GKE deployment jobs.
