@@ -57,7 +57,7 @@ steps:
           --image="$$image@$$digest" \
           --service-account="sa-keystone3-$${runtime_env}-runtime@$${BUILD_PROJECT}.iam.gserviceaccount.com" \
           --execution-environment=gen1 --cpu=1 --memory=512Mi --cpu-throttling \
-          --concurrency=20 --min-instances=0 --max-instances="$$max_instances" --port=3000 \
+          --concurrency=20 --min-instances=0 --max="$$max_instances" --port=3000 \
           --network=twreporter-custom-network --subnet="$$subnet" --vpc-egress=private-ranges-only \
           --ingress=internal-and-cloud-load-balancing --allow-unauthenticated \
           --env-vars-file="$$public_env_file" \
