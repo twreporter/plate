@@ -36,8 +36,8 @@ steps:
       - |
         set -euo pipefail
         case "$$BUILD_ENV" in
-          staging) runtime_env=nonprod; subnet=asia-east1-cloud-run-nonprod; max_instances=1 ;;
-          prod) runtime_env=prod; subnet=asia-east1-cloud-run-prod-services; max_instances=3 ;;
+          staging) runtime_env=nonprod; subnet=asia-east1-cloud-run-nonprod; min_instances=0; max_instances=1 ;;
+          prod) runtime_env=prod; subnet=asia-east1-cloud-run-prod-services; min_instances=1; max_instances=3 ;;
           *) echo 'Only staging and prod branches can deploy.' >&2; exit 1 ;;
         esac
 
@@ -56,8 +56,8 @@ steps:
         gcloud run deploy "$$service" --project="$$BUILD_PROJECT" --region="$$region" \
           --image="$$image@$$digest" \
           --service-account="sa-keystone3-$${runtime_env}-runtime@$${BUILD_PROJECT}.iam.gserviceaccount.com" \
-          --execution-environment=gen1 --cpu=1 --memory=512Mi --cpu-throttling \
-          --concurrency=20 --min-instances=0 --max="$$max_instances" --port=3000 \
+          --execution-environment=gen1 --cpu=1 --memory=1Gi --cpu-throttling \
+          --concurrency=80 --min="$$min_instances" --max="$$max_instances" --port=3000 \
           --network=twreporter-custom-network --subnet="$$subnet" --vpc-egress=private-ranges-only \
           --ingress=internal-and-cloud-load-balancing --allow-unauthenticated \
           --env-vars-file="$$public_env_file" \
