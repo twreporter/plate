@@ -37,7 +37,7 @@ steps:
         set -euo pipefail
         case "$$BUILD_ENV" in
           staging) runtime_env=nonprod; subnet=asia-east1-cloud-run-nonprod; min_instances=0; max_instances=1 ;;
-          prod) runtime_env=prod; subnet=asia-east1-cloud-run-prod-services; min_instances=1; max_instances=3 ;;
+          prod) runtime_env=prod; subnet=asia-east1-cloud-run-prod-services; min_instances=1; max_instances=1 ;;
           *) echo 'Only staging and prod branches can deploy.' >&2; exit 1 ;;
         esac
 
